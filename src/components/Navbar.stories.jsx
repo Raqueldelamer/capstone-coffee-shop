@@ -8,6 +8,7 @@ export default meta;
 
 export const Default = {
   args: {
-    title: "Menu Buttons Here"
+    menuItems: ["HOME", "ABOUT", "PURCHASE"],
+    title: "Navbar"
   }
 };
