@@ -8,6 +8,6 @@ export default meta;
 
 export const Default = {
   args: {
-    title: "Menu "
+    title: "Menu"
   }
 };
