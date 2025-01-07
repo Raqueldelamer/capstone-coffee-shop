@@ -5,7 +5,7 @@ export default function Home() {
   return (
   <>  
   <NavBar />
-  <h1>My Coffee Shop Frontend Splash Page</h1>;
+  <h1 className="text-white text-center justify-stretch">My Coffee Shop Frontend Splash Page</h1>;
   <TestButton />
   </>
   )
