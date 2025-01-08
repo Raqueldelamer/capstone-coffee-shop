@@ -35,12 +35,6 @@ Set up the following blank pages in the `pages` directory. These pages will serv
 - `signup.jsx`
 - `signin.jsx`
 
-### **Optional Admin Pages**:
-- `admin/list-products.jsx`
-- `admin/create-product.jsx`
-- `admin/view-product.jsx`
-- `admin/update-product.jsx`  
-  *(Note: `update-product.jsx` will include a delete product confirmation popup.)*
 
 Add a mock data json file for products and for the cart. You can use this data to test your components and pages.
 
