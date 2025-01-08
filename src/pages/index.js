@@ -23,8 +23,7 @@ export default function Home() {
   <>  
   <NavBar />
   <div style={divStyle}>
-    <Header />
-  <h1 className="text-white font-mono py-2 px-40 text-center text-bold justify-stretch">COFFEE OR TEA, SNACK & READ!</h1>
+  <Header headerText={"COFFEE OR TEA, SNACK & READ!"}/>
   <TestButton label="Sign Up" handleClick={handleCtaClick}/>
   </div>
   </>
