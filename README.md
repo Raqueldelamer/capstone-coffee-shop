@@ -1,3 +1,282 @@
+# Day 2 Guide: Coffee Shop Frontend => https://coffee-shop-frontend-git-components-raqueldelamers-projects.vercel.app
+
+## Objective:  
+
+Continue building the project you started in Day 1. Today, you will create pages for the Coffee Shop frontend, then break them into reusable components while the layout and structure are fresh in your mind. Utilize Storybook to verify components, and enhance the design for consistency across the application.
+
+Note: If you are unable to complete the full assignment, focus on the login pages and the product pages. If you can't get to the cart, you can still make a decent project. Then, you can fill in the other pages later if you have time, or leave them as a stretch goal. However, some of the pages in the Cart functionality are repetitive, so you may be able to reuse components from the product page for the cart page.
+
+Here are some helpful resources you may look into:
+
+- [Your UI as a Tree](https://react.dev/learn/understanding-your-ui-as-a-tree) for understanding how to break down your UI into components.
+- [Rendering Lists](https://react.dev/learn/describing-the-ui#rendering-lists) for arrays of data
+- [Adding interactivity with React](https://react.dev/learn/adding-interactivity) for button clicks and form submissions.
+- [React Forms](https://daveceddia.com/react-forms/). You may find this helpful in day three when finish design and begin work on functionality.
+
+---
+
+**Note:** Before you begin, create a new branch for your work. Make sure your main branch is up to date. Then create a new branch called design-components.
+
+```bash
+git switch main
+git pull
+git switch -c design-components
+```
+
+## **1. Create Basic Pages**
+Set up the following blank pages in the `pages` directory. These pages will serve as the foundation of your application:
+
+### **Required Pages**:
+- `index.jsx`
+- `products/index.jsx`
+- `products/[id].jsx`
+- `cart.jsx`
+- `checkout.jsx`
+- `signup.jsx`
+- `signin.jsx`
+
+### **Optional Admin Pages**:
+- `admin/list-products.jsx`
+- `admin/create-product.jsx`
+- `admin/view-product.jsx`
+- `admin/update-product.jsx`  
+  *(Note: `update-product.jsx` will include a delete product confirmation popup.)*
+
+Add a mock data json file for products and for the cart. You can use this data to test your components and pages.
+
+You can put them in a `mocks` folder in the root of your project. You can name them `products.json` and `cart.json`. Grab some images from the internet or generate them from AI and put them in the `public` folder. You can use these images in your mock data.
+
+You may copy some data from https://dummyjson.com/docs/products
+
+(Note: take care to note differences in the structure of the data from our actual backend (id vs _id, etc.))
+
+Or you may use this example data:
+
+### Example: Products Data (`/src/mocks/products.json`)
+```json
+[
+  {
+    "name": "Espresso",
+    "description": "A strong and concentrated coffee beverage.",
+    "price": 2.5,
+    "category": "Beverage",
+    "stock": 10,
+    "imageUrl": "/sample-images/espresso.jpg",
+    "_id": 0
+  },
+  {
+    "name": "Cappuccino",
+    "description": "An Italian coffee drink that is traditionally prepared with equal parts espresso, steamed milk, and milk foam.",
+    "price": 3.5,
+    "category": "Beverage",
+    "stock": 5,
+    "imageUrl": "/sample-images/cappuccino.jpg",
+    "_id": 1
+  },
+  {
+    "name": "Croissant",
+    "description": "A buttery, flaky, viennoiserie pastry named for its crescent shape.",
+    "price": 2,
+    "category": "Food",
+    "stock": 8,
+    "imageUrl": "/sample-images/croissant.jpg",
+    "_id": 2
+  },
+  {
+    "name": "Muffin",
+    "description": "A small, sweet baked good that is typically made with ingredients such as flour, sugar, eggs, and butter.",
+    "price": 2.5,
+    "category": "Food",
+    "stock": 6,
+    "imageUrl": "/sample-images/muffin.jpg",
+    "_id": 3
+  }
+]
+```
+### Example Cart data
+
+`/src/mocks/cart.json`
+
+```json
+{
+    "_id": "1",
+    "products": [
+        {
+          "name": "Espresso",
+          "description": "A strong and concentrated coffee beverage.",
+          "price": 2.5,
+          "category": "Beverage",
+          "stock": 10,
+          "imageUrl": "/sample-images/espresso.jpg",
+          "_id": 0
+        },
+        {
+          "name": "Croissant",
+          "description": "A buttery, flaky, viennoiserie pastry named for its crescent shape.",
+          "price": 2,
+          "category": "Food",
+          "stock": 8,
+          "imageUrl": "/sample-images/croissant.jpg",
+          "_id": 2
+        },
+        {
+          "name": "Muffin",
+          "description": "A small, sweet baked good that is typically made with ingredients such as flour, sugar, eggs, and butter.",
+          "price": 2.5,
+          "category": "Food",
+          "stock": 6,
+          "imageUrl": "/sample-images/muffin.jpg",
+          "_id": 3
+        }
+    ],
+    "user": "1"
+}
+```
+
+Remember to git commit with a message like: "Add basic pages for the Coffee Shop frontend."
+
+### Example: Home (Splash) Page (`src/pages/index.jsx`)
+```jsx
+export default function Home() {
+  return (
+    <div>
+      <h1>Welcome to the Coffee Shop!</h1>
+    </div>
+  );
+}
+```
+
+### Example 2: Product Page (`src/pages/products/[id].jsx`)
+```jsx
+import { useRouter } from 'next/router';
+
+export default function ProductPage() {
+  // For pages with dynamic routes, you can use the useRouter hook to get the route params
+  const router = useRouter();
+  const { id } = router.query; // Get 'id' from the route params
+  return (
+    <div>
+      <h1>Product Page for product &#35; { id }</h1>
+    </div>
+  );
+}
+```
+
+### Example 3: Products Page (`src/pages/products/index.jsx`)
+```jsx
+export default function ProductsPage() {
+  return (
+    <div>
+      <h1>Products Page</h1>
+    </div>
+  );
+}
+```
+
+---
+
+## **2. Splash Page (Home Page)**
+### **Step 1**: Create the Layout
+In `index.jsx`, build a splash page that includes the following:
+- **Header**
+- **Hero Image with Call-to-Action (CTA) Button**
+- **Brief Description**
+- **Footer**
+
+### **Step 2**: Break  Spash Page Into Components
+- Split the page into components, such as `Header`, `Footer`, `HeroSection`, and `Button`.
+- Verify each component works in Storybook.
+- Create a new story for each new component.
+- Remember, your Button component should accept a `label` prop.
+- If you like, you may have a prop that accepts a handleClick function.
+
+### **Step 3**: Example: Update the Button to handle click events
+
+- in `src/components/Button.jsx`:
+  ```jsx
+  export default function Button({ label, handleClick }) {
+    return (
+      <button onClick={handleClick} className="btn btn-primary">
+        {label}
+      </button>
+    );
+  }
+  ```
+- in `index.jsx`:
+  ```jsx
+  import Button from '../components/Button';
+  import { useRouter } from 'next/router';
+  ...
+  export default function Home() {
+    const router = useRouter();
+    function handleCtaClick() {
+      console.log('CTA button clicked!');
+      router.push('/signup');
+    }
+    return (
+      <div>
+      ...
+        <Button label="Sign Up Now" handleClick={handleCtaClick} />
+      ...
+      </div>
+    );
+  }
+  ```
+
+  This will allow the button to navigate to the signup page when clicked, but also keep the Button component flexible for other uses.
+
+### **Step 4**: Verify in Storybook
+
+Verify that your Button still works in Storybook.
+
+**git commit** with a message like "Add Button component with click handling."
+---
+
+## **3. Signup Page**
+
+Follow a similar process to the Splash page for the signup page and the rest of the pages. The goal is to build out your design, then break it into components. This will help you keep things organized. Focus on visual design and components. You will add functionality, like button clicks, later.
+
+### **Step 1**: Layout
+- Include the header and footer components from the splash page.
+- Add a form with the following fields:
+  - Name
+  - Email
+  - Password
+  - Submit Button
+
+### **Step 2**: Break the Form Into a Component
+- Create a `SignupForm` component and use the following prop:
+  - **`buttonLabel`**: A string that determines the button's text.
+- Use **PropTypes** to validate `buttonLabel` as a string.
+
+Example (Note 1: insert your own JSX and design choices into this component.) (Note 2: Don't forget to include PropTypes so you can validate the prop types in storybook.):
+```jsx
+import PropTypes from 'prop-types';
+import Button from '@/components/Button';
+
+export default function SignupForm({ buttonLabel }) {
+  return (
+    <form className="form">
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <Button label="Sign Up" handleClick={()=>{console.log("clicked sign up")}}/>
+    </form>
+  );
+}
+
+SignupForm.propTypes = {
+  buttonLabel: PropTypes.string.isRequired,
+};
+```
+
+### **Step 3**: Verify in Storybook
+- Verify your story for `SignupForm` with a mock button label.
+
+git commit with a message like "Add SignupForm component."
+
+---
+
 # Day One Setup for Coffee Shop Frontend
 
 ## Objective
