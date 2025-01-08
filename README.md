@@ -1,4 +1,4 @@
-# Day 2 Guide: Coffee Shop Frontend => https://coffee-shop-frontend-git-components-raqueldelamers-projects.vercel.app
+# Day 2 Guide: Coffee Shop Frontend => https://coffee-shop-frontend-azure.vercel.app
 
 ## Objective:  
 
