@@ -27,22 +27,21 @@
         "_id": 2
     },
     {
-        "name": "Croissant",
-        "description": "A buttery, flaky, French pastry named for its crescent shape.",
-        "price": 2.99,
-        "category": "Food",
-        "stock": 8,
-        "imageUrl": "/sample-images/croissant.jpg",
-        "_id": 3
-    },
-    
-    {
         "name": "Ruta Maya Coffee Beans",
         "description": "1lb Organic free trade coffee beans from Chiapas, Mexico.",
         "price": 12.99,
         "category": "Coffee",
         "stock": 10,
         "imageUrl": "/sample-images/product-coffee-beans.jpg",
+        "_id": 3
+    },
+    {
+        "name": "Croissant",
+        "description": "A buttery, flaky, French pastry named for its crescent shape.",
+        "price": 2.99,
+        "category": "Food",
+        "stock": 8,
+        "imageUrl": "/sample-images/croissant.jpg",
         "_id": 4
     },
     {
