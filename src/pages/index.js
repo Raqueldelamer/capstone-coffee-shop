@@ -24,7 +24,7 @@ export default function Home() {
   <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART"]} />
   <div style={divStyle}>
   <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
-  <center><TestButton label="SIGN UP" handleClick={handleCtaClick} className="mt-20 mx-auto"/></center>
+  <center><TestButton label="SIGN UP" handleClick={handleCtaClick} className="mt-60"/></center>
   </div>
   </>
   )
