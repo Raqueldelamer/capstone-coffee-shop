@@ -1,5 +1,5 @@
 import SignupForm from "@/components/SignUpForm";
-import Navbar from "@/components/Navbar";
+import NavBar from "@/components/Navbar";
 
 export default function Home() {
 
@@ -16,7 +16,7 @@ export default function Home() {
 
     return (
     <>  
-    <Navbar />
+    <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS"]} />
     <div style={divStyle}>
     <h1 className="text-yellow-200 drop-shadow-xl text-5xl text-center font-bold justify-stretch">SIGN UP BELOW!</h1>
     <SignupForm />

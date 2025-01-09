@@ -27,6 +27,15 @@
             "stock": 6,
             "imageUrl": "/sample-images/muffin.jpg",
             "_id": 3
+        },
+        {
+            "name": "Ruta Maya Coffee Beans",
+            "description": "Organic free trade coffee beans from Chiapas, Mexico.",
+            "price": 12.50,
+            "category": "Food",
+            "stock": 10,
+            "imageUrl": "/sample-images/product-coffee-beans.jpg",
+            "_id": 4
         }
     ],
     "user": "1"
