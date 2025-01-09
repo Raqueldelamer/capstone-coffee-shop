@@ -1,4 +1,4 @@
-# Day 3 ## **5. Product Page** => https://coffee-shop-frontend-azure.vercel.app
+# Day 3 ## **5. Product Page** => https://coffee-shop-frontend-azure.vercel.app/products
 
 ### **Step 1**: Layout
 - In `src/pages/products/[id].jsx`, create a layout for a single product page.
