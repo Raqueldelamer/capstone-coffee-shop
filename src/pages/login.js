@@ -1,4 +1,4 @@
-import SignupForm from "@/components/SignUpForm";
+import LoginForm from "@/components/LoginForm";
 import NavBar from "@/components/Navbar";
 
 export default function Home() {
@@ -19,8 +19,8 @@ export default function Home() {
     <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART"]} />
     <div style={divStyle}>
     <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 mt-10 mx-auto font-mono font-bold 
-    text-stroke-thick flex justify-around items-center w-full">SIGN UP BELOW!</h1>
-    <SignupForm />
+    text-stroke-thick flex justify-around items-center w-full">LOGIN BELOW!</h1>
+    <LoginForm />
     </div>
     </>
     )

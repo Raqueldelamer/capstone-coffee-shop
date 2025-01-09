@@ -1,8 +1,7 @@
+import Header from "@/components/Header";
 import products from '@/mocks/products.json';
 import ProductCard from '@/components/ProductCard';
 import Navbar from '@/components/Navbar';
-import Header from "@/components/Header";
-
 
 export default function ProductsPage() {
     const productsJSX = products.map((product) => {
@@ -20,9 +19,9 @@ export default function ProductsPage() {
     
     return (
         <>
-        <Navbar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS"]} />
+        <Navbar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART"]} />
         <Header headerText={"COFFEE, TEA, SNACK & READ!"}/>
-        <div className="grid grid-rows-3 grid-flow-col mx-0 justify-items-center">
+        <div className="grid grid-rows-3 grid-flow-col grid-cols-2 px-30 justify-items-center">
             {productsJSX}
         </div>
         </>

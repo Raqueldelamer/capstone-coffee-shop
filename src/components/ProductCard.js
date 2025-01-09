@@ -3,7 +3,7 @@ import Button from '@/components/Button';
 
 export default function ProductCard({ product }) {
     return (
-        <div className="card container text-center font-sans justify-stretch mt-40 mx-60 w-60">
+        <div className="container card text-center font-sans justify-center mx-auto w-44">
             <img src={product.imageUrl} alt={product.name} />
             <h3>{product.name}</h3>
             <p>{product.description}</p>

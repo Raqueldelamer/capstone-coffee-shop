@@ -9,13 +9,22 @@
         "_id": 0
     },
     {
+        "name": "Coffee: A Global History",
+        "description": "A book on the history of coffee by Jonathan Morris.",
+        "price": 10.99,
+        "category": "Merchandise",
+        "stock": 6,
+        "imageUrl": "/sample-images/coffee-book.jpg",
+        "_id": 1
+    },
+    {
         "name": "Cappuccino",
         "description": "An Italian coffee that is prepared with equal parts espresso, steamed milk, and milk froth.",
         "price": 3.99,
         "category": "Beverage",
         "stock": 5,
         "imageUrl": "/sample-images/cappuccino.jpg",
-        "_id": 1
+        "_id": 2
     },
     {
         "name": "Croissant",
@@ -24,18 +33,9 @@
         "category": "Food",
         "stock": 8,
         "imageUrl": "/sample-images/croissant.jpg",
-        "_id": 2
-    },
-    
-    {
-        "name": "Coffee: A global History",
-        "description": "A book on the history of coffee by Jonathan Morris.",
-        "price": 10.99,
-        "category": "Merchandise",
-        "stock": 6,
-        "imageUrl": "/sample-images/coffee-book.jpg",
         "_id": 3
     },
+    
     {
         "name": "Ruta Maya Coffee Beans",
         "description": "1lb Organic free trade coffee beans from Chiapas, Mexico.",
@@ -47,7 +47,7 @@
     },
     {
         "name": "Mariage Freres Tea Set",
-        "description": "Gift tea set. Lauded for their incomparable quality and masterfully nuanced blends, Mariage Frères has become synonymous with French tea culture.",
+        "description": "Lauded for their incomparable quality and masterfully nuanced blends, Mariage Frères has become synonymous with French tea culture.",
         "price": 40.99,
         "category": "Tea",
         "stock": 10,
