@@ -12,7 +12,7 @@ export default function Home() {
   }
   
   const divStyle = {
-    backgroundImage: 'url(/imgs/used-book-cafe-scaled.jpg)',
+    backgroundImage: 'url(/imgs/book-cafe.jpg)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundColor: 'black',
@@ -23,8 +23,8 @@ export default function Home() {
   <>  
   <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS"]} />
   <div style={divStyle}>
-  <Header headerText={"COFFEE OR TEA, SNACK & READ!"}/>
-  <center><TestButton label="Sign Up" handleClick={handleCtaClick} className="mt-10 mx-auto"/></center>
+  <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
+  <center><TestButton label="Sign Up" handleClick={handleCtaClick} className="mt-20 mx-auto"/></center>
   </div>
   </>
   )

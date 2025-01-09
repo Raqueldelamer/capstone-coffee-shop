@@ -8,6 +8,6 @@ export default meta;
 
 export const Default = {
   args: {
-    title: "COFFEE OR TEA, SNACK & READ!"
+    title: "COFFEE, TEA, SNACK & READ!"
   }
 };

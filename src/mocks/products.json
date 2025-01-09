@@ -10,7 +10,7 @@
     },
     {
         "name": "Cappuccino",
-        "description": "An Italian coffee drink that is traditionally prepared with equal parts espresso, steamed milk, and milk foam.",
+        "description": "An Italian coffee that is prepared with equal parts espresso, steamed milk, and milk froth.",
         "price": 3.5,
         "category": "Beverage",
         "stock": 5,
@@ -19,29 +19,39 @@
     },
     {
         "name": "Croissant",
-        "description": "A buttery, flaky, viennoiserie pastry named for its crescent shape.",
+        "description": "A buttery, flaky, French pastry named for its crescent shape.",
         "price": 2,
         "category": "Food",
         "stock": 8,
         "imageUrl": "/sample-images/croissant.jpg",
         "_id": 2
     },
+    
     {
-        "name": "Muffin",
-        "description": "A small, sweet baked good that is typically made with ingredients such as flour, sugar, eggs, and butter.",
-        "price": 2.5,
-        "category": "Food",
+        "name": "Coffee: A global History",
+        "description": "A book on the history of coffee by Jonathan Morris.",
+        "price": 10.99,
+        "category": "Merchandise",
         "stock": 6,
-        "imageUrl": "/sample-images/muffin.jpg",
+        "imageUrl": "/sample-images/coffee-book.jpg",
         "_id": 3
     },
     {
         "name": "Ruta Maya Coffee Beans",
-        "description": "Organic free trade coffee beans from Chiapas, Mexico.",
+        "description": "1lb Organic free trade coffee beans from Chiapas, Mexico.",
         "price": 12.55,
         "category": "Coffee",
         "stock": 10,
         "imageUrl": "/sample-images/product-coffee-beans.jpg",
+        "_id": 4
+    },
+    {
+        "name": "Mariage Freres Tea Set",
+        "description": "Gift tea set. Lauded for their incomparable quality and masterfully nuanced blends, Mariage Frères has become synonymous with French tea culture.",
+        "price": 40.99,
+        "category": "Tea",
+        "stock": 10,
+        "imageUrl": "/sample-images/french-tea.jpg",
         "_id": 4
     }
 ]

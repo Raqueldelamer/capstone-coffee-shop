@@ -5,7 +5,7 @@ export default function Home() {
 
 
     const divStyle = {
-        backgroundImage: 'url(/imgs/used-book-cafe-scaled.jpg)',
+        backgroundImage: 'url(/imgs/book-cafe.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundColor: 'black',
@@ -18,7 +18,8 @@ export default function Home() {
     <>  
     <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS"]} />
     <div style={divStyle}>
-    <h1 className="text-yellow-200 drop-shadow-xl text-5xl text-center font-bold justify-stretch">SIGN UP BELOW!</h1>
+    <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 mt-10 mx-auto font-mono font-bold 
+    text-stroke-thick flex justify-around items-center w-full">SIGN UP BELOW!</h1>
     <SignupForm />
     </div>
     </>

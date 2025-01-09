@@ -12,7 +12,7 @@
         },
         {
             "name": "Croissant",
-            "description": "A buttery, flaky, viennoiserie pastry named for its crescent shape.",
+            "description": "A buttery, flaky, pastry named for its crescent shape.",
             "price": 2,
             "category": "Food",
             "stock": 8,

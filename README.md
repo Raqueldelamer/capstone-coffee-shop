@@ -1,3 +1,123 @@
+# Day 3 ## **5. Product Page** => https://coffee-shop-frontend-azure.vercel.app
+
+### **Step 1**: Layout
+- In `src/pages/products/[id].jsx`, create a layout for a single product page.
+- Include a header and footer.
+- import the data from the mock products file at `src/mocks/products.json`.
+- Create a product card displaying:
+  - Product image
+  - Name
+  - Description
+  - Price
+  - Add to Cart Button
+
+**Starter code for Product Page**:
+```jsx
+import products from '../../mocks/products.json';
+import Button from '@/components/Button';
+import { useRouter } from 'next/router';
+
+export default function ProductPage() {
+  const router = useRouter();
+  const id = router.query.id;
+  const product = products[id] || {};;
+  return (
+    <div>
+      {/* TODO: Put this in CardProduct --> */}
+      <h1>{product.name}</h1>
+      <img src={product.imageUrl} alt={product.name} />
+      <p>{product.description}</p>
+      <p>${product.price}</p>
+      <Button title="Add to Cart"></Button>
+    </div>
+  );
+}
+```
+
+### **Step 2**: Break Into a `ProductCard` Component
+- Create or update your `ProductCard` component.
+- Pass the product data as a prop to the `ProductCard` component.
+- Use **PropTypes** to validate the product as an object.
+
+**Example**: Note: insert your own JSX and design choices into this component:
+```jsx
+import PropTypes from 'prop-types';
+import Button from '@/components/Button';
+
+export default function ProductCard({ product }) {
+  return (
+    <div className="card">
+      <img src={product.image} alt={product.name} />
+      <h3>{product.name}</h3>
+      <p>{product.description}</p>
+      <p>${product.price}</p>
+      <Button label="Add to Cart"/>
+    </div>
+  );
+}
+
+ProductCard.propTypes = {
+  product: PropTypes.object.isRequired,
+};
+```
+
+### **Step 3**: Verify in Storybook
+- Verify your story for `ProductCard` with mock product data.
+
+### **Step 4**: Update Product Page to include an event handler
+
+**Your challenge** is to create a function in `src/pages/products/[id].jsx` that will fire when the button is clicked. You can use `console.log` or `alert` to verify that the function is working.
+
+Look at the previous examples for how to pass a function to a component.
+
+git commit with a message like "Add Product page."
+
+---
+
+## **6. Products Page**
+
+The products page will display a list of products. You will use the `ProductCard` component to display each product. You will get the data from the mock products file and pass the data to the `ProductCard` components.
+
+- in `src/pages/products/index.jsx`, create a layout for the products page.
+- Use the `ProductCard` component to display a list of products.
+- Create mock data for products and iterate over them using `.map()`.
+- See [Rendering Lists](https://react.dev/learn/describing-the-ui#rendering-lists) in the React documentation for more information.
+
+Example:
+Note: you may put the mock data in a separate file and import it. You may also add test images to the `public` folder in your project.
+```jsx
+import ProductCard from '../components/ProductCard';
+import products from '../mocks/products.json';
+import '@/styles/products.css';
+
+// const products = [
+//   { _id: 1, name: 'Coffee A', description: 'Rich and smooth.', price: 10, image: '/coffee-a.jpg' },
+//   { _id: 2, name: 'Coffee B', description: 'Dark roast.', price: 12, image: '/coffee-b.jpg' },
+// ];
+
+export default function ProductsPage() {
+  const productsJSX = products.map((product) => {
+    // Use key prop every time you use map.
+    // This is a unique identifier for each product.
+    // React is not smart enough to keep track of the order of items in a list.
+    // so we need to give it help by providing a unique key prop.
+    return (<ProductCard key={product._id} product={product} />)
+  });
+  return (
+    <div className="products-grid">
+      {productsJSX}
+    </div>
+  );
+}
+```
+
+- Use Flexbox or Grid for layout.
+
+git commit with a message like "Add Products page to display multiple products."
+
+---
+
+
 # Day 2 Guide: Coffee Shop Frontend => https://coffee-shop-frontend-azure.vercel.app
 
 ## Objective:  
