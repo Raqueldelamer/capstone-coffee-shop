@@ -2,15 +2,25 @@ import products from '../../mocks/products.json';
 import Button from '@/components/Button';
 import { useRouter } from 'next/router';
 import ProductCard from '@/components/ProductCard';
+import Navbar from '@/components/Navbar';
+import Header from '@/components/Header';
 
 export default function ProductPage() {
   const router = useRouter();
   const id = router.query.id;
   const product = products[id]|| {};
+
+  function handleAddToCart() {
+    alert(product.name + ' added to Cart');
+  }
+
   return (
-    <div>
-      {/* TODO: Put this in CardProduct --> */}
-      <ProductCard product={product}/>
-    </div>
+    <>
+      <Navbar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART"]} />
+      <Header headerText={"COFFEE, TEA, SNACK & READ!"}/>
+      <div className="container mx-auto mt-5 px-4">
+      <ProductCard product={product} addToCart={handleAddToCart}/>
+      </div>
+    </>
   );
 }

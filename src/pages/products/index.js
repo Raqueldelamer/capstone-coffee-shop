@@ -1,17 +1,22 @@
+import Navbar from '@/components/Navbar';
 import Header from "@/components/Header";
 import products from '@/mocks/products.json';
 import ProductCard from '@/components/ProductCard';
-import Navbar from '@/components/Navbar';
 
 export default function ProductsPage() {
+
     const productsJSX = products.map((product) => {
         // Use key prop every time you use map.
         // This is a unique identifier for each product.
         // React is not smart enough to keep track of the order of items in a list.
         // so we need to give it help by providing a unique key prop.
-        return (
+        function addToCart() {
+            alert(product.name + " added to cart");
+        }
+        
+    return (
         <>
-        <ProductCard key={product._id} product={product} />
+        <ProductCard key={product._id} product={product} addToCart={addToCart} />
         </>
         
         )
