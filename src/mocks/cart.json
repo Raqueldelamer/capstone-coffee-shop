@@ -4,7 +4,7 @@
         {
             "name": "Espresso",
             "description": "A strong and concentrated coffee beverage.",
-            "price": 2.5,
+            "price": 1.99,
             "category": "Beverage",
             "stock": 10,
             "imageUrl": "/sample-images/espresso.jpg",
@@ -13,29 +13,20 @@
         {
             "name": "Croissant",
             "description": "A buttery, flaky, pastry named for its crescent shape.",
-            "price": 2,
+            "price": 2.99,
             "category": "Food",
             "stock": 8,
             "imageUrl": "/sample-images/croissant.jpg",
             "_id": 2
         },
         {
-            "name": "Muffin",
-            "description": "A small, sweet baked good that is typically made with ingredients such as flour, sugar, eggs, and butter.",
-            "price": 2.5,
-            "category": "Food",
-            "stock": 6,
-            "imageUrl": "/sample-images/muffin.jpg",
+            "name": "Cappuccino",
+            "description": "An Italian coffee that is prepared with equal parts espresso, steamed milk, and milk froth.",
+            "price": 3.99,
+            "category": "Beverage",
+            "stock": 5,
+            "imageUrl": "/sample-images/cappuccino.jpg",
             "_id": 3
-        },
-        {
-            "name": "Ruta Maya Coffee Beans",
-            "description": "Organic free trade coffee beans from Chiapas, Mexico.",
-            "price": 12.50,
-            "category": "Food",
-            "stock": 10,
-            "imageUrl": "/sample-images/product-coffee-beans.jpg",
-            "_id": 4
         }
     ],
     "user": "1"

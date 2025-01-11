@@ -21,7 +21,7 @@ export default function Home() {
 };
   return (
   <>  
-  <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART"]} />
+  <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
   <div style={divStyle}>
   <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
   <center><TestButton label="SIGN UP" handleClick={handleCtaClick} className="mt-60"/></center>

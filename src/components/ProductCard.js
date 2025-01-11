@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Button from '@/components/Button';
 
-export default function ProductCard({ product, addToCart }) {
+export default function ProductCard({ product, addToCart, buttonLabel }) {
     return (
         <div className="container card text-center font-sans justify-center mx-auto w-44">
             <img src={product.imageUrl} alt={product.name} />

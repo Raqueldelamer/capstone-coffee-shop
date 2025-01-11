@@ -16,9 +16,15 @@ export default function About() {
 
     return (
         <>  
-        <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART"]} />
+        <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
         <div style={divStyle}>
         <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
+        </div>
+        <div className="justify-self-center ml-auto mr-auto max-w-5xl text-yellow-200 text-med font-mono items-center round opacity-90 px-auto mt-25 text-wrap bg-black p-4 rounded shadow-lg mt-4">
+        <div className="card">
+            <p>About content.
+            </p>
+            </div>
         </div>
         </>
     )

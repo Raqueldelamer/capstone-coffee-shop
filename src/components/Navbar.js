@@ -9,6 +9,7 @@ export default function Navbar({ title, menuItems }) {
           <div><Link href="/login" className='hover:text-yellow-200'>{menuItems[2]}</Link></div>
           <div><Link href="/products" className='hover:text-yellow-200'>{menuItems[3]}</Link></div>
           <div><Link href="/cart" className='hover:text-yellow-200'>{menuItems[4]}</Link></div>
+          <div><Link href="/checkout" className='hover:text-yellow-200'>{menuItems[5]}</Link></div>
           </div>
 }
 Navbar.propTypes = {
