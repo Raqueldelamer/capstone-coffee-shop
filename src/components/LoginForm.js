@@ -4,12 +4,26 @@ import Button from '@/components/Button';
 
 export default function LoginForm({ buttonLabel, handleLogin }) {
     return (
-        
-    <form className="form text-yellow-500 mt-5 text-center font-sans text-l space-x-3 justify-around">
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <Button label="LOGIN" handleClick={handleLogin}/>
-    </form>
+    <div className="card bg-base-100 mx-auto justify-center flex-grow max-w-sm">
+        <div className="card-body justify-center">   
+        <form className="form-control text-yellow-500 mt-5 text-center font-sans text-l space-y-3">
+        <label className='label'>
+            <span className='label-text block mb-2'>Email</span>
+            <input type="email" placeholder="email" className="input input-bordered" />
+            </label>
+            <label className="label">
+            <span className='label-text block mb-2'>Password</span>
+            <input type="password" placeholder="password" className="input input-bordered " />
+            </label>
+            <label className="label form-control">
+                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+            </label>
+            <div className='form-control mb-3'>
+            <Button label="LOGIN" handleClick={handleLogin}/>
+            </div>
+        </form>
+        </div>
+    </div>
     );
 }
 
