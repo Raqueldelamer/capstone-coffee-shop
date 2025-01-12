@@ -24,7 +24,7 @@ export default function ProductsPage() {
     
     return (
         <>
-        <Navbar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
+        <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
         <Header headerText={"COFFEE, TEA, SNACK & READ!"}/>
         <div className="grid grid-rows-2 grid-flow-col grid-cols-3 hover:columns-3 px-30 justify-items-center">
             {productsJSX}

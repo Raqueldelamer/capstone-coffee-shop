@@ -16,7 +16,7 @@ export default function ProductPage() {
 
   return (
     <>
-      <Navbar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART"]} />
+      <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART"]} />
       <Header headerText={"COFFEE, TEA, SNACK & READ!"}/>
       <div className="container mx-auto mt-5 px-4">
       <ProductCard product={product} addToCart={handleAddToCart}/>

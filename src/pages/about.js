@@ -16,7 +16,7 @@ export default function AboutPage() {
 
     return (
         <>
-        <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
+        <NavBar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
         <div style={divStyle} >
         <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
         <About title= {"ABOUT"} />

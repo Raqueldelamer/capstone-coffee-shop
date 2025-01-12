@@ -22,12 +22,13 @@ export default function Home() {
 };
   return (
   <>  
-  <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
+  <NavBar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
   <div style={divStyle}>
   <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
   <center><TestButton label="SIGN UP HERE" handleClick={handleCtaClick} className="mb-40"/></center>
+  <br />
   <About title= {"ABOUT"} className="mt-20" />
   </div>
   </>
-  )
+  );
 }

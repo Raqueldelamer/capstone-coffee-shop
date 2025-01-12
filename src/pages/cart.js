@@ -27,7 +27,7 @@ export default function Cart() {
     
     return (
         <div>
-            <Navbar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
+            <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
             <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
             <h1 className="text-5xl mb-5 mt-10 mx-auto font-mono font-bold 
             text-stroke-thick flex justify-around items-center">Cart Contents</h1>

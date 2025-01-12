@@ -10,7 +10,7 @@ export default function CheckoutPage () {
 
     return (
         <div>
-            <Navbar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
+            <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
             <h1 className="form text-yellow-500 mt-5 text-center font-sans text-4xl space-x-6 justify-around">Check Out Page</h1>
             <form onSubmit={handleCheckout} className="flex flex-col space-y-4 mx-auto">
                 <label htmlFor="name">Name:</label>
