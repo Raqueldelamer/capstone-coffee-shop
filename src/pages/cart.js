@@ -34,6 +34,7 @@ export default function Cart() {
             <div className="flex flex-wrap">
                 {cartJSX}
             </div>
+            <Button />
         </div>
     )
 }

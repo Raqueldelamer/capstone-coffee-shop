@@ -18,7 +18,7 @@ export const Search = {
   }
 };
 
-export const Exit = {
+export const CART = {
   args: {
     label: "CART"
   }

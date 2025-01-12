@@ -8,7 +8,7 @@ export default function ProductCard({ product, addToCart, buttonLabel }) {
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <p>${product.price}</p>
-        <Button label="Add to Cart" handleClick={addToCart} />
+        <Button label={buttonLabel} handleClick={addToCart} />
     </div>
     );
 }
