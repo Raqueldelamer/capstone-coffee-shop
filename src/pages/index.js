@@ -2,6 +2,7 @@ import NavBar from "@/components/Navbar";
 import TestButton from "@/components/TestButton";
 import Header from "@/components/Header";
 import { useRouter } from 'next/router';
+import About from "@/components/About";
 
 export default function Home() {
 
@@ -24,7 +25,8 @@ export default function Home() {
   <NavBar menuItems={["HOME", "ABOUT", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
   <div style={divStyle}>
   <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
-  <center><TestButton label="SIGN UP" handleClick={handleCtaClick} className="mt-60"/></center>
+  <center><TestButton label="SIGN UP HERE" handleClick={handleCtaClick} className="mb-40"/></center>
+  <About title= {"ABOUT"} className="mt-20" />
   </div>
   </>
   )

@@ -31,7 +31,7 @@ export default function Cart() {
             <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
             <h1 className="text-5xl mb-5 mt-10 mx-auto font-mono font-bold 
             text-stroke-thick flex justify-around items-center">Cart Contents</h1>
-            <div className="flex flex-wrap">
+            <div className="flex-wrap grid grid-cols-3 ">
                 {cartJSX}
             </div>
             <Button />

@@ -3,11 +3,11 @@ import Button from '@/components/Button';
 
 export default function SignupForm({ handleSignIn }) {
   return (
-    <div className="card bg-base-100 flex-grow text-center max-w-sm">
-      <div className="card-body flex justify-center">
+    <div className="card bg-base-100 mx-auto justify-center flex-grow text-center max-w-sm">
+      <div className="card-body justify-center">
         <form className="form-control text-yellow-500 mt-5 text-center font-sans text-l space-y-3">
         <label className="label">
-          <span className='label-text block mb-2'>User Name</span>
+          <span className='label-text block mb-2'>User</span>
           <input type="text" placeholder="user name" className="input input-bordered"/>
         </label>
         <label className="label">
