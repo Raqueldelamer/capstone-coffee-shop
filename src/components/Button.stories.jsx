@@ -8,18 +8,18 @@ export default meta;
 
 export const Default = {
   args: {
-    label: "LOGIN"
+    label: "Sign Up"
   }
 };
 
-export const Search = {
+export const Login = {
   args: {
-    label: "PRODUCTS"
+    label: "Login"
   }
 };
 
 export const CART = {
   args: {
-    label: "CART"
+    label: "ADD to CART"
   }
 };
