@@ -1,7 +1,14 @@
 import SignupForm from "@/components/SignUpForm";
 import NavBar from "@/components/Navbar";
+import { useRouter } from "next/router";
 
-export default function Home() {
+export default function Signup() {
+    const router = useRouter();
+    
+    function signUp() {
+    alert("Thank you for Signing Up!");
+    router.push('/login');
+}
 
 
     const divStyle = {
@@ -14,13 +21,14 @@ export default function Home() {
     };
 
 
+
     return (
     <>  
-    <NavBar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
+    <NavBar menuItems={["HOME", "CART", "CHECKOUT"]} />
     <div style={divStyle}>
     <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 mt-10 mx-auto font-mono font-bold 
     text-stroke-thick flex justify-around items-center w-full">SIGN UP BELOW!</h1>
-    <SignupForm />
+    <SignupForm title="signup" handleSignUp={signUp} />
     </div>
     </>
     )

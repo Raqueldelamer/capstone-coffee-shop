@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '@/components/Button';
 
 export default function LoginForm({ buttonLabel, handleLogin }) {
+    
     return (
     <div className="card bg-base-100 mx-auto justify-center flex-grow max-w-sm">
         <div className="card-body justify-center">   

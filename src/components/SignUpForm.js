@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Button from '@/components/Button';
 
-export default function SignupForm({ handleSignIn }) {
+export default function SignupForm({ handleSignUp }) {
   return (
     <div className="card bg-base-100 mx-auto justify-center flex-grow text-center max-w-sm">
       <div className="card-body justify-center">
@@ -19,7 +19,7 @@ export default function SignupForm({ handleSignIn }) {
           <input type="password" placeholder="create password" className="input input-bordered" />
         </label>
       <div className='form-control mb-3'>
-        <Button label="Sign Up!"  className="btn btn-primary" handleClick={handleSignIn} />
+        <Button label="Sign Up!"  className="btn btn-primary" handleClick={handleSignUp} />
       </div>
       </form>
     </div>
@@ -29,5 +29,5 @@ export default function SignupForm({ handleSignIn }) {
 
 SignupForm.propTypes = {
   buttonLabel: PropTypes.string.isRequired,
-  handleSignIn: PropTypes.func.isRequired,
+  handleSignUp: PropTypes.func.isRequired,
 };
