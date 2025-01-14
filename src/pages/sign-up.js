@@ -24,9 +24,9 @@ export default function Signup() {
 
     return (
     <>  
-    <NavBar menuItems={["HOME", "CART", "CHECKOUT"]} />
+    <NavBar menuItems={["HOME", "LOGIN",]} />
     <div style={divStyle}>
-    <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 mt-10 mx-auto font-mono font-bold 
+    <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 mx-auto font-mono font-bold 
     text-stroke-thick flex justify-around items-center w-full">SIGN UP BELOW!</h1>
     <SignupForm title="signup" handleSignUp={signUp} />
     </div>
