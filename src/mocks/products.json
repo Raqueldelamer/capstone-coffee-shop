@@ -12,7 +12,7 @@
         "name": "Coffee: A Global History",
         "description": "A book on the history of coffee by Jonathan Morris.",
         "price": 10.99,
-        "category": "Merchandise",
+        "category": "Book",
         "stock": 6,
         "imageUrl": "/sample-images/coffee-book.jpg",
         "_id": 1
@@ -46,11 +46,29 @@
     },
     {
         "name": "Mariage Freres Tea Set",
-        "description": "Lauded for their incomparable quality and masterfully nuanced blends, Mariage Frères has become synonymous with French tea culture.",
+        "description": "Lauded for their incomparable quality nuanced blends, Mariage Frères has become synonymous with French tea culture.",
         "price": 40.99,
         "category": "Tea",
         "stock": 10,
         "imageUrl": "/sample-images/french-tea.jpg",
         "_id": 5
+    },
+    {
+        "name": "The Ancient Art of Tea",
+        "description": "This book is a look at the philosophy, history, and culture of tea in China.",
+        "price": 15.99,
+        "category": "Book",
+        "stock": 10,
+        "imageUrl": "/sample-images/art-of-tea.png",
+        "_id": 6
+    },
+    {
+        "name": "Chocolate Dipped Espresso Beans",
+        "description": "Chocolate-Dipped Espresso Beans are the perfect combination of dark chocolate and roasted espresso beans.",
+        "price": 14.99,
+        "category": "Snack",
+        "stock": 10,
+        "imageUrl": "/sample-images/Espresso-beans.png",
+        "_id": 7
     }
 ]

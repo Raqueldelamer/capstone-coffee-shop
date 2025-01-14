@@ -1,8 +1,9 @@
 import NavBar from "@/components/Navbar";
-import TestButton from "@/components/TestButton";
 import Header from "@/components/Header";
+import TestButton from "@/components/TestButton";
 import { useRouter } from 'next/router';
 import About from "@/components/About";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 
@@ -29,6 +30,7 @@ export default function Home() {
   <br />
   <About title= {"ABOUT"} className="mt-20" />
   </div>
+  <Footer />
   </>
   );
 }

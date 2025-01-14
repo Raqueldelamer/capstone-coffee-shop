@@ -49,11 +49,12 @@ export default function Cart() {
         <div>
             <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
             <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
-            <h1 className="text-5xl mb-5 mt-10 mx-auto font-mono font-bold 
+            <h1 className="text-5xl mb-10 mt-10 font-mono font-bold 
             text-stroke-thick flex justify-around items-center">Cart Contents</h1>
-            <div className="flex-wrap grid grid-cols-3 ">
+            <div className="grid grid-cols-4 gap-4 ml-10">
                 {cartJSX}
             </div>
+            
             
         </div>
     )

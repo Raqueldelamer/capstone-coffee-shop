@@ -1,5 +1,6 @@
 import LoginForm from "@/components/LoginForm";
 import NavBar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 
 export default function Login() {
@@ -30,6 +31,7 @@ export default function Login() {
     text-stroke-thick flex justify-around items-center w-full">LOGIN BELOW!</h1>
     <LoginForm title="Login" handleLogin={login}/>
     </div>
+    <Footer />
     </>
     )
 }

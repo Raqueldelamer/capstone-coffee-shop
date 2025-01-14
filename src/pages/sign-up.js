@@ -1,5 +1,6 @@
 import SignupForm from "@/components/SignUpForm";
 import NavBar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 
 export default function Signup() {
@@ -30,6 +31,7 @@ export default function Signup() {
     text-stroke-thick flex justify-around items-center w-full">SIGN UP BELOW!</h1>
     <SignupForm title="signup" handleSignUp={signUp} />
     </div>
+    <Footer />
     </>
     )
 }
