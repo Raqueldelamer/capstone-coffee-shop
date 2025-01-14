@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
 
 
-
-
-
-
-
 export default function About({ title, handleCtaClick }) {
     return (
     <div className="card justify-stretch bg-base-200 mx-auto w-96 shadow-xl">

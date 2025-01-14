@@ -1,9 +1,30 @@
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Header from "@/components/Header";
-import products from '@/mocks/products.json';
+import data from '@/mocks/products.json';
 import ProductCard from '@/components/ProductCard';
+import { loadCartFromLocalStorage, saveCartToLocalStorage } from '@/utils';
+// import Button from '@/components/Button';
+
 
 export default function ProductsPage() {
+    const [products, setProducts] = useState([]);
+    const [cartContents, setCartContents] = useState([]);
+
+    useEffect(() => { 
+
+        const cartData = loadCartFromLocalStorage();
+        
+        setCartContents(cartData);
+        setProducts(data)
+
+    }, []);
+
+    function addProductToCart(product) {
+        const newCartContents = [ ...cartContents, product ];
+        setCartContents(newCartContents);
+        saveCartToLocalStorage(newCartContents);
+    }
 
     const productsJSX = products.map((product) => {
         // Use key prop every time you use map.
@@ -12,13 +33,14 @@ export default function ProductsPage() {
         // so we need to give it help by providing a unique key prop.
         function addToCart() {
             alert(product.name + " added to cart!");
+            addProductToCart(product);
         }
 
     return (
-        <>
-        <ProductCard key={product._id} product={product} addToCart={addToCart} />
-        </>
         
+        <ProductCard key={product._id} product={product} addToCart={addToCart} />
+
+
         )
     });
     

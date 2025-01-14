@@ -1,27 +1,47 @@
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import ProductCard from "@/components/ProductCard";
-import Button from "@/components/Button";
-import cart from "@/mocks/cart.json";
+//import Button from "@/components/Button";
+// import cart from "@/mocks/cart.json";
+import { loadCartFromLocalStorage, saveCartToLocalStorage } from "@/utils";
 
 
 export default function Cart() {
-    console.log(cart);
-    console.log(cart.products);
-    const cartContents= cart.products || [];
+    const [cartContents, setCartContents] = useState([]);
+
+    useEffect(() => {
+
+        const cartData = loadCartFromLocalStorage();
+        setCartContents(cartData);
+
+    }, []);
+
+    function removeFromCart(productId) {
+        // Remove the product from the cart array
+        const updatedCart = cartContents.filter(product => product._id!==productId);
+
+        // Save the updated cart back to local storage
+        saveCartToLocalStorage(updatedCart);
+         // Update the state with the new cart contents
+        setCartContents(updatedCart);
+
+        alert("Product removed from cart!" );
+    }
+    
     const cartJSX = cartContents.map((product) => {
 
-    function removeFromCart() {
-        alert(product.name + " removed from cart!" );
+    //function removeFromCart() {
+    ///    alert(product.name + " removed from cart!" );
         
-    }
+    //}
         return (
             
             <ProductCard 
             key={product._id} 
             product={product} 
             buttonLabel="Remove from Cart" 
-            addToCart={removeFromCart} />
+            addToCart={() => removeFromCart(product._id)} />
         );
     });
     
@@ -34,7 +54,7 @@ export default function Cart() {
             <div className="flex-wrap grid grid-cols-3 ">
                 {cartJSX}
             </div>
-            <Button />
+            
         </div>
     )
 }
