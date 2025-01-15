@@ -47,7 +47,7 @@ export default function ProductsPage() {
     
     return (
         <>
-        <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
+        <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART"]} />
         <Header classname="justify-items-center" headerText={"COFFEE, TEA, & READ!"}/>
         <center><h1 className="text-5xl mb-10 mt-10 font-mono font-bold 
             text-stroke-thick justify-center">Products In Stock</h1></center>
