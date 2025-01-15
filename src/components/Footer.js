@@ -3,7 +3,7 @@ export default function Footer() {
     return (
 
 <footer className="footer bg-neutral text-neutral-content items-center p-4">
-    <aside className="grid-flow-col items-center">
+    <aside className="grid-flow-col items-center mb-0">
     <svg xmlns="http://www.w3.org/2000/svg" 
         width={30} 
         height={30} 

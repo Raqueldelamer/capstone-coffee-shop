@@ -51,7 +51,7 @@ export default function Cart() {
             <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
             <h1 className="text-5xl mb-10 mt-10 font-mono font-bold 
             text-stroke-thick flex justify-around items-center">Cart Contents</h1>
-            <div className="grid grid-cols-4 gap-4 ml-10">
+            <div className="grid grid-cols-4 gap-4 justify-items-center ml-10">
                 {cartJSX}
             </div>
             

@@ -45,8 +45,8 @@
         "_id": 4
     },
     {
-        "name": "Mariage Freres Tea Set",
-        "description": "Lauded for their incomparable quality nuanced blends, Mariage Frères has become synonymous with French tea culture.",
+        "name": "French Tea Set",
+        "description": "Incomparable quality tea blends and tea set, Mariage Frères has become synonymous with French tea culture.",
         "price": 40.99,
         "category": "Tea",
         "stock": 10,
@@ -63,8 +63,8 @@
         "_id": 6
     },
     {
-        "name": "Chocolate Dipped Espresso Beans",
-        "description": "Chocolate-Dipped Espresso Beans are the perfect combination of dark chocolate and roasted espresso beans.",
+        "name": "Chocolate Espresso Beans",
+        "description": "The perfect combination of dark chocolate and espresso beans.",
         "price": 14.99,
         "category": "Snack",
         "stock": 10,
