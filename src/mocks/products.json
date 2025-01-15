@@ -46,7 +46,7 @@
     },
     {
         "name": "French Tea Set",
-        "description": "Incomparable quality tea blends and tea set, Mariage Frères has become synonymous with French tea culture.",
+        "description": "Incomparable quality tea blends and tea set, Mariage Frères is synonymous with French tea culture.",
         "price": 40.99,
         "category": "Tea",
         "stock": 10,
@@ -54,7 +54,7 @@
         "_id": 5
     },
     {
-        "name": "The Ancient Art of Tea",
+        "name": "Ancient Art of Tea",
         "description": "This book is a look at the philosophy, history, and culture of tea in China.",
         "price": 15.99,
         "category": "Book",

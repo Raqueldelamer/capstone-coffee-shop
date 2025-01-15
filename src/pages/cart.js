@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
-//import Button from "@/components/Button";
 // import cart from "@/mocks/cart.json";
 import { loadCartFromLocalStorage, saveCartToLocalStorage } from "@/utils";
 
@@ -32,10 +31,6 @@ export default function Cart() {
     
     const cartJSX = cartContents.map((product) => {
 
-    //function removeFromCart() {
-    ///    alert(product.name + " removed from cart!" );
-        
-    //}
         return (
             
             <ProductCard 
@@ -50,8 +45,7 @@ export default function Cart() {
         <div>
             <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART"]} />
             <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
-            <h1 className="text-5xl mb-10 mt-10 font-mono font-bold 
-            text-stroke-thick flex justify-around items-center">Cart Contents</h1>
+            <h1 className="text-5xl mb-10 mt-10 font-mono font-bold text-stroke-thick flex justify-around items-center">Shopping Cart</h1>
             <div className="grid grid-cols-4 gap-4 justify-items-center ml-10">
                 {cartJSX}
             </div>
