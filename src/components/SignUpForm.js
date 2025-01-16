@@ -1,7 +1,23 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from '@/components/Button';
 
 export default function SignupForm({ buttonLabel, handleSignUp }) {
+
+  const [emailValue, setEmailValue] = useState("");
+  const [emailIsValid, setEmailIsValid] = useState(false);
+
+  function onEmailChange(event) {
+    console.log(event.target.value);
+
+    const newEmailValue = event.target.value;
+    if(newEmailValue.includes("@")) {
+      setEmailIsValid(true);
+    } else {
+      setEmailValue(false);
+    }
+    setEmailValue(event.target.value);
+  }
   
 
   return (
@@ -14,7 +30,11 @@ export default function SignupForm({ buttonLabel, handleSignUp }) {
         </label>
         <label className="label">
           <span className='label-text block mb-2'>Email</span>
-          <input type="email" placeholder="email" className="input input-bordered block max-w-full" />
+          <input type="email" 
+          onChange={onEmailChange} 
+          placeholder="email"
+          value={emailValue}
+          className="input input-bordered block max-w-full" />
         </label>
         <label className="label">
           <span className='label-text block mb-2'>Password</span>
