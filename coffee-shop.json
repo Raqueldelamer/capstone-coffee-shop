@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Espresso",
+        "description": "A strong and concentrated coffee beverage.",
+        "price": 1.99,
+        "category": "Beverage",
+        "stock": 10,
+        "imageUrl": "/sample-images/espresso.jpg",
+        "_id": 0
+    },
+    {
+        "name": "Coffee: A Global History",
+        "description": "A book on the history of coffee by Jonathan Morris.",
+        "price": 10.99,
+        "category": "Book",
+        "stock": 6,
+        "imageUrl": "/sample-images/coffee-book.jpg",
+        "_id": 1
+    },
+    {
+        "name": "Cappuccino",
+        "description": "An Italian coffee that is prepared with equal parts espresso, steamed milk, and milk froth.",
+        "price": 3.99,
+        "category": "Beverage",
+        "stock": 5,
+        "imageUrl": "/sample-images/cappuccino.jpg",
+        "_id": 2
+    },
+    {
+        "name": "Ruta Maya Coffee Beans",
+        "description": "2 lbs Organic free trade coffee beans from Chiapas, Mexico.",
+        "price": 13.99,
+        "category": "Coffee",
+        "stock": 10,
+        "imageUrl": "/sample-images/product-coffee-beans.jpg",
+        "_id": 3
+    },
+    {
+        "name": "Croissant",
+        "description": "A buttery, flaky, French pastry named for its crescent shape.",
+        "price": 2.99,
+        "category": "Food",
+        "stock": 8,
+        "imageUrl": "/sample-images/croissant.jpg",
+        "_id": 4
+    },
+    {
+        "name": "French Tea Set",
+        "description": "Incomparable quality tea blends and tea set, Mariage Frères is synonymous with French tea culture.",
+        "price": 40.99,
+        "category": "Tea",
+        "stock": 10,
+        "imageUrl": "/sample-images/french-tea.jpg",
+        "_id": 5
+    },
+    {
+        "name": "Ancient Art of Tea",
+        "description": "This book is a look at the philosophy, history, and culture of tea in China.",
+        "price": 15.99,
+        "category": "Book",
+        "stock": 10,
+        "imageUrl": "/sample-images/art-of-tea.png",
+        "_id": 6
+    },
+    {
+        "name": "Chocolate Espresso Beans",
+        "description": "The perfect combination of dark chocolate and espresso beans.",
+        "price": 14.99,
+        "category": "Snack",
+        "stock": 10,
+        "imageUrl": "/sample-images/Espresso-beans.png",
+        "_id": 7
+    }
+]
