@@ -1,3 +1,56 @@
+#### **Day 3: API Integration and Prop Management**
+- [x] **Goals:**
+  - Create and test **non-authenticated** API endpoints (API v1).
+  - Implement **useQuery** for efficient data fetching.
+  - Set up prop passing and drilling for key features:
+    - Login/Logout functionality.
+    - Add to Cart/Remove from Cart.
+    - Product management: Create, Update, Delete, List, and Show products.
+
+- **Key Deliverables:**
+  - Working API v1 endpoints.
+  - Basic product and user interactions integrated with the UI.
+
+---
+
+#### **Day 4: Authentication and API v2**
+- [x] **Goals:**
+  - Develop an **Auth Provider Context** to manage user authentication.
+  - Build and test **authenticated** API endpoints (API v2) for secure operations.
+
+- **Key Deliverables:**
+  - Authenticated routes and operations.
+  - Context-based authentication handling in the app.
+
+---
+
+#### **Day 5: Shopping Cart Feature**
+- [x] **Goals:**
+  - Build a **shopping cart sidebar/popup** for user-friendly cart interactions.
+  - Ensure seamless integration with the cart functionality implemented on Day 3.
+
+- **Key Deliverables:**
+  - Interactive shopping cart with add/remove item functionality.
+  - Fully integrated shopping cart experience.
+
+---
+
+### **Key Tools & Technologies**
+- **Frontend:** Next.js, DaisyUI, Storybook, React Hooks (useState, useQuery)
+- **Backend:** Node.js, API v1 (non-auth) and API v2 (auth)
+- **Database:** (Database type to be decided: e.g., MongoDB, PostgreSQL)
+- **Version Control:** Git/GitHub
+
+---
+
+### **Expected Outcome**
+By the end of Day 5, the project will be a fully functional e-commerce application with:
+- Modular and reusable components.
+- Secure and efficient API endpoints.
+- A user-friendly shopping cart.
+- A robust authentication system.
+
+
 # Day 3 ## **5. Product Page** => https://coffee-shop-frontend-azure.vercel.app/products
 
 ### **Step 1**: Layout
@@ -454,19 +507,19 @@ Live link: ...
 
 ## Components
 
-- [ ] Navbar
-- [ ] Footer
-- [ ] Button
+- [x] Navbar
+- [x] Footer
+- [x] Button
 - [ ] Loader
 - [ ] Toast
-- [ ] ProductCard
+- [x] ProductCard
 - [ ] CartItem
-- [ ] CartSummary
+- [x] CartSummary
 
 ## Features
-- [ ] Tailwind CSS with DaisyUI integration.
-- [ ] Storybook for component development.
-- [ ] Component stubs for all components.
+- [x] Tailwind CSS with DaisyUI integration.
+- [x] Storybook for component development.
+- [x] Component stubs for all components.
 
 ## Setup
 If you would like to try this project out or contribute, follow these steps:
