@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import Button from '@/components/Button';
 
-export default function SignupForm({ handleSignUp }) {
+export default function SignupForm({ buttonLabel, handleSignUp }) {
+  
+
   return (
     <div className="card bg-base-100 mx-auto justify-center flex-grow text-center max-w-sm">
       <div className="card-body justify-center">

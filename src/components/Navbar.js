@@ -19,7 +19,7 @@ export default function Navbar({ title, menuItems }) {
           {/* Cart Icon and Link to Cart.js */}
           <div className='flex justify-end space-x-1 ml-2 mr-4'><Link href="/cart" className='flex items-center text-xl hover:text-yellow-200'>
           <CartIcon /><span>{menuItems[3]}</span></Link></div>
-          <div><Link href="/checkout" className='hover:text-yellow-200'>{menuItems[4]}</Link></div>
+          <div><Link href="/checkout" className='hover:text-yellow-200 text-xl'>{menuItems[4]}</Link></div>
           </div>
       
     )

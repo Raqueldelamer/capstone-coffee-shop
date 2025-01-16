@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 // import cart from "@/mocks/cart.json";
+import Button from "@/components/Button";
 import { loadCartFromLocalStorage, saveCartToLocalStorage } from "@/utils";
 
 
 export default function Cart() {
     const [cartContents, setCartContents] = useState([]);
+    const router = useRouter();
 
     useEffect(() => {
 
@@ -29,17 +32,20 @@ export default function Cart() {
         alert("Product removed from cart!" );
     }
     
-    const cartJSX = cartContents.map((product) => {
+    function handleCheckout() {
+        alert("Checkout button clicked!");
+        router.push("/checkout");
+    }
 
-        return (
-            
+    
+    const cartJSX = cartContents.map((product) => (
+
             <ProductCard 
             key={product._id} 
             product={product} 
             buttonLabel="Remove from Cart" 
             addToCart={() => removeFromCart(product._id)} />
-        );
-    });
+    ));
     
     return (
         <div>
@@ -49,6 +55,12 @@ export default function Cart() {
             <div className="grid grid-cols-4 gap-4 justify-items-center ml-10">
                 {cartJSX}
             </div>
+        <div className="m-4 text-center">
+            <Button
+            label={"Checkout Here"}
+            handleClick={handleCheckout}
+            variant="btn-info btn-wide" />
+        </div>
             <Footer />
         </div>
     )
