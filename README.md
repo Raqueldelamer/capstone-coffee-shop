@@ -7,7 +7,7 @@ Today, you will add functionality to your Coffee Shop frontend project. You will
 
 - [x] **Step 1: Create Stub Functions**
 - [x] **Step 2: Implement Product List Page Functionality**
-- [x]  **Step 3: Verify in Storybook
+- [x] **Step 3: Verify in Storybook**
 - [x] **Step 4: Implement Shopping Cart Page Functionality**
 - [x] **Step 6: Implement Login and Register Pages**
 
