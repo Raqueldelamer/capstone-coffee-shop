@@ -1,28 +1,247 @@
-#### **Day 3: API Integration and Prop Management**
-- [x] **Goals:**
-  - Create and test **non-authenticated** API endpoints (API v1).
-  - Implement **useQuery** for efficient data fetching.
-  - Set up prop passing and drilling for key features:
-    - Login/Logout functionality.
-    - Add to Cart/Remove from Cart.
-    - Product management: Create, Update, Delete, List, and Show products.
+# Guide: Coffee Shop Frontend Project
 
-- **Key Deliverables:**
-  - Working API v1 endpoints.
-  - Basic product and user interactions integrated with the UI.
+Live link that displays steps initialized and completed: https://coffee-shop-frontend-azure.vercel.app
+
+## Objective:  
+Today, you will add functionality to your Coffee Shop frontend project. You will implement stub functions to handle user interactions, manipulate mock data, and save it to localStorage. By the end of the day, you will have a functional frontend with mock data that will serve as a foundation for connecting to a backend in the future.
+
+## - [x] **Step 1: Create Stub Functions**
+## - [x] **Step 2: Implement Product List Page Functionality**
+### - [x]  **Step 3**: Verify in Storybook
+## - [x] **Step 4: Implement Shopping Cart Page Functionality**
+## - [x] **Step 6: Implement Login and Register Pages**
+
+
+
+## Step 0: **Setup .env File and Connect to Backend**
+
+1. **Create `.env.local` File**:
+
+   ```plaintext
+   NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+   NEXT_PUBLIC_API_BASE_URL_PROD=https://api.onrender.com
+   ```
+
+2. **Connect to Backend**:
+   - Create a simple component:
+
+     ```javascript
+     // components/HelloBackend.js
+     import api from '../utils/api';
+
+     export default function HelloBackend() {
+       const fetchGreeting = async () => {
+         const response = await api.get('/hello-world');
+         console.log(response.data);
+       };
+
+       fetchGreeting();
+
+       return <div>Hello Backend</div>;
+     }
+     ```
+
+3. **Test Backend Connection**:
+   - Verify the console logs the response from the backend.
 
 ---
 
-#### **Day 4: Authentication and API v2**
-- [x] **Goals:**
-  - Develop an **Auth Provider Context** to manage user authentication.
-  - Build and test **authenticated** API endpoints (API v2) for secure operations.
+## **Step 1: Create Stub Functions**
 
-- **Key Deliverables:**
-  - Authenticated routes and operations.
-  - Context-based authentication handling in the app.
+### **Instructions**:
+1. **Stub Functions**: Create empty functions in the respective Page components. For now, these will log messages to the console or display alerts.
+2. **Placement**:
+   - Add the functions inside the **Page function** of each page.
+   - Some will be triggered on page load using `useEffect`.
+   - Others will be triggered by button clicks.
+3. **Prop Drilling**: Pass functions as props to child components where needed.
+
+### **List of Stub Functions and Locations**:
+| **Page/Component**             | **Functions to Add**                          |
+|---------------------------------|-----------------------------------------------|
+| **Header Component**            | `goToLogin`, `goToSignup`                     |
+| **Register Page** (`signup.jsx`) | `registerUser(user)`                          |
+| **Login Page** (`login.jsx`)    | `signInUser(username, password)`              |
+| **Product List Page**           | `loadProducts()`, `filterProducts(category, start, limit)`, `viewProduct(product)` |
+| **Product Display Page**        | `fetchProduct(id)`, `addToCart(product)`      |
+| **Cart Page**                   | `loadCart()`, `addToCart(product)`, `removeFromCart(product)`, `saveCartToLocalStorage(cart)` |
+| **Utility Functions** (`util/index.js`) | `loadProductsFromLocalStorage`, `loadCartFromLocalStorage`, `saveCartToLocalStorage`, `saveProductsToLocalStorage`, `saveUserToLocalStorage`, `loginUserToLocalStorage` |
+
+### **Example**:
+```javascript
+// src/pages/cart.jsx
+import { useEffect, useState } from 'react';
+
+import ProductCard from '@/components/ProductCard';
+
+// Stub data for Cart Page
+import data from '@/mocks/cart.json';
+
+export default function CartPage() {
+  const [cart, setCart] = useState([]);
+
+// Stub functions for Cart Page
+  const loadCart = () => console.log("Cart loaded");
+  const addToCart = (product) => console.log(`Added ${product.name} to cart`);
+  const removeFromCart = (product) => console.log(`Removed ${product.name} from cart`);
+  const saveCartToLocalStorage = (cart) => console.log("Cart saved to localStorage");
+
+  // use useEffect to put initialization code.
+  useEffect(() => {
+    loadCart();
+    setCart([...data]);
+  }, []);
+
+  const handleClick = (product) => {
+    addToCart(product);
+  };
+
+  // Note how we pass the handleClick function to the ProductCard component.
+  // This will passed again to the button in the ProductCard component.
+  // Passing a prop multiple times is called prop drilling.
+  return (<div>
+  <h1>Shopping Cart: {cart.length} items in cart</h1>
+  {cart.map((product) => (
+    <ProductCard 
+      key={product.id}
+      product={product}
+      handleClick={() => handleClick(product)} 
+    />
+  ))}
+
+  </div>);
+}
+```
+
+### **Git Commit**:
+```bash
+git add src/pages/ src/components/ src/util/
+git commit -m "Add stub functions for each page and utility functions for localStorage"
+```
 
 ---
+
+## **Step 2: Implement Product List Page Functionality**
+
+### **Instructions**:
+1. Replace stub functions with real functionality to:
+   - Load and filter products.
+   - Pass `viewProduct` to the button in `ProductCard` using **prop drilling**.
+2. Use mock data to populate the product list.
+   - check the Appendix at the end of this document for examples of mock data and utility functions.
+
+Observe how the `viewProduct` function is passed down to the `ProductCard` component and then to the `Button` component. This is an example of **prop drilling**. You will often use this technique to pass functions down to child components. It can be tedious, but it's a common pattern in React.
+
+Example of `viewProduct` function:
+```javascript
+// in src/pages/products/index.jsx
+const viewProduct = (product) => {
+  router.push(`/products/${product.id}`);
+};
+...
+<ProductCard product={product} handleClick={() => viewProduct(product)} />
+...
+```
+
+```javascript
+// in src/components/ProductCard.jsx
+<Button handleClick={() => handleClick(product)}>View Product</button>
+```
+
+```javascript
+// in src/components/Button.jsx
+export default function Button({ handleClick, label }) {
+  return <button onClick={handleClick}>{label}</button>;
+}
+```
+
+
+### **Git Commit**:
+```bash
+git add src/pages/products/
+git commit -m "Implement functionality for Product List Page with mock data and prop drilling"
+```
+
+---
+
+## **Step 3: Implement Product Display Page Functionality**
+
+### **Instructions**:
+1. Use `fetchProduct(id)` to load mock product data by ID.
+2. Pass `addToCart` into the button in the `ProductCard` component using **prop drilling**.
+
+### **Git Commit**:
+```bash
+git add src/pages/products/[id].jsx
+git commit -m "Implement functionality for Product Display Page with addToCart prop drilling"
+```
+
+---
+
+## **Step 4: Implement Shopping Cart Page Functionality**
+
+### **Instructions**:
+1. Replace the stub functions for `loadCart`, `addToCart`, `removeFromCart`, and `saveCartToLocalStorage` with real functionality.
+2. Use mock cart data for testing.
+
+### **Git Commit**:
+```bash
+git add src/pages/cart.jsx
+git commit -m "Implement functionality for Shopping Cart Page with mock cart data"
+```
+
+---
+
+## **Step 5: Implement Checkout Page Functionality**
+
+### **Instructions**:
+1. Add functionality to collect checkout information and save it to localStorage.
+2. Use a mock JSON object for order details.
+
+### Part 1: Implement a controlled form for checkout details:
+
+Controlled forms are a common pattern in react. React can't access the forms directly, so we need to `useState` and an `eventHandler` to manage the form data as it changes.
+
+
+Part 2: Implement a function to save the order details to localStorage.
+
+After the form is submitted (see the last video above), you can save the order details to localStorage. You can use the `saveCartToLocalStorage` function as a reference.
+
+### **Git Commit**:
+```bash
+git add src/pages/checkout.jsx
+git commit -m "Implement functionality for Checkout Page with mock order data"
+```
+
+---
+
+## **Step 6: Implement Login and Register Pages**
+
+### **Instructions**:
+1. Replace the stub functions in `registerUser` and `signInUser` with functionality to save user data to localStorage.
+2. Validate user credentials on the login page using mock data.
+
+Be sure to implement controlled forms for the login and register pages. Then save the data to localStorage using the utility functions.
+
+### **Git Commit**:
+```bash
+git add src/pages/signup.jsx src/pages/login.jsx
+git commit -m "Implement functionality for Login and Register Pages with localStorage"
+```
+
+---
+
+## **Utility Functions in `/src/util/index.js`**
+
+### **Shared Functions**:
+1. `loadProductsFromLocalStorage()`: Returns products.
+2. `loadCartFromLocalStorage()`: Returns the cart.
+3. `saveCartToLocalStorage(cart)`: Saves cart to localStorage.
+4. `saveProductsToLocalStorage(products)`: Saves products to localStorage.
+5. `saveUserToLocalStorage(user)`: Saves user to localStorage.
+6. `loginUserToLocalStorage(user)`: Saves logged-in user to localStorage.
+
+
 
 #### **Day 5: Shopping Cart Feature**
 - [x] **Goals:**
