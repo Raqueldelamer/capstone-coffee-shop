@@ -5,8 +5,8 @@ import { useRouter } from 'next/router';
 import ProductCard from '@/components/ProductCard';
 import Navbar from '@/components/Navbar';
 import Header from '@/components/Header';
-import { useQuery } from '@tanstack/react-query';
-import { fetchProduct } from '@/utils/api';
+// import { useQuery } from '@tanstack/react-query';
+// import { fetchProduct } from '@/utils/api';
 
 export default function ProductPage() {
   const router = useRouter();
