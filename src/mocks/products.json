@@ -19,7 +19,7 @@
     },
     {
         "name": "Cappuccino",
-        "description": "An Italian coffee that is prepared with equal parts espresso, steamed milk, and milk froth.",
+        "description": "An Italian coffee with equal parts espresso, steamed milk, and milk froth.",
         "price": 3.99,
         "category": "Beverage",
         "stock": 5,
