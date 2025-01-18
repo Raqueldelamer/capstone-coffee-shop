@@ -24,13 +24,12 @@ export default function CheckoutForm({ handleCheckout }) {
     function handleFormSubmit(e) {
         e.preventDefault();
 
-        // Call the parent function to handle the checkout
         handleCheckout(name, address, city, state, zipcode, cardInfo);
 
-        // Show confirmation alert
+        // confirmation alert
         alert("Thank you for your order!");
 
-        // Optionally, reset form fields after submission (if needed)
+        // reset form fields after submit
         setName("");
         setAddress("");
         setCity("");
