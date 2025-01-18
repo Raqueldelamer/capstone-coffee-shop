@@ -79,7 +79,7 @@ export default function Cart() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
                 {cartJSX}
             </div>
-            <CartSummary subtotal={subtotal} tax={tax} total={total} />   
+ 
         <div className="m-4 mt-10 mb-11 text-center">
             <Button
             label={"Proceed to Checkout"}
