@@ -17,7 +17,7 @@ export default function Login() {
         backgroundImage: 'url(/imgs/book-cafe.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundColor: 'black',
+        backgroundColor: 'brown',
         height: '100vh',
         color: 'black',
     };

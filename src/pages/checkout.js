@@ -1,38 +1,52 @@
 import Navbar from "@/components/Navbar";
-import Button from "@/components/Button";
-import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
+//import Button from "@/components/Button";
+import CheckoutForm from "@/components/CheckoutForm";
+import CartSummary from "@/components/CartSummary";
+import Footer from "@/components/Footer";
+import { useRouter } from "next/router";
+
 
 export default function CheckoutPage () {
+    const router = useRouter();
 
-    function handleCheckout() {
+    // get subtotal, tax & total from url query parameters
+    const { subtotal, tax, total } = router.query;
+
+    const divStyle = {
+        backgroundImage: 'url(/imgs/book-cafe.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor: 'brown',
+        height: '100vh',
+    };
+
+
+    function handleCheckout(name, address, city, state, zipcode) {
         alert('Submit Clicked!');
+        console.log('Checkout Info:', { name, address, city, state, zipcode });
     }
+    
+
 
     return (
-        <div>
-            <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
-            <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
-            <div className="px-20">
-            <h1 className="form text-yellow-500 mt-5 text-center font-mono text-4xl space-x-6 justify-around">Check Out Page</h1>
-            <form onSubmit={handleCheckout} className="flex flex-col mx-auto">
-                <label htmlFor="name">Name:</label>
-                <input type="text" className="space-x-20" placeholder="" id="name" />
-                
-                <label htmlFor="address">Address:</label>
-                <input type="text" placeholder="" id="address" />
-
-                <label htmlFor="city">City:</label>
-                <input type="text" placeholder="" id="city" />
-
-                <label htmlFor="zipcode">Zip Code:</label>
-                <input type="text" placeholder="" id="zipcode" />
-                
-
-                <Button label="Submit" className="btn btn-primary border border-black text-black font-bold py-2 px-4 rounded" />
-            </form>
-            </div>
+    
+        <>
             
-        </div>
-    )
+            <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
+            <div style={divStyle}>
+            <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 mx-auto font-mono font-bold 
+                text-stroke-thick flex justify-around items-center w-full"> CHECK OUT FORM</h1>
+        
+            <div className="m-4 flex justify-evenly items-start gap-4">
+                <CheckoutForm handleCheckout={handleCheckout}  />
+            <div className="rounded-lg shadow-lg">
+                <CartSummary subtotal={subtotal} tax={tax} total={total} />
+            </div>
+            </div>
+            </div>
+            <Footer />
+            
+        </>
+        
+    );
 }
