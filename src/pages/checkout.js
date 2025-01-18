@@ -40,7 +40,7 @@ export default function CheckoutPage () {
             </div>
             </div>
             </div>
-            <Footer />
+            <Footer className="flex justify-items-end" />
             
         </>
         

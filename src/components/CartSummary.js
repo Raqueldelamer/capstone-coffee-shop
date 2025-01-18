@@ -14,6 +14,10 @@ export default function CartSummary({ subtotal, tax, total }) {
                 <td>Sales tax (10%)</td>
                 <td>${tax}</td>
             </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>Free</td>
+            </tr>
             </tbody>
             <tfoot className="text-yellow-200 text-2xl font-mono">
             <tr >

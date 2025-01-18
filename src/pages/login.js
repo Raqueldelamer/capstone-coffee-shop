@@ -31,7 +31,7 @@ export default function Login() {
     text-stroke-thick flex justify-around items-center w-full">LOGIN BELOW!</h1>
     <LoginForm title="Login" handleLogin={login}/>
     </div>
-    <Footer />
+    <Footer className="flex justify-items-end" />
     </>
     )
 }

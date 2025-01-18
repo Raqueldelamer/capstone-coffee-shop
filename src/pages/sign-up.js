@@ -31,7 +31,7 @@ export default function Signup() {
     text-stroke-thick flex justify-around items-center w-full">SIGN UP BELOW!</h1>
     <SignupForm title="signup" handleSignUp={signUp} />
     </div>
-    <Footer />
+    <Footer className="flex justify-items-end" />
     </>
     )
 }

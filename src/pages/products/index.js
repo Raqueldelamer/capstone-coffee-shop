@@ -1,49 +1,70 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from "next/router";
 import Navbar from '@/components/Navbar';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import data from '@/mocks/products.json';
+// import data from '@/mocks/products.json';
 import ProductCard from '@/components/ProductCard';
 import { loadCartFromLocalStorage, saveCartToLocalStorage } from '@/utils';
+import { useFetch } from '@/hooks/api';
 // import Button from '@/components/Button';
-
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 export default function ProductsPage() {
-    const [products, setProducts] = useState([]);
+    const router = useRouter();
+    const { category } = router.query;
+    console.log(category);
+    //const [products, setProducts] = useState([]);
     const [cartContents, setCartContents] = useState([]);
+    const [url, setUrl] = useState(`${BACKEND_URL}/products`);
+    // fetch products using hook
+    const { data: products = [], loading, error } = useFetch(url, []);
+    //const [productFetchError, productsLoading, products] = useFetch (url, []);
 
-    useEffect(() => { 
-
+    useEffect(() => {
         const cartData = loadCartFromLocalStorage();
-        
         setCartContents(cartData);
-        setProducts(data)
-
     }, []);
-
+        
     function addProductToCart(product) {
-        const newCartContents = [ ...cartContents, product ];
+        const newCartContents = [...cartContents, product];
         setCartContents(newCartContents);
         saveCartToLocalStorage(newCartContents);
     }
 
-    const productsJSX = products.map((product) => {
-        // Use key prop every time you use map.
-        // This is a unique identifier for each product.
-        // React is not smart enough to keep track of the order of items in a list.
-        // so we need to give it help by providing a unique key prop.
-        function handleAddToCart() {
-            alert(product.name + " added to cart!");
-            addProductToCart(product);
+    // handling add to cart
+    function handleAddToCart(product) {
+        alert(`${product.name} added to cart!`);
+        addProductToCart(product);
+    }
+
+        if(loading) {
+            return <div className='text-xl ml-30 mb-10 mt-10 font-mono font-bold 
+            text-stroke-thick justify-center'>Loading products..</div>;
+        }
+        if(error) {
+            return <div>Error loading products: {error.message}</div>;
         }
 
-    return (
-        
-        <ProductCard key={product._id} product={product} addToCart={handleAddToCart} buttonLabel="Add to Cart" />
+    //function addProductToCart(product) {
+      //  const newCartContents = [ ...cartContents, product ];
+        //setCartContents(newCartContents);
+       // saveCartToLocalStorage(newCartContents);
+    //}
 
+    const productsJSX = Array.isArray(products) && products.length > 0 ? products.map((product) => (
+        <ProductCard
+            key={product._id}
+            product={product}
+            addToCart={() => handleAddToCart(product)}
+            buttonLabel="Add to Cart" />
+)) : <div className="text-2xl flex justify-items-center mb-10 mt-10 font-mono font-bold">No products available...</div>
 
-        )
-    });
+        //function handleAddToCart() {
+          //  alert(product.name + " added to cart!");
+            //addProductToCart(product);
+        //}
+
     
     return (
         <>
@@ -54,7 +75,7 @@ export default function ProductsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
             {productsJSX}
         </div>
-        <Footer />
+        <Footer className="flex justify-items-end" />
         </>
     );
 }

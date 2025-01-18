@@ -4,40 +4,45 @@ import Button from "./Button";
 
 
 export default function CheckoutForm ({ handleCheckout }) {
-    const [name, setName] = useState("");
-    const [address, setAddress] = useState("");
-    const [city, setCity] = useState("");
-    const [state, setState] = useState("");
-    const [zipcode, setZipcode] = useState("");
+    // values from localStorage
+    const [name, setName] = useState(localStorage.getItem("name") || "");
+    const [address, setAddress] = useState(localStorage.getItem("address") || "");
+    const [city, setCity] = useState(localStorage.getItem("city") || "");
+    const [state, setState] = useState(localStorage.getItem("state") || "");
+    const [zipcode, setZipcode] = useState(localStorage.getItem("zipcode") || "");
+    const [cardInfo, setCardInfo] = useState(localStorage.getItem("cardInfo") || "");
 
 
     function handleFormSubmit(e) {
         e.preventDefault();
-        //const name= event.target.elements.name.value;
-        //const address= event.target.elements.address.value;
-        //const city= event.target.elements.city.value;
-        //const state= event.target.elements.city.value;
-        //const zipcode= event.target.elements.zipcode.value;
+          // Save form data to localStorage
+        localStorage.setItem("name", name);
+        localStorage.setItem("address", address);
+        localStorage.setItem("city", city);
+        localStorage.setItem("state", state);
+        localStorage.setItem("zipcode", zipcode);
+        localStorage.setItem("cardInfo", cardInfo);
+        
+        handleCheckout(name, address, city, state, zipcode, cardInfo);
+        alert('Thank you for your order!');
 
-        // Reset on submit
+          // Reset on submit
         setName("");
         setAddress("");
         setCity("");
         setState("");
         setZipcode("");
-        
-        handleCheckout(name, address, city, state, zipcode);
-        alert('Thank you for your order!');
+        setCardInfo("");
     }
 
     return (
         <div className="bg-base-100 shadow-md rounded-lg p-8 max-w-md w-full">
             <div className="container justify-center">   
-            <h2 className="text-2xl font-mono font-semibold text-center mb-4">Fill Out Form</h2>
+            <h2 className="text-2xl font-mono font-semibold text-center mb-4">Payment Information</h2>
             <form onSubmit={handleFormSubmit} className="flex flex-col space-y-1">
                 <div className="form-control">
                 <label className="label-text">
-                    <span className="label-text">Name:</span>
+                    <span className="label">Name:</span>
                 </label>
                 <input className="input input-bordered w-full" 
                         type="text" 
@@ -100,12 +105,25 @@ export default function CheckoutForm ({ handleCheckout }) {
                         onChange={(e) => setZipcode(e.target.value)} />
                 </div>
 
+                <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Credit Card Info:</span>
+                </label>
+                <input className="input input-bordered w-full" 
+                        type="text" 
+                        placeholder="XXXX XXXX XXXX XXXX" 
+                        id="cardInfo" 
+                        name="cardInfo"
+                        required value={cardInfo}
+                        onChange={(e) => setCardInfo(e.target.value)} />
+                </div>
+
                 <Button label="Submit"
                         handleClick={handleFormSubmit} 
                         className="btn btn-primary border border-black text-black font-bold py-2 px-4 rounded" />
 
 
-            </form>
+                </form>
             </div>
         </div>
     )

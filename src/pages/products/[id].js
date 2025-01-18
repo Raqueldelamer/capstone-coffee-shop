@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import products from '../../mocks/products.json';
-import Button from '@/components/Button';
+//import products from '../../mocks/products.json';
+//import Button from '@/components/Button';
 import { useRouter } from 'next/router';
 import ProductCard from '@/components/ProductCard';
 import Navbar from '@/components/Navbar';
@@ -17,7 +17,7 @@ export default function ProductPage() {
 
   async function fetchProduct(id) {
     console.log("Fetching Product!");
-    const result = await fetch(`https://coffee-shop-backend-5fmn.onrender.com/api/v1/products/${id}`);
+    const result = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products/${id}`);
     const product = await result.json();
     setProduct(product);
   }

@@ -86,7 +86,7 @@ export default function Cart() {
             handleClick={handleCheckout}
             variant="btn-info btn-wide" />
         </div>
-            <Footer />
+            <Footer className="flex justify-items-end" />
         </div>
     )
 }
