@@ -11,7 +11,7 @@ export default function CartSummary({ subtotal, tax, total }) {
                 <td>${subtotal}</td>
             </tr>
             <tr>
-                <td>Tax (10%)</td>
+                <td>Sales tax (10%)</td>
                 <td>${tax}</td>
             </tr>
             </tbody>
