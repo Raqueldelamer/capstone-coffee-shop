@@ -1,10 +1,8 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "./Button";
 
-
-export default function CheckoutForm ({ handleCheckout }) {
-    // values from localStorage
+export default function CheckoutForm({ handleCheckout }) {
+    // Initialize state with values from localStorage
     const [name, setName] = useState(localStorage.getItem("name") || "");
     const [address, setAddress] = useState(localStorage.getItem("address") || "");
     const [city, setCity] = useState(localStorage.getItem("city") || "");
@@ -12,21 +10,27 @@ export default function CheckoutForm ({ handleCheckout }) {
     const [zipcode, setZipcode] = useState(localStorage.getItem("zipcode") || "");
     const [cardInfo, setCardInfo] = useState(localStorage.getItem("cardInfo") || "");
 
-
-    function handleFormSubmit(e) {
-        e.preventDefault();
-          // Save form data to localStorage
+    // Update localStorage whenever a field value changes
+    useEffect(() => {
         localStorage.setItem("name", name);
         localStorage.setItem("address", address);
         localStorage.setItem("city", city);
         localStorage.setItem("state", state);
         localStorage.setItem("zipcode", zipcode);
         localStorage.setItem("cardInfo", cardInfo);
-        
-        handleCheckout(name, address, city, state, zipcode, cardInfo);
-        alert('Thank you for your order!');
+    }, [name, address, city, state, zipcode, cardInfo]);
 
-          // Reset on submit
+    // Handle form submission
+    function handleFormSubmit(e) {
+        e.preventDefault();
+
+        // Call the parent function to handle the checkout
+        handleCheckout(name, address, city, state, zipcode, cardInfo);
+
+        // Show confirmation alert
+        alert("Thank you for your order!");
+
+        // Optionally, reset form fields after submission (if needed)
         setName("");
         setAddress("");
         setCity("");
