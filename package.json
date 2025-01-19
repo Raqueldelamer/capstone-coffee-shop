@@ -16,6 +16,8 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "daisyui": "^4.12.23",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
     "next": "15.1.3",
     "proptypes": "^1.1.0",
     "react": "^19.0.0",
@@ -43,5 +45,10 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
-  }
+  },
+  "description": "Live link that displays steps initialized and completed: - [x] https://coffee-shop-frontend-azure.vercel.app  - [x] https://coffee-shop-frontend-azure.vercel.app/sign-up  - [x] https://coffee-shop-frontend-azure.vercel.app/products  - [x] https://coffee-shop-frontend-azure.vercel.app/cart  - [x] https://coffee-shop-frontend-azure.vercel.app/checkout",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
