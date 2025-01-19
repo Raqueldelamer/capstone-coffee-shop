@@ -2,33 +2,42 @@ import { useState, useEffect } from "react";
 import Button from "./Button";
 
 export default function CheckoutForm({ handleCheckout }) {
-    // Initialize state with values from localStorage
-    const [name, setName] = useState(localStorage.getItem("name") || "");
-    const [address, setAddress] = useState(localStorage.getItem("address") || "");
-    const [city, setCity] = useState(localStorage.getItem("city") || "");
-    const [state, setState] = useState(localStorage.getItem("state") || "");
-    const [zipcode, setZipcode] = useState(localStorage.getItem("zipcode") || "");
-    const [cardInfo, setCardInfo] = useState(localStorage.getItem("cardInfo") || "");
 
-    // Update localStorage whenever a field value changes
+    const [name, setName] = useState("");
+    const [address, setAddress] = useState("");
+    const [city, setCity] = useState("");
+    const [state, setState] = useState("");
+    const [zipcode, setZipcode] = useState("");
+    const [cardInfo, setCardInfo] = useState("");
+
+    // state w localStorage
     useEffect(() => {
-        localStorage.setItem("name", name);
-        localStorage.setItem("address", address);
-        localStorage.setItem("city", city);
-        localStorage.setItem("state", state);
-        localStorage.setItem("zipcode", zipcode);
-        localStorage.setItem("cardInfo", cardInfo);
+        setName(localStorage.getItem("name") || "");
+        setAddress(localStorage.getItem("address") || "");
+        setCity(localStorage.getItem("city") || "");
+        setState(localStorage.getItem("state") || "");
+        setZipcode(localStorage.getItem("zipcode") || "");
+        setCardInfo(localStorage.getItem("cardInfo") || "");
+    }, []);
+
+      // update localStorage
+    useEffect(() => {
+        if (name || address || city || state || zipcode || cardInfo) {
+            localStorage.setItem("name", name);
+            localStorage.setItem("address", address);
+            localStorage.setItem("city", city);
+            localStorage.setItem("state", state);
+            localStorage.setItem("zipcode", zipcode);
+            localStorage.setItem("cardInfo", cardInfo);
+        }
     }, [name, address, city, state, zipcode, cardInfo]);
 
     // Handle form submission
     function handleFormSubmit(e) {
         e.preventDefault();
 
-        handleCheckout(name, address, city, state, zipcode, cardInfo);
-
-        // confirmation alert
+    handleCheckout(name, address, city, state, zipcode, cardInfo);
         alert("Thank you for your order!");
-
         // reset form fields after submit
         setName("");
         setAddress("");
