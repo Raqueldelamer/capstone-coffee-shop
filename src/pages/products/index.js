@@ -14,6 +14,7 @@ export default function ProductsPage() {
     const router = useRouter();
     const { category } = router.query;
     console.log(category);
+    const { id } = router.query;
     //const [products, setProducts] = useState([]);
     const [cartContents, setCartContents] = useState([]);
     const [url, setUrl] = useState(`${BACKEND_URL}/products`);

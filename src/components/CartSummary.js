@@ -1,10 +1,10 @@
 export default function CartSummary({ subtotal, tax, total }) {
     return (
-    <div className="bg-base-100 container justify-center p-6 mx-5 shadow-md rounded-lg">
-            <div className="text-2xl font-mono font-semibold text-center mt-2 mb-4">
+    <div className="bg-base-100 shadow-md rounded-lg p-8 max-w-md w-full">
+            <div className="text-2xl font-mono font-semibold text-center mt-2 mb-6">
             <h2>Order Summary</h2>
-        </div>
-        <table className="table text-xl font-mono">
+        
+        <table className="table text-l font-mono">
             <tbody>
             <tr>
                 <td>Sub total</td>
@@ -16,16 +16,17 @@ export default function CartSummary({ subtotal, tax, total }) {
             </tr>
             <tr>
                 <td>Shipping</td>
-                <td>Free</td>
+                <td>FREE</td>
             </tr>
             </tbody>
-            <tfoot className="text-yellow-200 text-2xl font-mono">
+            <tfoot className="text-yellow-200 text-xl font-mono">
             <tr >
                 <td>Total</td>
                 <td>${total}</td>
             </tr>
             </tfoot>
         </table>
+        </div>
     </div>
     );
 }
