@@ -16,7 +16,7 @@ export default function Home() {
   const divStyle = {
     backgroundImage: 'url(/imgs/book-cafe.jpg)',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'fill',
     backgroundColor: 'brown',
     height: '100vh',
     color: 'black',

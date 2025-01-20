@@ -17,7 +17,6 @@ export default function CheckoutPage () {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundColor: 'brown',
-        height: '100vh',
     };
 
     function handleCheckout(name, address, city, state, zipcode) {
@@ -30,19 +29,17 @@ export default function CheckoutPage () {
         <>
             
             <Navbar className="min-h-screen" menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
-            <div className="h-screen w-full justify-around min-h-screen" style={divStyle}>
+            <div className="h-screen w-full min-h-screen" style={divStyle}>
                 <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 font-mono font-bold 
                 text-stroke-thick flex justify-around items-center w-full"> CHECK OUT FORM</h1>
                 <div className="flex justify-evenly w-full">
-            <CheckoutForm className="w-full sm:w-auto mb-6" handleCheckout={handleCheckout}  />
-                <div className=" rounded-lg shadow-lg">
+            <CheckoutForm className="mb-1" handleCheckout={handleCheckout}  />
+                <div className="rounded-lg shadow-lg">
             <CartSummary subtotal={subtotal} tax={tax} total={total} />
             </div>
             </div>
-            
-            <Footer className="flex" />
             </div>
-            
+            <Footer className=" flex mt-6" />
         </>
         
     );

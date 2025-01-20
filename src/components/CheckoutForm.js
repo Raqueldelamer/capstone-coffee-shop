@@ -121,7 +121,7 @@ export default function CheckoutForm({ handleCheckout }) {
                 <label className="label">
                     <span className="label-text">Credit Card Info:</span>
                 </label>
-                <input className="input input-bordered w-full" 
+                <input className="input input-bordered w-full mb-2" 
                         type="text" 
                         placeholder="**** **** **** ****" 
                         id="cardInfo" 
