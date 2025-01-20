@@ -29,9 +29,9 @@ export default function CheckoutPage () {
     
         <>
             
-            <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
-            <div className="h-screen w-full" style={divStyle}>
-            <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 font-mono font-bold 
+            <Navbar className="min-h-screen" menuItems={["HOME", "LOGIN", "PRODUCTS", "CART", "CHECKOUT"]} />
+            <div className="h-screen w-full justify-around min-h-screen" style={divStyle}>
+                <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 font-mono font-bold 
                 text-stroke-thick flex justify-around items-center w-full"> CHECK OUT FORM</h1>
                 <div className="flex justify-evenly w-full">
             <CheckoutForm className="w-full sm:w-auto mb-6" handleCheckout={handleCheckout}  />

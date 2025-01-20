@@ -123,7 +123,7 @@ export default function CheckoutForm({ handleCheckout }) {
                 </label>
                 <input className="input input-bordered w-full" 
                         type="text" 
-                        placeholder="XXXX XXXX XXXX XXXX" 
+                        placeholder="**** **** **** ****" 
                         id="cardInfo" 
                         name="cardInfo"
                         required value={cardInfo}
