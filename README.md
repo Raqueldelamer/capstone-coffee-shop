@@ -54,7 +54,7 @@ The Coffee Shop Backend is a Node.js-based Express application that serves as th
 
 2. **Connect to POSTMAN Backend**:
    - Add Products to Postman Backend URL 
-   
+
    ![Alt text](public/imgs/postman.jpg) <br /><br />
 
      ```javascript
@@ -144,16 +144,11 @@ export default function CartPage() {
   </div>);
 }
 ```
-
-### **Git Commit**:
-```bash
-git add src/pages/ src/components/ src/util/
-git commit -m "Add stub functions for each page and utility functions for localStorage"
-```
-
----
-
 ## **Step 2: Implement Product List Page Functionality**
+
+## Products Page fetching Backend URL, implementing Product Card Component
+
+![Alt text](public/imgs/products-page.jpg) <br /><br />
 
 ### **Instructions**:
 1. Replace stub functions with real functionality to:
@@ -226,6 +221,12 @@ git commit -m "Implement functionality for Shopping Cart Page with mock cart dat
 
 ## **Step 5: Implement Checkout Page Functionality**
 
+- [x] - Stretch Goal: empty cart Animated Icon that redirects to Products.js Page
+
+![Alt text](public/imgs/empty-cart.jpg) <br /><br />
+
+![Alt text](public/imgs/full-shopping-cart.png) <br /><br />
+
 ### **Instructions**:
 1. Add functionality to collect checkout information and save it to localStorage.
 2. Use a mock JSON object for order details.
@@ -239,11 +240,6 @@ Part 2: Implement a function to save the order details to localStorage.
 
 After the form is submitted (see the last video above), you can save the order details to localStorage. You can use the `saveCartToLocalStorage` function as a reference.
 
-### **Git Commit**:
-```bash
-git add src/pages/checkout.jsx
-git commit -m "Implement functionality for Checkout Page with mock order data"
-```
 
 ---
 
@@ -255,11 +251,6 @@ git commit -m "Implement functionality for Checkout Page with mock order data"
 
 Be sure to implement controlled forms for the login and register pages. Then save the data to localStorage using the utility functions.
 
-### **Git Commit**:
-```bash
-git add src/pages/signup.jsx src/pages/login.jsx
-git commit -m "Implement functionality for Login and Register Pages with localStorage"
-```
 
 ---
 
@@ -430,22 +421,8 @@ Continue building the project you started in Day 1. Today, you will create pages
 
 Note: If you are unable to complete the full assignment, focus on the login pages and the product pages. If you can't get to the cart, you can still make a decent project. Then, you can fill in the other pages later if you have time, or leave them as a stretch goal. However, some of the pages in the Cart functionality are repetitive, so you may be able to reuse components from the product page for the cart page.
 
-Here are some helpful resources you may look into:
-
-- [Your UI as a Tree](https://react.dev/learn/understanding-your-ui-as-a-tree) for understanding how to break down your UI into components.
-- [Rendering Lists](https://react.dev/learn/describing-the-ui#rendering-lists) for arrays of data
-- [Adding interactivity with React](https://react.dev/learn/adding-interactivity) for button clicks and form submissions.
-- [React Forms](https://daveceddia.com/react-forms/). You may find this helpful in day three when finish design and begin work on functionality.
-
 ---
 
-**Note:** Before you begin, create a new branch for your work. Make sure your main branch is up to date. Then create a new branch called design-components.
-
-```bash
-git switch main
-git pull
-git switch -c design-components
-```
 
 ## **1. Create Basic Pages**
 Set up the following blank pages in the `pages` directory. These pages will serve as the foundation of your application:
@@ -468,90 +445,6 @@ You may copy some data from https://dummyjson.com/docs/products
 
 (Note: take care to note differences in the structure of the data from our actual backend (id vs _id, etc.))
 
-Or you may use this example data:
-
-### Example: Products Data (`/src/mocks/products.json`)
-```json
-[
-  {
-    "name": "Espresso",
-    "description": "A strong and concentrated coffee beverage.",
-    "price": 2.5,
-    "category": "Beverage",
-    "stock": 10,
-    "imageUrl": "/sample-images/espresso.jpg",
-    "_id": 0
-  },
-  {
-    "name": "Cappuccino",
-    "description": "An Italian coffee drink that is traditionally prepared with equal parts espresso, steamed milk, and milk foam.",
-    "price": 3.5,
-    "category": "Beverage",
-    "stock": 5,
-    "imageUrl": "/sample-images/cappuccino.jpg",
-    "_id": 1
-  },
-  {
-    "name": "Croissant",
-    "description": "A buttery, flaky, viennoiserie pastry named for its crescent shape.",
-    "price": 2,
-    "category": "Food",
-    "stock": 8,
-    "imageUrl": "/sample-images/croissant.jpg",
-    "_id": 2
-  },
-  {
-    "name": "Muffin",
-    "description": "A small, sweet baked good that is typically made with ingredients such as flour, sugar, eggs, and butter.",
-    "price": 2.5,
-    "category": "Food",
-    "stock": 6,
-    "imageUrl": "/sample-images/muffin.jpg",
-    "_id": 3
-  }
-]
-```
-### Example Cart data
-
-`/src/mocks/cart.json`
-
-```json
-{
-    "_id": "1",
-    "products": [
-        {
-          "name": "Espresso",
-          "description": "A strong and concentrated coffee beverage.",
-          "price": 2.5,
-          "category": "Beverage",
-          "stock": 10,
-          "imageUrl": "/sample-images/espresso.jpg",
-          "_id": 0
-        },
-        {
-          "name": "Croissant",
-          "description": "A buttery, flaky, viennoiserie pastry named for its crescent shape.",
-          "price": 2,
-          "category": "Food",
-          "stock": 8,
-          "imageUrl": "/sample-images/croissant.jpg",
-          "_id": 2
-        },
-        {
-          "name": "Muffin",
-          "description": "A small, sweet baked good that is typically made with ingredients such as flour, sugar, eggs, and butter.",
-          "price": 2.5,
-          "category": "Food",
-          "stock": 6,
-          "imageUrl": "/sample-images/muffin.jpg",
-          "_id": 3
-        }
-    ],
-    "user": "1"
-}
-```
-
-Remember to git commit with a message like: "Add basic pages for the Coffee Shop frontend."
 
 ### Example: Home (Splash) Page (`src/pages/index.jsx`)
 ```jsx
@@ -640,7 +533,6 @@ In `index.jsx`, build a splash page that includes the following:
     );
   }
   ```
-
   This will allow the button to navigate to the signup page when clicked, but also keep the Button component flexible for other uses.
 
 ### **Step 4**: Verify in Storybook
