@@ -39,7 +39,7 @@ export default function CheckoutPage () {
             </div>
             </div>
             </div>
-            <Footer className=" flex mt-6" />
+            <Footer className="flex justify-items-end" />
         </>
         
     );

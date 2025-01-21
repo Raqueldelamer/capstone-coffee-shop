@@ -72,8 +72,11 @@ export default function Cart() {
     ));
      // coffee icon to display when the cart is empty
     const emptyCartIcon = (
-        <div className=" justify-items-center text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 24 24">
+        <div className="justify-items-center text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+            width={32} 
+            height={32} 
+            viewBox="0 0 24 24">
             <g fill="none" stroke="#d0ad42" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}>
             <path strokeDasharray={48} strokeDashoffset={48} d="M17 9v9c0 1.66 -1.34 3 -3 3h-6c-1.66 0 -3 -1.34 -3 -3v-9Z">
             <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="48;0"></animate>
@@ -92,7 +95,7 @@ export default function Cart() {
             </rect>
             </g>
         </svg>
-        <p className="flex text-yellow-200 font-mono">COFFEE CART EMPTY</p>
+        <p className=" text-yellow-200 font-mono">COFFEE CART EMPTY</p>
         </div>
     );
 

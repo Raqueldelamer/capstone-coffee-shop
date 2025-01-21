@@ -75,7 +75,9 @@ export default function ProductsPage() {
             product={product}
             addToCart={() => handleAddToCart(product)}
             buttonLabel="Add to Cart" />
-)) : <div className="text-2xl flex justify-items-center mb-10 mt-10 font-mono font-bold">No products available...</div>
+    )) : <div className="text-2xl flex justify-items-center mb-10 mt-10 font-mono font-bold">
+                        No products available...
+            </div>
 
         //function handleAddToCart() {
           //  alert(product.name + " added to cart!");
