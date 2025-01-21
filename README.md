@@ -135,7 +135,28 @@ export default function CartPage() {
   </div>);
 }
 ```
-## **Step 2: Implement Product List Page Functionality**
+
+## **Setup Storybook**
+
+a. **Install Storybook**:
+
+   ```bash
+   npx storybook@latest init
+   ```
+
+b. **Run Storybook**:
+
+Storybook may will already be running after the installation. If not, you can start it with:
+
+   ```bash
+   npm run storybook
+   ```
+
+- [x] - Verify Storybook runs at [http://localhost:6006](http://localhost:6006).
+
+![Alt text](public/imgs/storybook.png) <br /><br />
+  
+## **Step 3: Implement Product List Page Functionality**
 
 ## Products fetched via Backend URL, implementing Product Card Component
 
@@ -370,14 +391,6 @@ Set up the following blank pages in the `pages` directory. These pages will serv
 - `signin.jsx`
 
 
-Add a mock data json file for products and for the cart. You can use this data to test your components and pages.
-
-You can put them in a `mocks` folder in the root of your project. You can name them `products.json` and `cart.json`. Grab some images from the internet or generate them from AI and put them in the `public` folder. You can use these images in your mock data.
-
-You may copy some data from https://dummyjson.com/docs/products
-
-(Note: take care to note differences in the structure of the data from our actual backend (id vs _id, etc.))
-
 ---
 
 ## **2. Splash Page (Home Page)**
@@ -429,11 +442,6 @@ In `index.jsx`, build a splash page that includes the following:
   ```
   This will allow the button to navigate to the signup page when clicked, but also keep the Button component flexible for other uses.
 
-### **Step 4**: Verify in Storybook
-
-Verify that your Button still works in Storybook.
-
-**git commit** with a message like "Add Button component with click handling."
 ---
 
 ## **3. Signup Page**
@@ -547,9 +555,6 @@ If you would like to contribute to this project, please follow these steps:
 5. Push your changes to your fork.
 6. Create a pull request.
 
-## Screenshots
-
-Add screenshots of the app here.
 
 ## Attribution
 
@@ -559,9 +564,6 @@ Give credit to any resources or inspiration you used in this project.
 - [DaisyUI](https://daisyui.com/)
 - [Storybook](https://storybook.js.org/)
 
-
-
-```
 
 5. Update index.js file.
 
@@ -574,7 +576,7 @@ export default function Home() {
 }
 ```
 
-6. Deploy to Vercel.
+- [x] - 6. Deploy to Vercel.
 
 It's a good idea to deploy your app to Vercel right away to ensure it works as expected in a production environment.
 
@@ -585,47 +587,9 @@ It's a good idea to deploy your app to Vercel right away to ensure it works as e
 - Note: you may want to have a special branch for deployment, such as `main` or `production`.
 - Note: Although you have no Environment Variables yet, remember to update your Environment Variables in Vercel to match your `.env.local` file as you add them.
 - Check your deployed app to ensure it works as expected after each commit to see if you can catch any bugs as they are made.
-
-7. Create a new branch for your work today.
-
-```bash
-  git switch -c setup-components
-```
 ---
 
-## **2. Setup Storybook**
 
-1. **Install Storybook**:
-
-   ```bash
-   npx storybook@latest init
-   ```
-
-2. **Run Storybook**:
-
-Storybook may will already be running after the installation. If not, you can start it with:
-
-   ```bash
-   npm run storybook
-   ```
-
-   Verify Storybook runs at [http://localhost:6006](http://localhost:6006).
-
-    - Note: Delete the default content in `styles/globals.css`.
-    Add or keep Tailwind CSS to `styles/globals.css`:
-     ```css
-     @tailwind base;
-     @tailwind components;
-     @tailwind utilities;
-     ```
-
-- Add your global CSS to storybook. In the file `.storybook/previews`, import the Tailwind CSS file:
-
-     ```javascript
-     /** @type { import('@storybook/react').Preview } */
-     import '../src/styles/globals.css'; // add this line
-     ...
-     ```
 
 3. **Add a Button Component to Test**:
 
@@ -705,11 +669,10 @@ Storybook may will already be running after the installation. If not, you can st
    - Commit often to track your progress.
 
 3. **Test Each Component in Storybook**:
-   Verify all components render correctly in Storybook.
+- [x] - Verify all components render correctly in Storybook.
+- [x] - Add one screenshot of the Storybook interface to your README.md. 
 
-4. **Update README.md**:
-   - Document the components created and the progress made.
-   - Example:
+
 
      ```markdown
      # Coffee Shop Frontend
@@ -725,7 +688,6 @@ Storybook may will already be running after the installation. If not, you can st
      - CartSummary
      ```
 
-     Add one screenshot of the Storybook interface to your README.md. 
 ---
 
 
