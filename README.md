@@ -170,8 +170,16 @@ export default function Button({ handleClick, label }) {
 ## **Step 3: Implement Product Display Page Functionality**
 
 ### **Instructions**:
-1. Use `fetchProduct(id)` to load mock product data by ID.
+1. Use `fetchProduct` to load product data via https://coffee-shop-backend-5fmn.onrender.com/api/v1/products/ .
+
 2. Pass `addToCart` into the button in the `ProductCard` component using **prop drilling**.
+- [x] - Stretch Goal: Empty Cart Animated Icon that redirects to Products.js Page
+
+![Alt text](public/imgs/empty-cart.jpg) <br /><br />
+
+- [x] - Shopping cart saved to Local Storage, redirects to CheckOut.js
+
+![Alt text](public/imgs/full-shopping-cart.png) <br /><br />
 
 ---
 
@@ -183,14 +191,6 @@ export default function Button({ handleClick, label }) {
 ---
 
 ## **Step 5: Implement Checkout Page Functionality**
-
-- [x] - Stretch Goal: Empty Cart Animated Icon that redirects to Products.js Page
-
-![Alt text](public/imgs/empty-cart.jpg) <br /><br />
-
-- [x] - Shopping cart saved to Local Storage, redirects to CheckOut.js
-
-![Alt text](public/imgs/full-shopping-cart.png) <br /><br />
 
 - [x] - Checkout Cart Summary and Checkout Form
 
