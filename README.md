@@ -146,7 +146,7 @@ export default function CartPage() {
 ```
 ## **Step 2: Implement Product List Page Functionality**
 
-## Products Page fetching Backend URL, implementing Product Card Component
+## Products fetched via Backend URL, implementing Product Card Component
 
 ![Alt text](public/imgs/products-page.jpg) <br /><br />
 
@@ -182,13 +182,6 @@ export default function Button({ handleClick, label }) {
 }
 ```
 
-
-### **Git Commit**:
-```bash
-git add src/pages/products/
-git commit -m "Implement functionality for Product List Page with mock data and prop drilling"
-```
-
 ---
 
 ## **Step 3: Implement Product Display Page Functionality**
@@ -196,12 +189,6 @@ git commit -m "Implement functionality for Product List Page with mock data and 
 ### **Instructions**:
 1. Use `fetchProduct(id)` to load mock product data by ID.
 2. Pass `addToCart` into the button in the `ProductCard` component using **prop drilling**.
-
-### **Git Commit**:
-```bash
-git add src/pages/products/[id].jsx
-git commit -m "Implement functionality for Product Display Page with addToCart prop drilling"
-```
 
 ---
 
