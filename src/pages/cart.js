@@ -7,7 +7,6 @@ import ProductCard from "@/components/ProductCard";
 // import cart from "@/mocks/cart.json";
 import Button from "@/components/Button";
 import { loadCartFromLocalStorage, saveCartToLocalStorage } from "@/utils";
-import CartSummary from "@/components/CartSummary";
 
 
 
@@ -72,30 +71,35 @@ export default function Cart() {
     ));
      // coffee icon to display when the cart is empty
     const emptyCartIcon = (
-        <div className="justify-items-center text-center">
+        <div className="flex justify-items-center justify-center text-center">
+            <p className="text-yellow-200 text-2xl font-mono">COFFEE CART EMPTY</p>
         <svg xmlns="http://www.w3.org/2000/svg" 
             width={32} 
             height={32} 
             viewBox="0 0 24 24">
             <g fill="none" stroke="#d0ad42" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}>
             <path strokeDasharray={48} strokeDashoffset={48} d="M17 9v9c0 1.66 -1.34 3 -3 3h-6c-1.66 0 -3 -1.34 -3 -3v-9Z">
-            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="48;0"></animate>
+                <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="48;0"></animate>
             </path>
             <path strokeDasharray={14} strokeDashoffset={14} d="M17 9h3c0.55 0 1 0.45 1 1v3c0 0.55 -0.45 1 -1 1h-3">
                 <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="14;0"></animate>
             </path>
             <mask id="lineMdCoffeeLoop0">
-            <path stroke="#fff" d="M8 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M12 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M16 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4">
-                <animateMotion calcMode="linear" dur="3s" path="M0 0v-8" repeatCount="indefinite"></animateMotion>
-            </path>
+                <path stroke="#fff" d="M8 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M12 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M16 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4">
+                    <animateMotion calcMode="linear" dur="3s" path="M0 0v-8" repeatCount="indefinite"></animateMotion>
+                </path>
             </mask>
-            <rect width={24} height={0} y={7} fill="#d0ad42" mask="url(#lineMdCoffeeLoop0)">
+            <rect 
+                width={24} 
+                height={0} 
+                y={7} 
+                fill="#d0ad42"
+                mask="url(#lineMdCoffeeLoop0)">
                 <animate fill="freeze" attributeName="y" begin="0.8s" dur="0.6s" values="7;2"></animate>
                 <animate fill="freeze" attributeName="height" begin="0.8s" dur="0.6s" values="0;5"></animate>
             </rect>
             </g>
         </svg>
-        <p className=" text-yellow-200 font-mono">COFFEE CART EMPTY</p>
         </div>
     );
 

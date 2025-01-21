@@ -8,7 +8,7 @@ import CartIcon from './CartIcon';
 
 export default function Navbar({ title, menuItems }) {
     return (
-      <div className="flex items-center ml-4 mt-1">
+      <div className="flex items-center text-wrap ml-4 mt-1">
         <Icon />
         <p className='text-xl mx-2'>+</p>
         <Book />

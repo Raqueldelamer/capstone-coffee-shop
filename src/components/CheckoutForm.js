@@ -48,7 +48,7 @@ export default function CheckoutForm({ handleCheckout }) {
     }
 
     return (
-        <div className="bg-base-100 shadow-md rounded-lg p-8 max-w-md w-full">
+        <div className="bg-base-100 shadow-md rounded-lg p-7 max-w-md w-full">
             <div className="container justify-center">   
             <h2 className="text-2xl font-mono font-semibold text-center mb-4">Payment Information</h2>
             <form onSubmit={handleFormSubmit} className="flex flex-col space-y-1">
