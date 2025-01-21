@@ -40,8 +40,7 @@ The Coffee Shop Backend is a Node.js-based Express application that serves as th
 - [x] **Implement Shopping Cart Page Functionality**
 - [x] **Implement Login and Register Pages**
 - [x] **CRUD Operations: Implemented APIs for managing products, including creating, reading,** 
-- [x] **uUdating, and deleting.JWT User Authentication & Protected Routes**
-
+- [x] **Updating, and deleting.JWT User Authentication & Protected Routes**
 
 
 ## Step 0: **Setup .env File and Connect to Backend**
@@ -53,8 +52,10 @@ The Coffee Shop Backend is a Node.js-based Express application that serves as th
    NEXT_PUBLIC_API_BASE_URL_PROD=https://api.onrender.com
    ```
 
-2. **Connect to Backend**:
-   - Create a simple component:
+2. **Connect to POSTMAN Backend**:
+   - Add Products to Postman Backend URL 
+   
+   ![Alt text](public/imgs/postman.jpg) <br /><br />
 
      ```javascript
      // components/HelloBackend.js
