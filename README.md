@@ -7,20 +7,40 @@ Live link that displays steps initialized and completed:
 - [x] https://coffee-shop-frontend-azure.vercel.app/cart 
 - [x] https://coffee-shop-frontend-azure.vercel.app/checkout
 
-##Splash Page
+## Splash Page
 
 ![Alt text](public/imgs/splash.jpg) <br /><br />
 
 ## Objective:  
 The Coffee Shop Backend is a Node.js-based Express application that serves as the backend for an e-commerce coffee shop. It provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
 
+## Key Tools & Technologies
+- Frontend: Next.js, DaisyUI, Tailwind CSS, Storybook, Iconify, React Hooks (useState, useQuery)
+- Backend: Node.js, API v1 (non-auth) and API v2 (auth)
+- Database: (Database type to be decided: e.g., Vercel, MongoDB, Postman, PostgreSQL)
+- Version Control: Git/GitHub
+
+## Components
+- [x] Button
+- [x] Cart Icon
+- [x] Cart Summary
+- [x] Checkout Form
+- [x] Footer
+- [x] Header
+- [x] Login Form
+- [x] Navbar
+- [x] Product Card
+- [x] Signup Form
+- [x] Test Button
+
+## Features
 - [x] **Create Stub Functions**
 - [x] **Implement Product List Page Functionality**
 - [x] **Verify in Storybook**
-- [x] **Step 4: Implement Shopping Cart Page Functionality**
-- [x] **Step 6: Implement Login and Register Pages**
+- [x] **Implement Shopping Cart Page Functionality**
+- [x] **Implement Login and Register Pages**
 - [x] **CRUD Operations: Implemented APIs for managing products, including creating, reading,** 
-- [x] **updating, and deleting.JWT User Authentication & Protected Routes**
+- [x] **uUdating, and deleting.JWT User Authentication & Protected Routes**
 
 
 
