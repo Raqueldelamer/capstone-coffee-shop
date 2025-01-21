@@ -57,22 +57,6 @@ The Coffee Shop Backend is a Node.js-based Express application that serves as th
 
    ![Alt text](public/imgs/postman.jpg) <br /><br />
 
-     ```javascript
-     // components/HelloBackend.js
-     import api from '../utils/api';
-
-     export default function HelloBackend() {
-       const fetchGreeting = async () => {
-         const response = await api.get('/hello-world');
-         console.log(response.data);
-       };
-
-       fetchGreeting();
-
-       return <div>Hello Backend</div>;
-     }
-     ```
-
 3. **Test Backend Connection**:
    - Verify the console logs the response from the backend.
 
@@ -181,7 +165,6 @@ export default function Button({ handleClick, label }) {
   return <button onClick={handleClick}>{label}</button>;
 }
 ```
-
 ---
 
 ## **Step 3: Implement Product Display Page Functionality**
@@ -205,11 +188,11 @@ export default function Button({ handleClick, label }) {
 
 ![Alt text](public/imgs/empty-cart.jpg) <br /><br />
 
-- [x] - Full shopping cart saved to Local Storage, redirects to CheckOut.js
+- [x] - Shopping cart saved to Local Storage, redirects to CheckOut.js
 
 ![Alt text](public/imgs/full-shopping-cart.png) <br /><br />
 
-- [x] - Checkout cart summary with Checkout Form
+- [x] - Checkout Cart Summary and Checkout Form
 
 ![Alt text](public/imgs/checkout-cart-summary.png) <br /><br />
 
@@ -225,8 +208,6 @@ Controlled forms are a common pattern in react. React can't access the forms dir
 Part 2: Implement a function to save the order details to localStorage.
 
 After the form is submitted (see the last video above), you can save the order details to localStorage. You can use the `saveCartToLocalStorage` function as a reference.
-
-
 ---
 
 ## **Step 6: Implement Login and Register Pages**
@@ -236,10 +217,7 @@ After the form is submitted (see the last video above), you can save the order d
 2. Validate user credentials on the login page using mock data.
 
 Be sure to implement controlled forms for the login and register pages. Then save the data to localStorage using the utility functions.
-
-
 ---
-
 ## **Utility Functions in `/src/util/index.js`**
 
 ### **Shared Functions**:
@@ -249,8 +227,6 @@ Be sure to implement controlled forms for the login and register pages. Then sav
 4. `saveProductsToLocalStorage(products)`: Saves products to localStorage.
 5. `saveUserToLocalStorage(user)`: Saves user to localStorage.
 6. `loginUserToLocalStorage(user)`: Saves logged-in user to localStorage.
-
-
 
 #### **Day 5: Shopping Cart Feature**
 - [x] **Goals:**
@@ -329,8 +305,6 @@ export default function ProductPage() {
 **Your challenge** is to create a function in `src/pages/products/[id].jsx` that will fire when the button is clicked. You can use `console.log` or `alert` to verify that the function is working.
 
 Look at the previous examples for how to pass a function to a component.
-
-git commit with a message like "Add Product page."
 
 ---
 
@@ -573,21 +547,12 @@ Set up a solid foundation for the project by creating a Next.js app, integrating
 
 2. **Initialize a Git Repository**:
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin <your-repo-url>
-   git push -u origin main
-   ```
 
 3. **Test Application**:
 
-   ```bash
+
    npm run dev
    ```
-
    Verify the app runs at [http://localhost:3000](http://localhost:3000).
 
 4. **Update your README.md file.**
@@ -596,7 +561,6 @@ Set up a solid foundation for the project by creating a Next.js app, integrating
 - add an outline of what you plan to do or the template provided in the assignment.
 - commit your changes.
 
-```markdown
 # Coffee Shop Frontend
 
 This is a project to build a frontend for a coffee shop. The project will include a variety of components and features to create a user-friendly experience for customers.
@@ -618,10 +582,7 @@ Live link: ...
 - [x] Navbar
 - [x] Footer
 - [x] Button
-- [ ] Loader
-- [ ] Toast
 - [x] ProductCard
-- [ ] CartItem
 - [x] CartSummary
 
 ## Features
