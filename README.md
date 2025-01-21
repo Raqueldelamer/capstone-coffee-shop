@@ -11,6 +11,10 @@ Live link that displays steps initialized and completed:
 
 ![Alt text](public/imgs/splash.jpg) <br /><br />
 
+## Deploy on Vercel
+
+![Alt text](public/imgs/vercel.jpg) <br /><br />
+
 ## Objective:  
 The Coffee Shop Backend is a Node.js-based Express application that serves as the backend for an e-commerce coffee shop. It provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
 
@@ -33,8 +37,11 @@ The Coffee Shop Backend is a Node.js-based Express application that serves as th
 - [x] Signup Form
 - [x] Test Button
 
+
 ## Features
-- [x] **Create Stub Functions**
+- [x] **Tailwind CSS with DaisyUI integration.**
+- [x] **Storybook for component development.**
+- [x] **Create Stub Functions for all Components**
 - [x] **Implement Product List Page Functionality**
 - [x] **Verify in Storybook**
 - [x] **Implement Shopping Cart Page Functionality**
@@ -315,17 +322,6 @@ The products page will display a list of products. You will use the `ProductCard
 - Create mock data for products and iterate over them using `.map()`.
 - See [Rendering Lists](https://react.dev/learn/describing-the-ui#rendering-lists) in the React documentation for more information.
 
-Example:
-Note: you may put the mock data in a separate file and import it. You may also add test images to the `public` folder in your project.
-```jsx
-import ProductCard from '../components/ProductCard';
-import products from '../mocks/products.json';
-import '@/styles/products.css';
-
-// const products = [
-//   { _id: 1, name: 'Coffee A', description: 'Rich and smooth.', price: 10, image: '/coffee-a.jpg' },
-//   { _id: 2, name: 'Coffee B', description: 'Dark roast.', price: 12, image: '/coffee-b.jpg' },
-// ];
 
 export default function ProductsPage() {
   const productsJSX = products.map((product) => {
@@ -382,45 +378,6 @@ You may copy some data from https://dummyjson.com/docs/products
 
 (Note: take care to note differences in the structure of the data from our actual backend (id vs _id, etc.))
 
-
-### Example: Home (Splash) Page (`src/pages/index.jsx`)
-```jsx
-export default function Home() {
-  return (
-    <div>
-      <h1>Welcome to the Coffee Shop!</h1>
-    </div>
-  );
-}
-```
-
-### Example 2: Product Page (`src/pages/products/[id].jsx`)
-```jsx
-import { useRouter } from 'next/router';
-
-export default function ProductPage() {
-  // For pages with dynamic routes, you can use the useRouter hook to get the route params
-  const router = useRouter();
-  const { id } = router.query; // Get 'id' from the route params
-  return (
-    <div>
-      <h1>Product Page for product &#35; { id }</h1>
-    </div>
-  );
-}
-```
-
-### Example 3: Products Page (`src/pages/products/index.jsx`)
-```jsx
-export default function ProductsPage() {
-  return (
-    <div>
-      <h1>Products Page</h1>
-    </div>
-  );
-}
-```
-
 ---
 
 ## **2. Splash Page (Home Page)**
@@ -431,7 +388,7 @@ In `index.jsx`, build a splash page that includes the following:
 - **Brief Description**
 - **Footer**
 
-### **Step 2**: Break  Spash Page Into Components
+### **Step 2**: Break Splash Page Into Components
 - Split the page into components, such as `Header`, `Footer`, `HeroSection`, and `Button`.
 - Verify each component works in Storybook.
 - Create a new story for each new component.
@@ -563,8 +520,6 @@ Set up a solid foundation for the project by creating a Next.js app, integrating
 
 This is a project to build a frontend for a coffee shop. The project will include a variety of components and features to create a user-friendly experience for customers.
 
-Live link: ...
-
 ## Technologies
 
 - React
@@ -573,20 +528,6 @@ Live link: ...
 - Storybook
 - DaisyUI
 - Vercel
-- ...
-
-## Components
-
-- [x] Navbar
-- [x] Footer
-- [x] Button
-- [x] ProductCard
-- [x] CartSummary
-
-## Features
-- [x] Tailwind CSS with DaisyUI integration.
-- [x] Storybook for component development.
-- [x] Component stubs for all components.
 
 ## Setup
 If you would like to try this project out or contribute, follow these steps:
@@ -940,64 +881,21 @@ Storybook may will already be running after the installation. If not, you can st
 
 ---
 
-## **8. Test and Create README.md**
-
 1. **Test Application**:
    - Ensure all components work in Storybook and the app.
    - Verify the backend connection and DaisyUI integration.
 
 2. **Create `README.md`**:
    - Document the setup steps, dependencies, and testing process.
-   - Example:
 
-     ```markdown
-     # Coffee Shop Frontend
-
-     ## Setup
-     1. Clone the repository.
-     2. Run `npm install` to install dependencies.
-     3. Start the app with `npm run dev`.
-
-     ## Features
-     - Tailwind CSS with DaisyUI integration.
-     - Storybook for component development.
-     - Backend connection with a sample HelloBackend component.
-     ```
-
-## **9. Commit and Push Changes**
+## **Commit and Push Changes**
 
 Make sure to commit your changes and push them to GitHub. Then check to see if your app is deployed on Vercel. You may have accidentally added something that causes an error in production, so it's good to check after each commit.
 
-Then create a pull request to merge your changes into the main branch.
 
-```bash
-git add .
-git commit -m "Setup components and backend connection"
-git push origin setup-components
-```
-
-On GitHub, create a pull request to merge your changes into the main branch. Then click the "Merge pull request" button to merge your changes.
-
-Finally, on your local machine, switch back to the main branch and pull the changes:
-
-```bash
-git switch main
-git pull
-```
-
-You may safely delete the `setup-components` branch now that the changes have been merged into the main branch. Or you may keep it for future reference.
-
-```bash
-git branch -d setup-components
-```
-
-Tomorrow, you will branch again from the main branch to continue working on the project.
-
-## **10. Submission**
+## **Submission**
 
 Submit the GitHub repository link for the project. Be sure to include the link to the deployed app on Vercel.
-
-If your deploy stops working, take a screenshot of the error message on Vercel and submit it with your repository link. Give a brief description of the work that you completed after the deploy stopped working.
 
 ---
 
