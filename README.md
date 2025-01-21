@@ -1,4 +1,4 @@
-# Guide: Coffee Shop Frontend Project
+## Guide: Coffee Shop Frontend & Backend Capstone Project
 
 Live link that displays steps initialized and completed:
 - [x] https://coffee-shop-frontend-azure.vercel.app 
@@ -7,14 +7,20 @@ Live link that displays steps initialized and completed:
 - [x] https://coffee-shop-frontend-azure.vercel.app/cart 
 - [x] https://coffee-shop-frontend-azure.vercel.app/checkout
 
-## Objective:  
-Today, you will add functionality to your Coffee Shop frontend project. You will implement stub functions to handle user interactions, manipulate mock data, and save it to localStorage. By the end of the day, you will have a functional frontend with mock data that will serve as a foundation for connecting to a backend in the future.
+##Splash Page
 
-- [x] **Step 1: Create Stub Functions**
-- [x] **Step 2: Implement Product List Page Functionality**
-- [x] **Step 3: Verify in Storybook**
+![Alt text](public/imgs/splash.jpg) <br /><br />
+
+## Objective:  
+The Coffee Shop Backend is a Node.js-based Express application that serves as the backend for an e-commerce coffee shop. It provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
+
+- [x] **Create Stub Functions**
+- [x] **Implement Product List Page Functionality**
+- [x] **Verify in Storybook**
 - [x] **Step 4: Implement Shopping Cart Page Functionality**
 - [x] **Step 6: Implement Login and Register Pages**
+- [x] **CRUD Operations: Implemented APIs for managing products, including creating, reading,** 
+- [x] **updating, and deleting.JWT User Authentication & Protected Routes**
 
 
 
