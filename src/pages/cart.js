@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 // import cart from "@/mocks/cart.json";
 import Button from "@/components/Button";
@@ -57,8 +56,15 @@ export default function Cart() {
 
         router.push({ pathname: "/checkout", query: { subtotal, tax, total },
         });
-        
     }
+    const handleProceed = () =>
+    {
+        if (cartContents.length === 0) {
+            router.push("/products");
+        } else {
+            handleCheckout();
+        }
+    };
 
 
     const cartJSX = cartContents.map((product) => (
@@ -72,7 +78,7 @@ export default function Cart() {
      // coffee icon to display when the cart is empty
     const emptyCartIcon = (
         <div className="flex justify-items-center justify-center text-center">
-            <p className="text-yellow-200 text-2xl font-mono">COFFEE CART EMPTY</p>
+            <p className="text-yellow-200 text-2xl font-mono">COFFEE CART IS EMPTY</p>
         <svg xmlns="http://www.w3.org/2000/svg" 
             width={32} 
             height={32} 
@@ -108,26 +114,26 @@ export default function Cart() {
         <div>
         <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART"]} />
         <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
-        <h1 className="text-5xl mb-10 mt-10 font-mono font-bold text-stroke-thick flex justify-center">
+            <h1 className="text-5xl mb-10 mt-10 font-mono font-bold text-stroke-thick flex justify-center">
                 Shopping Cart
-        </h1>
-            {/* If cart is empty, show empty cart icon and message */}
-            {cartContents.length === 0 ? (
-                emptyCartIcon
-            ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
+            </h1>
+        {/* If cart is empty, show empty cart icon and message */}
+        {cartContents.length === 0 ? (
+            emptyCartIcon
+        ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
                 {cartJSX}
+            </div>
+        )}
+
+            <div className="m-4 mt-10 mb-11 text-center">
+            <Button
+            label={cartContents.length === 0 ? "Proceed to Products" : "Proceed to Checkout"}
+            handleClick={handleProceed} // This triggers the function based on cart content
+            variant="btn-info btn-wide"
+            />
+            </div>
         </div>
-            )}
-    
-        <div className="m-4 mt-10 mb-11 text-center">
-                <Button
-                label={"Proceed to Checkout"}
-                handleClick={handleCheckout}
-                variant="btn-info btn-wide" />
-        </div>
-        </div>
-            <Footer className="flex justify-items-end" />
         </>
-        );
-    }
+    );
+}

@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import Button from '@/components/Button';
 
 function checkPassword(password) {
-  if (password.length > 8) {
-    return true;
-  } else {
-    return false;
-  }
+  return password.length >= 8;
 }
+
 const isEmailValid = (email) => {
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   return emailPattern.test(email);
@@ -18,9 +15,9 @@ export default function SignupForm({ buttonLabel, handleSignUp }) {
 
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
-  const [emailIsValid, setEmailIsValid] = useState(false);
+  const [emailIsValid, setEmailIsValid] = useState(true);
   const [passwordValue, setPasswordValue] = useState("");
-  const [passwordIsValid, setPasswordIsValid] = useState(false);
+  const [passwordIsValid, setPasswordIsValid] = useState(true);
   const [error, setError] = useState("");
 
 
@@ -31,6 +28,10 @@ export default function SignupForm({ buttonLabel, handleSignUp }) {
       setError('Fix errors before submitting.');
       return;
     }
+
+    //reset error msg before submitting
+    setError('');
+
     // call the handleSignUp function as a prop
     handleSignUp({
       name: nameValue,
@@ -42,8 +43,8 @@ export default function SignupForm({ buttonLabel, handleSignUp }) {
     setNameValue("");
     setEmailValue("");
     setPasswordValue("");
-    setEmailIsValid(false);
-    setPasswordIsValid(false);
+    setEmailIsValid(true);
+    setPasswordIsValid(true);
   }
 
   function onEmailChange(event) {
@@ -75,8 +76,10 @@ export default function SignupForm({ buttonLabel, handleSignUp }) {
         </label>
         <label className="label">
           <span className='label-text block mb-2'>Email</span>
-          <input type="email" className="input input-bordered block max-w-full"
+          <input type="email" 
+          className="input input-bordered block max-w-full"
           placeholder="email"
+          value={emailValue}
           onChange={onEmailChange} />
         </label>
         {error && <p className="text-xs text-red-400">{error}</p>}

@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-//import Button from "@/components/Button";
 import CheckoutForm from "@/components/CheckoutForm";
 import CartSummary from "@/components/CartSummary";
 import Footer from "@/components/Footer";
