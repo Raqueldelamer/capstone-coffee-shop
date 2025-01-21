@@ -147,7 +147,7 @@ Example of `viewProduct` function:
 ```javascript
 // in src/pages/products/index.jsx
 const viewProduct = (product) => {
-  router.push(`/products/${product.id}`);
+  router.push(`/products/${product}`);
 };
 ...
 <ProductCard product={product} handleClick={() => viewProduct(product)} />
@@ -169,7 +169,7 @@ export default function Button({ handleClick, label }) {
 
 ## **Step 3: Implement Product Display Page Functionality Instructions**:
 
-1. Use `fetchProduct` to load product data via https://coffee-shop-backend-5fmn.onrender.com/api/v1/products/ .
+1. Use `fetchProduct` to load product data via .env.local to BACKEND https://coffee-shop-backend-5fmn.onrender.com/api/v1/products/ .
 
 2. Pass `addToCart` into the button in the `ProductCard` component using **prop drilling**.
 
