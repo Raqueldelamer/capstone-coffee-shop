@@ -157,8 +157,7 @@ Storybook may will already be running after the installation. If not, you can st
 ![Alt text](public/imgs/storybook.png) <br /><br />
   
 ## **Step 3: Implement Product List Page Functionality**
-
-## Products fetched via Backend URL, implementing Product Card Component
+- [x] - Products fetched via Backend URL, implementing Product Card Component w product data and Add to Cart Button which redirects to the cart.js
 
 ![Alt text](public/imgs/products-page.jpg) <br /><br />
 
