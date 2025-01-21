@@ -197,22 +197,21 @@ export default function Button({ handleClick, label }) {
 ### **Instructions**:
 1. Replace the stub functions for `loadCart`, `addToCart`, `removeFromCart`, and `saveCartToLocalStorage` with real functionality.
 2. Use mock cart data for testing.
-
-### **Git Commit**:
-```bash
-git add src/pages/cart.jsx
-git commit -m "Implement functionality for Shopping Cart Page with mock cart data"
-```
-
 ---
 
 ## **Step 5: Implement Checkout Page Functionality**
 
-- [x] - Stretch Goal: empty cart Animated Icon that redirects to Products.js Page
+- [x] - Stretch Goal: Empty Cart Animated Icon that redirects to Products.js Page
 
 ![Alt text](public/imgs/empty-cart.jpg) <br /><br />
 
+- [x] - Full shopping cart saved to Local Storage, redirects to CheckOut.js
+
 ![Alt text](public/imgs/full-shopping-cart.png) <br /><br />
+
+- [x] - Checkout cart summary with Checkout Form
+
+![Alt text](public/imgs/checkout-cart-summary.png) <br /><br />
 
 ### **Instructions**:
 1. Add functionality to collect checkout information and save it to localStorage.
@@ -321,27 +320,6 @@ export default function ProductPage() {
 - Pass the product data as a prop to the `ProductCard` component.
 - Use **PropTypes** to validate the product as an object.
 
-**Example**: Note: insert your own JSX and design choices into this component:
-```jsx
-import PropTypes from 'prop-types';
-import Button from '@/components/Button';
-
-export default function ProductCard({ product }) {
-  return (
-    <div className="card">
-      <img src={product.image} alt={product.name} />
-      <h3>{product.name}</h3>
-      <p>{product.description}</p>
-      <p>${product.price}</p>
-      <Button label="Add to Cart"/>
-    </div>
-  );
-}
-
-ProductCard.propTypes = {
-  product: PropTypes.object.isRequired,
-};
-```
 
 ### **Step 3**: Verify in Storybook
 - Verify your story for `ProductCard` with mock product data.
