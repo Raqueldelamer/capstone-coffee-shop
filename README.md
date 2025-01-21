@@ -202,17 +202,17 @@ export default function Button({ handleClick, label }) {
 ![Alt text](public/imgs/checkout-cart-summary.png) <br /><br />
 
 ### **Instructions**:
-1. Add functionality to collect checkout information and save it to localStorage.
-2. Use a mock JSON object for order details.
+- [x] - Add functionality to collect checkout information and save it to localStorage.
+
 
 ### Part 1: Implement a controlled form for checkout details:
 
 Controlled forms are a common pattern in react. React can't access the forms directly, so we need to `useState` and an `eventHandler` to manage the form data as it changes.
 
 
-Part 2: Implement a function to save the order details to localStorage.
+## Part 2: Implement a function to save the order details to localStorage.
 
-After the form is submitted (see the last video above), you can save the order details to localStorage. You can use the `saveCartToLocalStorage` function as a reference.
+After the form is submitted you can save the order details to localStorage. You can use the `saveCartToLocalStorage` function as a reference.
 ---
 
 ## **Step 6: Implement Login and Register Pages**
@@ -260,7 +260,7 @@ By the end of Day 5, the project will be a fully functional e-commerce applicati
 - A robust authentication system.
 
 
-# Day 3 ## **5. Product Page** => https://coffee-shop-frontend-azure.vercel.app/products
+# Day 3 **5. Product Page => https://coffee-shop-frontend-azure.vercel.app/products**
 
 ### **Step 1**: Layout
 - In `src/pages/products/[id].jsx`, create a layout for a single product page.
