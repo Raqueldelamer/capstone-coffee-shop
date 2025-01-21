@@ -7,7 +7,7 @@ Live link that displays steps initialized and completed:
 - [x] https://coffee-shop-frontend-azure.vercel.app/cart 
 - [x] https://coffee-shop-frontend-azure.vercel.app/checkout
 
-## Splash Page
+## Splash Page: COFFEE, TEA, & READ!
 
 ![Alt text](public/imgs/splash.jpg) <br /><br />
 
