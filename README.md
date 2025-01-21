@@ -60,7 +60,7 @@ The Coffee Shop Backend is a Node.js-based Express application that serves as th
    ```
 
 2. **Connect to POSTMAN Backend**:
-   - Add Products to Postman Backend URL 
+   - POST Products on Postman Backend URL 
 
    ![Alt text](public/imgs/postman.jpg) <br /><br />
 
