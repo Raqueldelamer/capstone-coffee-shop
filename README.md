@@ -16,7 +16,8 @@ Live link that displays steps initialized and completed:
 ![Alt text](public/imgs/vercel.jpg) <br /><br />
 
 ## Objective:  
-The Coffee Shop Backend is a Node.js-based Express application that serves as the backend for an e-commerce coffee shop. It provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
+
+The Coffee Shop Backend and Frontend is a Node.js-based Express application that serves as an e-commerce coffee shop. It provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
 
 ## Key Tools & Technologies
 - Frontend: Next.js, DaisyUI, Tailwind CSS, Storybook, Iconify, React Hooks (useState, useQuery)
