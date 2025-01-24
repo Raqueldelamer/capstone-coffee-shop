@@ -17,6 +17,10 @@ export default function ProductsPage() {
     const { id } = router.query;
     //const [products, setProducts] = useState([]);
     const [cartContents, setCartContents] = useState([]);
+
+    const { token } = useAuth();
+    console.log(token);
+    
     const [url, setUrl] = useState(`${BACKEND_URL}/products`);
     // fetch products using hook
     const { data: products = [], loading, error } = useFetch(url, []);

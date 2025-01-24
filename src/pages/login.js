@@ -5,13 +5,38 @@ import { useRouter } from "next/router";
 
 export default function Login() {
     const router = useRouter();
-    function login() {
-        alert("You are logged in!")
-        router.push('/products');
+
+    // Handle login
+    async function handleLogin(email, password) {
+        const payload = {
+            email,
+            password,
+        };
+
+        try {
+            const response = await fetch("https://coffee-shop-backend-5fmn.onrender.com/api/v2/users/login", 
+                {   method: "POST",
+                    body: JSON.stringify(payload),
+                    headers: { "Content-Type": "application/json; charset=UTF-8", },
+                }
+            );
+
+            const data = await response.json();
+
+            // store it in localStorage if returned a token
+            if (data.token) {
+                localStorage.setItem("token", data.token);
+                localStorage.setItem("user", JSON.stringify(data.user)); 
+                alert('You are logged in: ' + email); 
+                router.push('/products'); 
+            } else {
+                alert('Login failed!');
+            }
+        } catch (error) {
+            console.error("Login error:", error);
+            alert('An error occurred while logging in.');
+        }
     }
-
-    const loginUser = (username, password) => console.log("User Logged In!");
-
 
     const divStyle = {
         backgroundImage: 'url(/imgs/book-cafe.jpg)',
@@ -22,16 +47,15 @@ export default function Login() {
         color: 'black',
     };
 
-
     return (
-    <>  
-    <NavBar menuItems={["HOME", "LOGIN"]} />
-    <div style={divStyle}>
-    <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 mx-auto font-mono font-bold 
-    text-stroke-thick flex justify-around items-center w-full">LOGIN BELOW!</h1>
-    <LoginForm title="Login" handleLogin={login}/>
-    </div>
-    <Footer className="flex justify-items-end" />
-    </>
-    )
+        <>  
+            <NavBar menuItems={["HOME", "LOGIN"]} />
+            <div style={divStyle}>
+                <h1 className="text-black text-5xl bg-slate-400 opacity-70 drop-shadow-2xl mb-5 mx-auto font-mono font-bold 
+                text-stroke-thick flex justify-around items-center w-full">LOGIN BELOW!</h1>
+                <LoginForm handleLogin={handleLogin} />
+            </div>
+            <Footer className="flex justify-items-end" />
+        </>
+    );
 }
