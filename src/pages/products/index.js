@@ -6,7 +6,8 @@ import Footer from "@/components/Footer";
 // import data from '@/mocks/products.json';
 import ProductCard from '@/components/ProductCard';
 import { loadCartFromLocalStorage, saveCartToLocalStorage } from '@/utils';
-import { useFetch } from '@/hooks/api';
+import { useAuthFetch } from '@/hooks/api';
+import useAuth from '@/hooks/auth';
 // import Button from '@/components/Button';
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
@@ -20,10 +21,10 @@ export default function ProductsPage() {
 
     const { token } = useAuth();
     console.log(token);
-    
+
     const [url, setUrl] = useState(`${BACKEND_URL}/products`);
     // fetch products using hook
-    const { data: products = [], loading, error } = useFetch(url, []);
+    const { data: products = [], loading, error } = useAuthFetch(url, [], token);
     //const [productFetchError, productsLoading, products] = useFetch (url, []);
 
     useEffect(() => {
