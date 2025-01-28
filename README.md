@@ -11,6 +11,16 @@ Live link that displays steps initialized and completed:
 ## Splash Page: COFFEE, TEA, & READ!
 
 ![Alt text](public/imgs/splash.jpg) <br /><br />
+### **Splash Home Page. Break Splash Page Into Components**
+In `index.jsx`, build a splash page that includes the following:
+- [x] - **Header**
+- [x] - **Hero Image with Call-to-Action (CTA) Button**
+- [x] - **Brief Description**
+- [x] - **Footer**
+- [x] - Split the page into components, such as `Header`, `Footer`, `HeroSection`, and `Button`.
+- [x] - Verify each component works in Storybook.
+- [x] - Create a new story for each new component.
+
 
 ## Deploy on Vercel
 
@@ -216,6 +226,10 @@ export default function Button({ handleClick, label }) {
 
 1. Replace the stub functions for `loadCart`, `addToCart`, `removeFromCart`, and `saveCartToLocalStorage` with real functionality.
 
+- **Key Deliverables:**
+- [x] - Interactive shopping cart with add/remove item functionality.
+- [x] - Fully integrated shopping cart experience.
+
 - [x] - Stretch Goal: Empty Cart Animated Icon that redirects to Products.js Page if cart is empty
 
 ![Alt text](public/imgs/empty-cart.jpg) <br /><br />
@@ -253,21 +267,17 @@ export default function Button({ handleClick, label }) {
 ## **Step 6: Implement Login and Register Pages**
 
 ### **Instructions**:
-1. Replace the stub functions in `registerUser` and `signInUser` with functionality to save user data to localStorage.
-2. Validate user credentials on the login page using mock data.
+- [x] - Replace the stub functions in `registerUser` and `signInUser` with functionality to save user data to localStorage.
 
-Be sure to implement controlled forms for the login and register pages. Then save the data to localStorage using the utility functions.
+- [x] - Implement controlled forms for the login and register pages. Then save the data to localStorage using the utility functions.
+
+![Alt text](public/imgs/logged-in.png) <br /><br />
+
+
 ---
 ## **Utility Functions in `/src/util/index.js`**
 
-#### **Day 5: Shopping Cart Feature**
-- [x] **Goals:**
-  - Build a **shopping cart sidebar/popup** for user-friendly cart interactions.
-  - Ensure seamless integration with the cart functionality implemented on Day 3.
 
-- **Key Deliverables:**
-  - Interactive shopping cart with add/remove item functionality.
-  - Fully integrated shopping cart experience.
 
 ---
 
@@ -300,28 +310,7 @@ By the end of Day 5, the project will be a fully functional e-commerce applicati
   - Price
   - Add to Cart Button
 
-**Starter code for Product Page**:
-```jsx
-import products from '../../mocks/products.json';
-import Button from '@/components/Button';
-import { useRouter } from 'next/router';
 
-export default function ProductPage() {
-  const router = useRouter();
-  const id = router.query.id;
-  const product = products[id] || {};;
-  return (
-    <div>
-      {/* TODO: Put this in CardProduct --> */}
-      <h1>{product.name}</h1>
-      <img src={product.imageUrl} alt={product.name} />
-      <p>{product.description}</p>
-      <p>${product.price}</p>
-      <Button title="Add to Cart"></Button>
-    </div>
-  );
-}
-```
 
 ### **Step 2**: Break Into a `ProductCard` Component
 - Create or update your `ProductCard` component.
@@ -392,20 +381,6 @@ Set up the following blank pages in the `pages` directory. These pages will serv
 
 ---
 
-## **2. Splash Page (Home Page)**
-### **Step 1**: Create the Layout
-In `index.jsx`, build a splash page that includes the following:
-- **Header**
-- **Hero Image with Call-to-Action (CTA) Button**
-- **Brief Description**
-- **Footer**
-
-### **Step 2**: Break Splash Page Into Components
-- Split the page into components, such as `Header`, `Footer`, `HeroSection`, and `Button`.
-- Verify each component works in Storybook.
-- Create a new story for each new component.
-- Remember, your Button component should accept a `label` prop.
-- If you like, you may have a prop that accepts a handleClick function.
 
 ### **Step 3**: Example: Update the Button to handle click events
 

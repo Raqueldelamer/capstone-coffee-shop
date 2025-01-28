@@ -68,20 +68,14 @@ export default function ProductsPage() {
             return <div>Error loading products: {error.message}</div>;
         }
 
-    //function addProductToCart(product) {
-      //  const newCartContents = [ ...cartContents, product ];
-        //setCartContents(newCartContents);
-       // saveCartToLocalStorage(newCartContents);
-    //}
-
     const productsJSX = Array.isArray(products) && products.length > 0 ? products.map((product) => (
         <ProductCard
             key={product._id}
             product={product}
             addToCart={() => handleAddToCart(product)}
             buttonLabel="Add to Cart" />
-    )) : <div className="text-2xl flex justify-items-center mb-10 mt-10 font-mono font-bold">
-                        No products available...
+    )) : <div className="text-2xl flex justify-around ml-20 mb-10 mt-10 font-mono font-bold">
+                        ..No products available. Must sign up & login to obtain access.
             </div>
 
         //function handleAddToCart() {
