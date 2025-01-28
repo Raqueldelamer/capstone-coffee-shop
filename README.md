@@ -260,8 +260,6 @@ Be sure to implement controlled forms for the login and register pages. Then sav
 ---
 ## **Utility Functions in `/src/util/index.js`**
 
-
-
 #### **Day 5: Shopping Cart Feature**
 - [x] **Goals:**
   - Build a **shopping cart sidebar/popup** for user-friendly cart interactions.
@@ -367,13 +365,6 @@ export default function ProductsPage() {
   );
 }
 ```
-
-- Use Flexbox or Grid for layout.
-
-git commit with a message like "Add Products page to display multiple products."
-
----
-
 
 # Day 2 Guide: Coffee Shop Frontend => https://coffee-shop-frontend-azure.vercel.app
 
