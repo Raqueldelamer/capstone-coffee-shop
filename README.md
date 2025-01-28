@@ -224,21 +224,26 @@ export default function Button({ handleClick, label }) {
 ## **Step 5: Implement Checkout Page Functionality**
 
 - [x] - Checkout Cart Summary and Checkout Form
+- [x] - Implement a controlled form for checkout details
 
 ![Alt text](public/imgs/checkout-cart-summary.png) <br /><br />
 
-### **Instructions**:
-- [x] - Add functionality to collect checkout information and save it to localStorage.
+### **Add functionality to collect checkout information and save it to localStorage.**:
 
+![Alt text](public/imgs/local-storage.png) <br /><br />
 
-### Part 1: Implement a controlled form for checkout details:
+## Implement a function to save the cart order details to localStorage.
 
-Controlled forms are a common pattern in react. React can't access the forms directly, so we need to `useState` and an `eventHandler` to manage the form data as it changes.
+- [x] - After the form is submitted you can save the order details to localStorage. You can use the `saveCartToLocalStorage` function as a reference.
 
+### **Shared Functions**:
+1. `loadProductsFromLocalStorage()`: Returns products.
+2. `loadCartFromLocalStorage()`: Returns the cart.
+3. `saveCartToLocalStorage(cart)`: Saves cart to localStorage.
+4. `saveProductsToLocalStorage(products)`: Saves products to localStorage.
+5. `saveUserToLocalStorage(user)`: Saves user to localStorage.
+6. `loginUserToLocalStorage(user)`: Saves logged-in user to localStorage.
 
-## Part 2: Implement a function to save the order details to localStorage.
-
-After the form is submitted you can save the order details to localStorage. You can use the `saveCartToLocalStorage` function as a reference.
 ---
 
 ## **Step 6: Implement Login and Register Pages**
@@ -251,13 +256,7 @@ Be sure to implement controlled forms for the login and register pages. Then sav
 ---
 ## **Utility Functions in `/src/util/index.js`**
 
-### **Shared Functions**:
-1. `loadProductsFromLocalStorage()`: Returns products.
-2. `loadCartFromLocalStorage()`: Returns the cart.
-3. `saveCartToLocalStorage(cart)`: Saves cart to localStorage.
-4. `saveProductsToLocalStorage(products)`: Saves products to localStorage.
-5. `saveUserToLocalStorage(user)`: Saves user to localStorage.
-6. `loginUserToLocalStorage(user)`: Saves logged-in user to localStorage.
+
 
 #### **Day 5: Shopping Cart Feature**
 - [x] **Goals:**
