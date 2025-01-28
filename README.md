@@ -65,7 +65,7 @@ In `index.jsx`, build a splash page that includes the following:
 
 ![Alt text](public/imgs/vercel.jpg) <br /><br />
 
-## Step 1: **Setup Storybook**
+## Step 0: **Setup Storybook**
 
 a. **Install Storybook**:
 
