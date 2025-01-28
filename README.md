@@ -42,6 +42,7 @@ The Coffee Shop Backend and Frontend is a Node.js-based Express application that
 
 ## Features
 - [x] **Tailwind CSS with DaisyUI integration.**
+- [x] **Test Custom CSS**
 - [x] **Storybook for component development.**
 - [x] **Create Stub Functions for all Components**
 - [x] **Implement Product List Page Functionality**
@@ -798,70 +799,8 @@ It's a good idea to deploy your app to Vercel right away to ensure it works as e
      };
      ```
 
-2. **Test Theme**:
-   - Apply the theme in your app:
-
-     ```javascript
-     // pages/_app.js
-     import '../styles/globals.css';
-
-     export default function MyApp({ Component, pageProps }) {
-       return (
-         <div data-theme="coffeeShop">
-           <Component {...pageProps} />
-         </div>
-       );
-     }
-     ```
-
-   - Verify the theme is applied.
-
----
-
-## **7. Create Custom CSS Rule for a Component**
-
-1. **Add Custom CSS**:
-   - Example for `Navbar`:
-
-     ```css
-     /* styles/navbar.css */
-     .navbar {
-       background-color: #6b4f4f;
-       color: white;
-     }
-     ```
-
-2. **Import CSS**:
-
-   ```javascript
-   // components/Navbar.js
-   import '../styles/navbar.css';
-
-   export default function Navbar() {
-       return <div className="navbar">Navbar Component</div>;
-   }
-   ```
-
-3. **Test Custom CSS**:
-   - Verify the custom style is applied to the `Navbar` component.
-
----
-
-1. **Test Application**:
-   - Ensure all components work in Storybook and the app.
-   - Verify the backend connection and DaisyUI integration.
-
-2. **Create `README.md`**:
-   - Document the setup steps, dependencies, and testing process.
-
-## **Commit and Push Changes**
-
-Make sure to commit your changes and push them to GitHub. Then check to see if your app is deployed on Vercel. You may have accidentally added something that causes an error in production, so it's good to check after each commit.
 
 
-## **Submission**
 
-Submit the GitHub repository link for the project. Be sure to include the link to the deployed app on Vercel.
 
----
 
