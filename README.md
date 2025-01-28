@@ -11,20 +11,6 @@ Live link that displays steps initialized and completed:
 ## Splash Page: COFFEE, TEA, & READ!
 
 ![Alt text](public/imgs/splash.jpg) <br /><br />
-### **Splash Home Page. Break Splash Page Into Components**
-In `index.jsx`, build a splash page that includes the following:
-- [x] - **Header**
-- [x] - **Hero Image with Call-to-Action (CTA) Button**
-- [x] - **Brief Description**
-- [x] - **Footer**
-- [x] - Split the page into components, such as `Header`, `Footer`, `HeroSection`, and `Button`.
-- [x] - Verify each component works in Storybook.
-- [x] - Create a new story for each new component.
-
-
-## Deploy on Vercel
-
-![Alt text](public/imgs/vercel.jpg) <br /><br />
 
 ## Objective:  
 
@@ -64,6 +50,23 @@ The Coffee Shop Backend and Frontend is a Node.js-based Express application that
 - [x] **Updating, and deleting.JWT User Authentication & Protected Routes**
 
 
+### **Splash Home Page. Break Splash Page Into Components**
+In `index.jsx`, build a splash page that includes the following:
+- [x] - **Header**
+- [x] - **Hero Image with Call-to-Action (CTA) Button**
+- [x] - **Brief Description**
+- [x] - **Footer**
+- [x] - Split the page into components, such as `Header`, `Footer`, `HeroSection`, and `Button`.
+- [x] - Verify each component works in Storybook.
+- [x] - Create a new story for each new component.
+
+
+## Deploy on Vercel
+
+![Alt text](public/imgs/vercel.jpg) <br /><br />
+
+
+
 ## Step 0: **Setup .env File and Connect to Backend**
 
 1. **Create `.env.local` File**:
@@ -87,7 +90,29 @@ The Coffee Shop Backend and Frontend is a Node.js-based Express application that
 
 ---
 
-## **Step 1: Create Stub Functions**
+## Step 1: **Setup Storybook**
+
+a. **Install Storybook**:
+
+   ```bash
+   npx storybook@latest init
+   ```
+
+b. **Run Storybook**:
+
+Storybook may will already be running after the installation. If not, you can start it with:
+
+   ```bash
+   npm run storybook
+   ```
+
+- [x] - Verify Storybook runs at [http://localhost:6006](http://localhost:6006).
+- [x] - Verify all components render correctly in Storybook.
+- [x] - Add one screenshot of the Storybook interface to your README.md
+
+![Alt text](public/imgs/storybook.png) <br /><br />
+
+## **Step 2: Create Stub Functions**
 
 ### **Instructions**:
 1. **Stub Functions**: Create empty functions in the respective Page components. For now, these will log messages to the console or display alerts.
@@ -154,27 +179,7 @@ export default function CartPage() {
 }
 ```
 
-## **Setup Storybook**
 
-a. **Install Storybook**:
-
-   ```bash
-   npx storybook@latest init
-   ```
-
-b. **Run Storybook**:
-
-Storybook may will already be running after the installation. If not, you can start it with:
-
-   ```bash
-   npm run storybook
-   ```
-
-- [x] - Verify Storybook runs at [http://localhost:6006](http://localhost:6006).
-- [x] - Verify all components render correctly in Storybook.
-- [x] - Add one screenshot of the Storybook interface to your README.md
-
-![Alt text](public/imgs/storybook.png) <br /><br />
   
 ## **Step 3: Implement Product List Page Functionality**
 - [x] - Products fetched via Backend URL, implementing Product Card Component w product data and Add to Cart Button which redirects to the cart.js
