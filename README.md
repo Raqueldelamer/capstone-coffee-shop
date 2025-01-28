@@ -65,31 +65,6 @@ In `index.jsx`, build a splash page that includes the following:
 
 ![Alt text](public/imgs/vercel.jpg) <br /><br />
 
-
-
-## Step 0: **Setup .env File and Connect to Backend**
-
-1. **Create `.env.local` File**:
-
-   ```plaintext
-   NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
-   NEXT_PUBLIC_API_BASE_URL_PROD=https://api.onrender.com
-   ```
-
-2. **Connect to POSTMAN Backend**:
-   - POST Products on Postman Backend URL 
-
-   ![Alt text](public/imgs/postman.jpg) <br /><br />
-
-   - GET All Products
-
-   ![Alt text](public/imgs/get.png) <br /><br />
-
-3. **Test Backend Connection**:
-   - Verify the console logs the response from the backend.
-
----
-
 ## Step 1: **Setup Storybook**
 
 a. **Install Storybook**:
@@ -111,6 +86,29 @@ Storybook may will already be running after the installation. If not, you can st
 - [x] - Add one screenshot of the Storybook interface to your README.md
 
 ![Alt text](public/imgs/storybook.png) <br /><br />
+
+## Step 1: **Setup .env File and Connect to Backend**
+
+1. **Create `.env.local` File**:
+
+   ```plaintext
+   NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+   NEXT_PUBLIC_API_BASE_URL_PROD=https://api.onrender.com
+   ```
+
+2. **Connect to POSTMAN Backend**:
+   - POST Products on Postman Backend URL 
+
+   ![Alt text](public/imgs/postman.jpg) <br /><br />
+
+   - GET All Products
+
+   ![Alt text](public/imgs/get.png) <br /><br />
+
+3. **Test Backend Connection**:
+   - Verify the console logs the response from the backend.
+
+---
 
 ## **Step 2: Create Stub Functions**
 
