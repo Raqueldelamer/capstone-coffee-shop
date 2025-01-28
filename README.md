@@ -217,7 +217,7 @@ export default function Button({ handleClick, label }) {
 ```
 ---
 
-## **Step 3: Implement Product Display Page Functionality Instructions**:
+## **Step 4: Implement Product Display Page Functionality Instructions**:
 
 1. Use `fetchProduct` to load product data via .env.local to BACKEND https://coffee-shop-backend-5fmn.onrender.com/api/v1/products/ .
 
@@ -225,7 +225,7 @@ export default function Button({ handleClick, label }) {
 
 ---
 
-## **Step 4: Implement Shopping Cart Page Functionality Instructions**:
+## **Step 5: Implement Shopping Cart Page Functionality**:
 
 1. Replace the stub functions for `loadCart`, `addToCart`, `removeFromCart`, and `saveCartToLocalStorage` with real functionality.
 
