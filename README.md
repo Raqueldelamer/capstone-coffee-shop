@@ -41,9 +41,10 @@ The Coffee Shop Backend and Frontend is a Node.js-based Express application that
 
 
 ## Features
-- [x] **Tailwind CSS with DaisyUI integration.**
+- [x] **Tailwind CSS with DaisyUI Theme integration.**
 - [x] **Test Custom CSS**
 - [x] **Storybook for component development.**
+- [x] **Create Skeleton for All Components**
 - [x] **Create Stub Functions for all Components**
 - [x] **Implement Product List Page Functionality**
 - [x] **Verify in Storybook**
@@ -160,6 +161,8 @@ Storybook may will already be running after the installation. If not, you can st
    ```
 
 - [x] - Verify Storybook runs at [http://localhost:6006](http://localhost:6006).
+- [x] - Verify all components render correctly in Storybook.
+- [x] - Add one screenshot of the Storybook interface to your README.md
 
 ![Alt text](public/imgs/storybook.png) <br /><br />
   
@@ -596,60 +599,7 @@ It's a good idea to deploy your app to Vercel right away to ensure it works as e
 
 
 
-3. **Add a Button Component to Test**:
 
-   - First, delete the `stories` directory in the `src` folder.
-
-   - Next, create a simple button component to test in Storybook:
-
-     ```javascript
-     // components/Button.js
-      import PropTypes from 'prop-types';
-      export default function Button({ label }) {
-        return <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{label}</button>;
-      }
-      Button.propTypes = {
-        label: PropTypes.string.isRequired,
-      };
-     ```
-
-   - Open Storybook's UI by running:
-
-     ```bash
-     npm run storybook
-     ```
-
-   - In Storybook, create a new story:
-     - Navigate to the Storybook interface.
-     - Use the UI options to create a story for the `Button` component.
-
-   - Test the button in the Storybook interface to ensure it renders correctly.
-   - Open Storybook's UI by running:
-
-     ```bash
-     npm run storybook
-     ```
-
-   - In Storybook, create a new story:
-     - Navigate to the Storybook interface.
-     - Use the UI options to create a story for the `Button` component.
-
-   - Run Storybook and confirm the button renders correctly.
-
----
-
-## **3. Create Skeleton for All Components**
-
-1. **Create Components**:
-   - Create files for the following components:
-     - Navbar.jsx
-     - Footer.jsx
-     - Button.jsx
-     - Loader.jsx
-     - Toast.jsx
-     - ProductCard.jsx
-     - CartItem.jsx
-     - CartSummary.jsx
 
 2. **Add Skeleton Code and Stories**:
    - Do not complete the components yet; add a simple "Hello World" message to each component. You will have the opportunity to add more functionality later.
@@ -679,125 +629,10 @@ It's a good idea to deploy your app to Vercel right away to ensure it works as e
 
 
 
-     ```markdown
-     # Coffee Shop Frontend
-
-     ## Components
-     - Navbar
-     - Footer
-     - Button
-     - Loader
-     - Toast
-     - ProductCard
-     - CartItem
-     - CartSummary
-     ```
-
----
 
 
-## **5. Setup DaisyUI**
 
-1. **Install DaisyUI**:
 
-   ```bash
-   npm install daisyui
-   ```
-
-2. **Configure DaisyUI**:
-   - Add DaisyUI to `tailwind.config.js`:
-
-     ```javascript
-     module.exports = {
-       content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-       theme: {
-         extend: {},
-       },
-       plugins: [require("daisyui")],
-     };
-     ```
-
-3. **Test DaisyUI**:
-   - Add a sample component:
-
-     ```javascript
-     export default function TestButton() {
-       return <button className="btn btn-primary">Test DaisyUI</button>;
-     }
-     ```
-
-   - Verify the button renders with DaisyUI styling.
-
----
-
-## **6. Setup Custom DaisyUI Theme**
-
-1. **Use DaisyUI Theme Generator**:
-   - Visit the [DaisyUI Theme Generator](https://daisyui.com/theme-generator/).
-   - Customize the theme colors to align with your coffee shop branding.
-   - Copy the generated theme configuration.
-
-2. **Configure the Custom Theme**:
-   - Update `tailwind.config.js` with the copied theme configuration:
-
-     ```javascript
-     module.exports = {
-       plugins: [require("daisyui")],
-       daisyui: {
-         themes: [
-           {
-             coffeeShop: {
-               primary: "#6B4F4F", // Replace with your custom color
-               secondary: "#FFD700", // Replace with your custom color
-               accent: "#C0C0C0", // Replace with your custom color
-               neutral: "#3D4451", // Replace with your custom color
-               "base-100": "#FFFFFF", // Replace with your custom color
-             },
-           },
-         ],
-       },
-     };
-     ```
-
-3. **Test the Theme**:
-   - Apply the theme in your app:
-
-     ```javascript
-     // pages/_app.js
-     import '../styles/globals.css';
-
-     export default function MyApp({ Component, pageProps }) {
-       return (
-         <div data-theme="coffeeShop">
-           <Component {...pageProps} />
-         </div>
-       );
-     }
-     ```
-
-   - Verify the custom theme is applied and renders as expected.
-
-1. **Configure Custom Theme**:
-   - Update `tailwind.config.js`:
-
-     ```javascript
-     module.exports = {
-       plugins: [require("daisyui")],
-       daisyui: {
-         themes: [
-           {
-             coffeeShop: {
-               primary: "#6B4F4F",
-               secondary: "#FFD700",
-               accent: "#C0C0C0",
-               neutral: "#3D4451",
-               "base-100": "#FFFFFF",
-             },
-           },
-         ],
-       },
-     };
-     ```
 
 
 
