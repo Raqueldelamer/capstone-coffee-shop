@@ -3,6 +3,7 @@
 Live link that displays steps initialized and completed:
 - [x] https://coffee-shop-frontend-azure.vercel.app 
 - [x] https://coffee-shop-frontend-azure.vercel.app/sign-up 
+- [x] https://coffee-shop-frontend-azure.vercel.app/login
 - [x] https://coffee-shop-frontend-azure.vercel.app/products 
 - [x] https://coffee-shop-frontend-azure.vercel.app/cart 
 - [x] https://coffee-shop-frontend-azure.vercel.app/checkout
@@ -64,6 +65,10 @@ The Coffee Shop Backend and Frontend is a Node.js-based Express application that
    - POST Products on Postman Backend URL 
 
    ![Alt text](public/imgs/postman.jpg) <br /><br />
+
+   - GET All Products
+
+   ![Alt text](public/imgs/get.png) <br /><br />
 
 3. **Test Backend Connection**:
    - Verify the console logs the response from the backend.

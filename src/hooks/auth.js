@@ -15,9 +15,9 @@ export default function useAuth() {
         if(t) {
             setIsAuthenticated(true);
         }
-    })
+    }, [] );
     
 
-    return { user, token  }
+    return { user, token, isAuthenticated }
 
 }

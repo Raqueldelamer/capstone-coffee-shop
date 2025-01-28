@@ -22,7 +22,7 @@ export default function ProductsPage() {
     const { token } = useAuth();
     console.log(token);
 
-    const [url, setUrl] = useState(`${BACKEND_URL}/products`);
+    const [url, setUrl] = useState(`${BACKEND_URL}/products?limit=25`);
     // fetch products using hook
     const { data: products = [], loading, error } = useAuthFetch(url, [], token);
     //const [productFetchError, productsLoading, products] = useFetch (url, []);
