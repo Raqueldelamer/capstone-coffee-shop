@@ -185,37 +185,11 @@ export default function CartPage() {
 ![Alt text](public/imgs/products-page.jpg) <br /><br />
 
 ### **Instructions**:
-1. Replace stub functions with real functionality to:
+- [x] - Replace stub functions with real functionality to:
    - Load and filter products.
    - Pass `viewProduct` to the button in `ProductCard` using **prop drilling**.
-2. Use mock data to populate the product list.
-   - check the Appendix at the end of this document for examples of mock data and utility functions.
 
-Observe how the `viewProduct` function is passed down to the `ProductCard` component and then to the `Button` component. This is an example of **prop drilling**. You will often use this technique to pass functions down to child components. It can be tedious, but it's a common pattern in React.
 
-Example of `viewProduct` function:
-```javascript
-// in src/pages/products/index.jsx
-const viewProduct = (product) => {
-  router.push(`/products/${product}`);
-};
-...
-<ProductCard product={product} handleClick={() => viewProduct(product)} />
-...
-```
-
-```javascript
-// in src/components/ProductCard.jsx
-<Button handleClick={() => handleClick(product)}>View Product</button>
-```
-
-```javascript
-// in src/components/Button.jsx
-export default function Button({ handleClick, label }) {
-  return <button onClick={handleClick}>{label}</button>;
-}
-```
----
 
 ## **Step 4: Implement Product Display Page Functionality Instructions**:
 
@@ -280,8 +254,6 @@ export default function Button({ handleClick, label }) {
 ---
 ## **Utility Functions in `/src/util/index.js`**
 
-
-
 ---
 
 ### **Key Tools & Technologies**
@@ -302,16 +274,6 @@ By the end of Day 5, the project will be a fully functional e-commerce applicati
 
 # Day 3 **5. Product Page => https://coffee-shop-frontend-azure.vercel.app/products**
 
-### **Step 1**: Layout
-- In `src/pages/products/[id].jsx`, create a layout for a single product page.
-- Include a header and footer.
-- import the data from the mock products file at `src/mocks/products.json`.
-- Create a product card displaying:
-  - Product image
-  - Name
-  - Description
-  - Price
-  - Add to Cart Button
 
 
 
@@ -342,29 +304,12 @@ The products page will display a list of products. You will use the `ProductCard
 - See [Rendering Lists](https://react.dev/learn/describing-the-ui#rendering-lists) in the React documentation for more information.
 
 
-export default function ProductsPage() {
-  const productsJSX = products.map((product) => {
-    // Use key prop every time you use map.
-    // This is a unique identifier for each product.
-    // React is not smart enough to keep track of the order of items in a list.
-    // so we need to give it help by providing a unique key prop.
-    return (<ProductCard key={product._id} product={product} />)
-  });
-  return (
-    <div className="products-grid">
-      {productsJSX}
-    </div>
-  );
-}
-```
 
 # Day 2 Guide: Coffee Shop Frontend => https://coffee-shop-frontend-azure.vercel.app
 
 ## Objective:  
 
 Continue building the project you started in Day 1. Today, you will create pages for the Coffee Shop frontend, then break them into reusable components while the layout and structure are fresh in your mind. Utilize Storybook to verify components, and enhance the design for consistency across the application.
-
-Note: If you are unable to complete the full assignment, focus on the login pages and the product pages. If you can't get to the cart, you can still make a decent project. Then, you can fill in the other pages later if you have time, or leave them as a stretch goal. However, some of the pages in the Cart functionality are repetitive, so you may be able to reuse components from the product page for the cart page.
 
 ---
 
@@ -570,31 +515,8 @@ It's a good idea to deploy your app to Vercel right away to ensure it works as e
 
 
 
-2. **Add Skeleton Code and Stories**:
-   - Do not complete the components yet; add a simple "Hello World" message to each component. You will have the opportunity to add more functionality later.
-   - Example for `Navbar`:
 
-     ```javascript
-     // components/Navbar.js
-     import PropTypes from 'prop-types';
-     export default function Navbar({title}) {
-       return <div className="navbar">Navbar Component {title}</div>;
-     }
-     Navbar.propTypes = {
-       // Add prop-types here
-        title: PropTypes.string.isRequired,
-     };
-     ```
 
-   - Make use of snippets or copy and paste boilerplate code to speed up the process.
-   - Test the components in Storybook to ensure they render correctly.
-   - Click the + sign in the Storybook interface to add a new story.
-   - Don't forget to click update story in storybook to save the changes, if you update controls (props).
-   - Commit often to track your progress.
-
-3. **Test Each Component in Storybook**:
-- [x] - Verify all components render correctly in Storybook.
-- [x] - Add one screenshot of the Storybook interface to your README.md. 
 
 
 

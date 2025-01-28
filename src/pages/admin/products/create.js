@@ -31,11 +31,6 @@ export default function CreateProducts() {
         const price = event.target.elements.price.value;
         const category = event.target.elements.category.value;
         const stock = event.target.elements.stock.value;
-        alert("name:" + name)
-        alert("description:" + description)
-        alert("price:" + price)
-        alert("category:" + category)
-        alert("stock:" + stock)
 
         const product = {
             name,
