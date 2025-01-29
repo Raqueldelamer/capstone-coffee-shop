@@ -79,7 +79,7 @@ export default function CreateProducts() {
             
             <div className="card bg-base-100 mx-auto justify-center flex-grow max-w-sm">
             <div className="card-body justify-center">
-                <h2 className='text-center text-xl font-mono text-yellow-500'>Create Product Form</h2>
+                <h2 className='text-center text-xl font-bold font-mono text-yellow-500'>CREATE PRODUCT FORM</h2>
             <form onSubmit={handleSubmit} className="form-control text-yellow-500 mt-5 text-center font-sans text-l space-y-">
             <label className="label">
                 <span className="label-text block mb-2">Product:</span>
@@ -103,7 +103,7 @@ export default function CreateProducts() {
                 
                 <label className="label">
                 <span className="label-text block mb-2">Stock:</span>
-                <input type="text" placeholder="in stock" name="stock" className="input input-bordered" />
+                <input type="text" placeholder="in stock" name="stock" className="input input-bordered mb-2" />
                 </label>
             <Button label="Submit to Create New Product" />
             </form>

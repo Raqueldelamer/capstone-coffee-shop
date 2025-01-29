@@ -16,7 +16,7 @@ export default function ProductsPage() {
     const { category } = router.query;
     console.log(category);
     const { id } = router.query;
-    //const [products, setProducts] = useState([]);
+
     const [cartContents, setCartContents] = useState([]);
 
     const { token } = useAuth();
@@ -61,7 +61,7 @@ export default function ProductsPage() {
                     <animate attributeName="r" begin={0} calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;2;0;0"></animate>
                     </circle>
                 </svg>
-                <p className="text-yellow-200 font-mono">Loading products</p>
+                <p className="text-yellow-200 font-mono">Loading products..</p>
             </div>;
         }
         if(error) {
