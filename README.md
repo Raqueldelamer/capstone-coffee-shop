@@ -14,13 +14,13 @@ Live link that displays steps initialized and completed:
 
 ## Objective:  
 
-The Coffee Shop Backend and Frontend is a Node.js-based Express application that serves as an e-commerce coffee shop. It provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
+The Coffee Shop Backend and Frontend is a Node.js-based Express application that serves as an e-commerce coffee shop. Set up a solid foundation for the project by creating a Next.js app, integrating Storybook for component development, and building stubs for your components. Follow an incremental approach to ensure all components work as expected before moving forward. The fullstack app provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
 
-## Key Tools & Technologies
-- Frontend: Next.js, DaisyUI, Tailwind CSS, Storybook, Iconify, React Hooks (useState, useQuery)
-- Backend: Node.js, API v1 (non-auth) and API v2 (auth)
-- Database: (Database type to be decided: e.g., Vercel, MongoDB, Postman, PostgreSQL)
-- Version Control: Git/GitHub
+### **Key Tools & Technologies**
+- **Frontend:** Next.js, DaisyUI, Storybook, Iconify, React Hooks (useState, useQuery)
+- **Backend:** Node.js, API v1 (non-auth) and API v2 (auth)
+- **Database:** (Database type to be decided: e.g., MongoDB, PostgreSQL)
+- **Version Control:** Git/GitHub
 
 ## Components
 - [x] Button
@@ -268,15 +268,11 @@ export default function CartPage() {
 
 
 ---
-## **Utility Functions in `/src/util/index.js`**
+## **Create Product Function for Authenticated Logged In Admin User in `/admin/products/create.js`**
 
----
+![Alt text](public/imgs/create-save-localstorage.png) <br /><br />
 
-### **Key Tools & Technologies**
-- **Frontend:** Next.js, DaisyUI, Storybook, React Hooks (useState, useQuery)
-- **Backend:** Node.js, API v1 (non-auth) and API v2 (auth)
-- **Database:** (Database type to be decided: e.g., MongoDB, PostgreSQL)
-- **Version Control:** Git/GitHub
+
 
 ---
 
@@ -425,15 +421,7 @@ SignupForm.propTypes = {
 
 git commit with a message like "Add SignupForm component."
 
----
 
-# Day One Setup for Coffee Shop Frontend
-
-## Objective
-
-Set up a solid foundation for the project by creating a Next.js app, integrating Storybook for component development, and building stubs for your components. Follow an incremental approach to ensure all components work as expected before moving forward.
-
----
 
 ## **1. Setup Next.js and Repository**
 
@@ -449,18 +437,8 @@ Set up a solid foundation for the project by creating a Next.js app, integrating
 2. **Initialize a Git Repository**:
 
 
-3. **Test Application**:
 
 
-   npm run dev
-   ```
-   Verify the app runs at [http://localhost:3000](http://localhost:3000).
-
-4. **Update your README.md file.**
-
-- delete the default content.
-- add an outline of what you plan to do or the template provided in the assignment.
-- commit your changes.
 
 # Coffee Shop Frontend
 
