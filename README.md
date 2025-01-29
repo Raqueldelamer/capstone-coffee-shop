@@ -49,6 +49,14 @@ The Coffee Shop Backend and Frontend is a Node.js-based Express application that
 - [x] **CRUD Operations: Implemented APIs for managing products, including creating, reading,** 
 - [x] **Updating, and deleting.JWT User Authentication & Protected Routes**
 
+## Attribution
+
+Give credit to any resources or inspiration you used in this project.
+
+- [Tailwind CSS](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
+- [Storybook](https://storybook.js.org/)
+
 
 ### **Splash Home Page. Break Splash Page Into Components**
 In `index.jsx`, build a splash page that includes the following:
@@ -62,6 +70,7 @@ In `index.jsx`, build a splash page that includes the following:
 
 
 ## Deploy on Vercel
+- [x] - It's best to deploy your app to Vercel right away to ensure it works as expected in a production environment.
 
 ![Alt text](public/imgs/vercel.jpg) <br /><br />
 
@@ -457,66 +466,16 @@ Set up a solid foundation for the project by creating a Next.js app, integrating
 
 This is a project to build a frontend for a coffee shop. The project will include a variety of components and features to create a user-friendly experience for customers.
 
-## Technologies
-
-- React
-- Next.js
-- Tailwind CSS
-- Storybook
-- DaisyUI
-- Vercel
-
-## Setup
-If you would like to try this project out or contribute, follow these steps:
-
-1. Clone the repository.
-2. Run `npm install` to install dependencies.
-3. Start the app with `npm run dev`.
-4. Open Storybook with `npm run storybook`.
-
-## Contributing
-If you would like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature.
-3. Make your changes.
-4. Test your changes.
-5. Push your changes to your fork.
-6. Create a pull request.
 
 
-## Attribution
-
-Give credit to any resources or inspiration you used in this project.
-
-- [Tailwind CSS](https://tailwindcss.com/)
-- [DaisyUI](https://daisyui.com/)
-- [Storybook](https://storybook.js.org/)
 
 
-5. Update index.js file.
 
-- delete the default content.
-- add a simple heading to test the app.
 
-```jsx
-export default function Home() {
-  return <h1>Coffee Shop Frontend Splash Page</h1>;
-}
-```
 
-- [x] - 6. Deploy to Vercel.
 
-It's a good idea to deploy your app to Vercel right away to ensure it works as expected in a production environment.
 
-- Push your code to GitHub.
-- Create a new project on Vercel.
-- Import your project from GitHub.
-- Deploy your project.
-- Note: you may want to have a special branch for deployment, such as `main` or `production`.
-- Note: Although you have no Environment Variables yet, remember to update your Environment Variables in Vercel to match your `.env.local` file as you add them.
-- Check your deployed app to ensure it works as expected after each commit to see if you can catch any bugs as they are made.
----
+
 
 
 
