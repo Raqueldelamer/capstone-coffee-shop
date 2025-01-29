@@ -56,6 +56,7 @@ Give credit to any resources or inspiration you used in this project.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 - [Storybook](https://storybook.js.org/)
+- [Iconify](https://icon-sets.iconify.design)
 
 
 ### **Splash Home Page. Break Splash Page Into Components**
