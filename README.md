@@ -14,7 +14,7 @@ Live link that displays steps initialized and completed:
 
 ## Objective:  
 
-The Coffee Shop Backend and Frontend is a Node.js-based Express application that serves as an e-commerce coffee shop. Set up a solid foundation for the project by creating a Next.js app, integrating Storybook for component development, and building stubs for your components. Follow an incremental approach to ensure all components work as expected before moving forward. The fullstack app provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
+The Coffee Shop Backend and Frontend is a project to build a Next.js-based frontend and backend application that will include a variety of components and features to create a user-friendly experience for customers that serves as an e-commerce coffee shop. This project integrates Storybook for component development, and building stubs for your components. Follow an incremental approach to ensure all components work as expected before moving forward. The fullstack app provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
 
 ### **Key Tools & Technologies**
 - **Frontend:** Next.js, DaisyUI, Storybook, Iconify, React Hooks (useState, useQuery)
@@ -438,11 +438,6 @@ git commit with a message like "Add SignupForm component."
 
 
 
-
-
-# Coffee Shop Frontend
-
-This is a project to build a frontend for a coffee shop. The project will include a variety of components and features to create a user-friendly experience for customers.
 
 
 
