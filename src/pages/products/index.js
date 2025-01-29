@@ -75,7 +75,7 @@ export default function ProductsPage() {
             addToCart={() => handleAddToCart(product)}
             buttonLabel="Add to Cart" />
     )) : <div className="text-2xl flex justify-around ml-20 mb-10 mt-10 font-mono font-bold">
-                        ..No products available. Must sign up & login to obtain access.
+                        ..No products available. Sign Up & Login to obtain access.
             </div>
 
         //function handleAddToCart() {

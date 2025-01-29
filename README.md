@@ -119,8 +119,6 @@ Storybook may will already be running after the installation. If not, you can st
 
    ![Alt text](public/imgs/delete-id.png) <br /><br />
 
-3. **Test Backend Connection**:
-   - Verify the console logs the response from the backend.
 
 ---
 
