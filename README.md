@@ -224,7 +224,6 @@ export default function CartPage() {
 ![Alt text](public/imgs/empty-cart.jpg) <br /><br />
 
 - [x] - Products Added redirected into Shopping Cart
-- [x] - Shopping cart saved to Local Storage, redirects to CheckOut.js
 
 ![Alt text](public/imgs/full-shopping-cart.png) <br /><br />
 
