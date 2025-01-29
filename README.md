@@ -209,7 +209,7 @@ export default function CartPage() {
 
 ---
 
-## **Step 5: Implement Shopping Cart Page Functionality**:
+## **Step 4: Implement Shopping Cart Page Functionality**:
 
 1. Replace the stub functions for `loadCart`, `addToCart`, `removeFromCart`, and `saveCartToLocalStorage` with real functionality.
 
