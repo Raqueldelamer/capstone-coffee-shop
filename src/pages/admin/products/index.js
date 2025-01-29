@@ -1,22 +1,22 @@
 // import { useState, useEffect } from 'react';
 // import { useRouter } from "next/router";
-// import Navbar from '@/components/Navbar';
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
-// // import data from '@/mocks/products.json';
+//import Navbar from '@/components/Navbar';
+//import Header from "@/components/Header";
+//import Footer from "@/components/Footer";
+// import data from '@/mocks/products.json';
 // import ProductCard from '@/components/ProductCard';
 // import { loadCartFromLocalStorage, saveCartToLocalStorage } from '@/utils';
 // import { useAuthFetch } from '@/hooks/api';
 // import useAuth from '@/hooks/auth';
-// // import Button from '@/components/Button';
+// import Button from '@/components/Button';
 // const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-// export default function ProductsPage() {
+//export default function ProductsPage() {
 //     const router = useRouter();
 //     const { category } = router.query;
 //     console.log(category);
 //     const { id } = router.query;
-//     //const [products, setProducts] = useState([]);
+    //const [products, setProducts] = useState([]);
 //     const [cartContents, setCartContents] = useState([]);
 
 //     const { token } = useAuth();
@@ -38,7 +38,7 @@
 //         saveCartToLocalStorage(newCartContents);
 //     }
 
-//     // handling add to cart
+     // handling add to cart
 //     function handleAddToCart(product) {
 //         alert(`${product.name} added to cart!`);
 //         addProductToCart(product);
@@ -88,7 +88,7 @@
 //         <center><h1 className="text-5xl mb-10 mt-10 font-mono font-bold 
 //             text-stroke-thick justify-center">Products In Stock</h1></center>
 //         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-//             {productsJSX}
+//             {/* {productsJSX} */}
 //         </div>
 //         <Footer className="flex justify-items-end" />
 //         </>

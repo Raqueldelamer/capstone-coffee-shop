@@ -3,14 +3,14 @@ import Footer from "@/components/Footer";
 
 
 
-export function AdminProduct() {
+export default function AdminProduct() {
 
     // need ID , token, & product
 
     return (
         <>
         <Navbar />
-        New admin product card goes here. 
+        {/* New admin product card goes here.  */}
         <Footer />
         </>
     )
