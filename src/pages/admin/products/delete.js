@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Button from "@/components/Button";
 
-export default function CreateProducts() {
+export default function DeleteProducts() {
     //const router = useRouter();
     const{token} = useAuth();
     console.log(token);
@@ -22,7 +22,7 @@ export default function CreateProducts() {
         event.preventDefault();
         console.log(event);
         alert("Product data deleted!");
-         // goal; get all the input values, and log them
+         // goal; get all the input values
         const name = event.target.elements.name.value;
         const category = event.target.elements.category.value;
 
@@ -31,11 +31,11 @@ export default function CreateProducts() {
             name,
             category,
         }
-        createProduct(product);
+        deleteProduct(product);
     }
 
-    async function createProduct(product) {
-        // const { name, description, price, stock } = product;
+    async function deleteProduct(product) {
+        console.log("delete", product);
         console.table(product);
 
         // goal: Fetch POST
@@ -68,12 +68,12 @@ export default function CreateProducts() {
             <Navbar menuItems={["HOME", "", "PRODUCTS"]} />
             <div style={divStyle}>
             <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
-            
             <div className="card bg-base-100 mx-auto justify-center flex-grow max-w-sm">
             <div className="card-body justify-center">
+                <h2 className='text-center text-xl font-mono text-yellow-500'>Delete Product Form</h2>
             <form onSubmit={handleSubmit} className="form-control text-yellow-500 mt-5 text-center font-sans text-l space-y-">
             <label className="label">
-                <span className="label-text block mb-2">Product Title:</span>
+                <span className="label-text block mb-2">Product:</span>
                 <input type="text" placeholder="product title" name="name" className="input input-bordered" />
                 </label>
                 
