@@ -416,10 +416,6 @@ SignupForm.propTypes = {
 };
 ```
 
-### **Step 3**: Verify in Storybook
-- Verify your story for `SignupForm` with a mock button label.
-
-git commit with a message like "Add SignupForm component."
 
 
 
