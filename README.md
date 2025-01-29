@@ -423,18 +423,6 @@ git commit with a message like "Add SignupForm component."
 
 
 
-## **1. Setup Next.js and Repository**
-
-1. **Create a New Next.js App**:
-
-   ```bash
-   npx create-next-app@latest coffee-shop-frontend
-   cd coffee-shop-frontend
-   ```
-
-   - During setup, select **Use Tailwind CSS** and **Use Pages Router** options.
-
-2. **Initialize a Git Repository**:
 
 
 
