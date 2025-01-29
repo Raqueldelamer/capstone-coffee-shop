@@ -209,7 +209,7 @@ export default function CartPage() {
 
 ---
 
-## **Step 4: Implement Shopping Cart Page Functionality**:
+## **Step 5: Implement Shopping Cart Page Functionality**:
 
 1. Replace the stub functions for `loadCart`, `addToCart`, `removeFromCart`, and `saveCartToLocalStorage` with real functionality.
 
@@ -233,7 +233,7 @@ export default function CartPage() {
 ![Alt text](public/imgs/product-removed.png) <br /><br />
 ---
 
-## **Step 5: Implement Checkout Page Functionality**
+## **Step 6: Implement Checkout Page Functionality**
 
 - [x] - Checkout Cart Summary and Checkout Form
 - [x] - Implement a controlled form for checkout details
@@ -258,7 +258,7 @@ export default function CartPage() {
 
 ---
 
-## **Step 6: Implement Login and Register Pages**
+## **Step 7: Implement Login and Register Pages**
 
 ### **Instructions**:
 - [x] - Replace the stub functions in `registerUser` and `signInUser` with functionality to save user data to localStorage.
@@ -269,7 +269,7 @@ export default function CartPage() {
 
 
 ---
-## **Step 7: Implement a Create Product Function for Authenticated Logged In Admin User in `/admin/products/create.js`**
+## **Step 8: Implement a Create Product Function for Authenticated Logged In Admin User in `/admin/products/create.js`**
 
 ![Alt text](public/imgs/create-save-localstorage.png) <br /><br />
 
