@@ -40,10 +40,21 @@ export default function CreateProducts() {
             stock,
         }
         createProduct(product);
-    }
+
+         // Reset form fields by clearing the formData state
+        setFormData({
+            name: '',
+            description: '',
+            price: '',
+            category: '',
+            stock: '',
+    });
+}
+    
 
     async function createProduct(product) {
         // const { name, description, price, stock } = product;
+        
         console.table(product);
 
         // goal: Fetch POST
@@ -83,27 +94,37 @@ export default function CreateProducts() {
             <form onSubmit={handleSubmit} className="form-control text-yellow-500 mt-5 text-center font-sans text-l space-y-">
             <label className="label">
                 <span className="label-text block mb-2">Product:</span>
-                <input type="text" placeholder="product title" name="name" className="input input-bordered" />
+                <input type="text" placeholder="product title" name="name" className="input input-bordered" 
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
                 </label>
                 
                 <label className="label">
                 <span className="label-text block mb-2">Description:</span>
-                <input type="text" placeholder="description" name="description" className="input input-bordered" />
+                <input type="text" placeholder="description" name="description" className="input input-bordered"
+                    value={formData.description}
+                    onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
                 </label>
 
                 <label className="label">
                 <span className="label-text block mb-2">Price:</span>
-                <input type="text" placeholder="price" name="price" className="input input-bordered" />
+                <input type="text" placeholder="price" name="price" className="input input-bordered"
+                    value={formData.price}
+                    onChange={(e) => setFormData({ ...formData, price: e.target.value })} />
                 </label>
 
                 <label className="label">
                 <span className="label-text block mb-2">Category:</span>
-                <input type="text" placeholder="category" name="category" className="input input-bordered" />
+                <input type="text" placeholder="category" name="category" className="input input-bordered"
+                    value={formData.category}
+                    onChange={(e) => setFormData({ ...formData, category: e.target.value })} />
                 </label>
                 
                 <label className="label">
                 <span className="label-text block mb-2">Stock:</span>
-                <input type="text" placeholder="in stock" name="stock" className="input input-bordered mb-2" />
+                <input type="text" placeholder="in stock" name="stock" className="input input-bordered mb-2"
+                    value={formData.stock}
+                    onChange={(e) => setFormData({ ...formData, stock: e.target.value })} />
                 </label>
             <Button label="Submit to Create New Product" />
             </form>
