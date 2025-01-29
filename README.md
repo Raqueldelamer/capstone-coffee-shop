@@ -263,13 +263,15 @@ export default function CartPage() {
 ### **Instructions**:
 - [x] - Replace the stub functions in `registerUser` and `signInUser` with functionality to save user data to localStorage.
 
-- [x] - Implement controlled forms for the login and register pages. Then save the data to localStorage using the utility functions.
+- [x] - Create controlled forms for the login and register pages. Then save the data to localStorage using the utility functions.
 
 ![Alt text](public/imgs/logged-in.png) <br /><br />
 
 
 ---
-## **Step 8: Implement a Create Product Function for Authenticated Logged In Admin User in `/admin/products/create.js`**
+## **Step 8: Implement a Create Product page for Authenticated Logged In Admin User in `/admin/products/create.js`**
+
+- [x] - 
 
 ![Alt text](public/imgs/create-save-localstorage.png) <br /><br />
 

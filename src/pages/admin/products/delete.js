@@ -14,30 +14,22 @@ export default function CreateProducts() {
 
     const [formData, setFormData] = useState({
         name: '',
-        description: '',
-        price: '',
         category: '',
-        stock: '',
     });
 
     // goal; say "form submitted" on submit
     function handleSubmit(event) {
         event.preventDefault();
         console.log(event);
-        alert("Product data submitted and created!");
+        alert("Product data deleted!");
          // goal; get all the input values, and log them
         const name = event.target.elements.name.value;
-        const description = event.target.elements.description.value;
-        const price = event.target.elements.price.value;
         const category = event.target.elements.category.value;
-        const stock = event.target.elements.stock.value;
+
 
         const product = {
             name,
-            description,
-            price,
             category,
-            stock,
         }
         createProduct(product);
     }
@@ -49,7 +41,7 @@ export default function CreateProducts() {
         // goal: Fetch POST
         try {
             const response = await fetch("https://coffee-shop-backend-5fmn.onrender.com/api/v1/products/", {
-                method: "POST",
+                method: "DELETE",
                 body: JSON.stringify(product),
                 headers: { "Content-Type": "application/json; charset=UTF-8", },
                 
@@ -85,26 +77,14 @@ export default function CreateProducts() {
                 <input type="text" placeholder="product title" name="name" className="input input-bordered" />
                 </label>
                 
-                <label className="label">
-                <span className="label-text block mb-2">Description:</span>
-                <input type="text" placeholder="description" name="description" className="input input-bordered" />
-                </label>
-
-                <label className="label">
-                <span className="label-text block mb-2">Price:</span>
-                <input type="text" placeholder="price" name="price" className="input input-bordered" />
-                </label>
 
                 <label className="label">
                 <span className="label-text block mb-2">Category:</span>
-                <input type="text" placeholder="category" name="category" className="input input-bordered" />
+                <input type="text" placeholder="category" name="category" className="input input-bordered mb-3" />
                 </label>
                 
-                <label className="label">
-                <span className="label-text block mb-2">Stock:</span>
-                <input type="text" placeholder="in stock" name="stock" className="input input-bordered" />
-                </label>
-            <Button label="Submit to Create New Product" />
+                
+            <Button label="Submit to Delete Product" />
             </form>
             </div>
             </div>
