@@ -211,9 +211,16 @@ export default function CartPage() {
 
 ![Alt text](public/imgs/empty-cart.jpg) <br /><br />
 
+- [x] - Products Added redirected into Shopping Cart
 - [x] - Shopping cart saved to Local Storage, redirects to CheckOut.js
 
 ![Alt text](public/imgs/full-shopping-cart.png) <br /><br />
+
+- [x] - Shopping cart saved to Local Storage, redirects to CheckOut.js
+
+- [x] - Product successfully removed from Shopping cart.js
+
+![Alt text](public/imgs/product-removed.png) <br /><br />
 ---
 
 ## **Step 5: Implement Checkout Page Functionality**
