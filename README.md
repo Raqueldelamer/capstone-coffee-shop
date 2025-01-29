@@ -268,7 +268,7 @@ export default function CartPage() {
 
 
 ---
-## **Create Product Function for Authenticated Logged In Admin User in `/admin/products/create.js`**
+## **Step 7: Implement a Create Product Function for Authenticated Logged In Admin User in `/admin/products/create.js`**
 
 ![Alt text](public/imgs/create-save-localstorage.png) <br /><br />
 
