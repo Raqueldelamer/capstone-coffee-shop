@@ -271,7 +271,9 @@ export default function CartPage() {
 ---
 ## **Step 8: Implement a Create Product page for Authenticated Logged In Admin User in `/admin/products/create.js`**
 
-- [x] - 
+- [x] - Successfully create product by Authenticated Admin User
+
+![Alt text](public/imgs/create-product.png) <br /><br />
 
 ![Alt text](public/imgs/create-save-localstorage.png) <br /><br />
 
@@ -279,27 +281,12 @@ export default function CartPage() {
 
 ---
 
-### **Expected Outcome**
-By the end of Day 5, the project will be a fully functional e-commerce application with:
-- Modular and reusable components.
-- Secure and efficient API endpoints.
-- A user-friendly shopping cart.
-- A robust authentication system.
 
 
 # Day 3 **5. Product Page => https://coffee-shop-frontend-azure.vercel.app/products**
 
 
 
-
-### **Step 2**: Break Into a `ProductCard` Component
-- Create or update your `ProductCard` component.
-- Pass the product data as a prop to the `ProductCard` component.
-- Use **PropTypes** to validate the product as an object.
-
-
-### **Step 3**: Verify in Storybook
-- Verify your story for `ProductCard` with mock product data.
 
 ### **Step 4**: Update Product Page to include an event handler
 
