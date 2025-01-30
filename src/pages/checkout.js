@@ -3,6 +3,7 @@ import CheckoutForm from "@/components/CheckoutForm";
 import CartSummary from "@/components/CartSummary";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 
 export default function CheckoutPage () {
@@ -10,6 +11,11 @@ export default function CheckoutPage () {
 
     // get subtotal, tax & total from url query parameters
     const { subtotal, tax, total } = router.query;
+    const [cart, setCart] = useState({
+        subtotal: subtotal || 0,
+        tax: tax || 0,
+        total: total || 0,
+    });
 
     const divStyle = {
         backgroundImage: 'url(/imgs/book-cafe.jpg)',
@@ -21,6 +27,13 @@ export default function CheckoutPage () {
     function handleCheckout(name, address, city, state, zipcode) {
         alert('Submit Clicked!');
         console.log('Checkout Info:', { name, address, city, state, zipcode });
+
+         // Clear the cart summary after checkout
+        setCart({
+            subtotal: 0,
+            tax: 0,
+            total: 0,
+        });
     }
     
     return (
@@ -34,7 +47,7 @@ export default function CheckoutPage () {
                 <div className="flex justify-evenly w-full">
             <CheckoutForm className="mb-1" handleCheckout={handleCheckout}  />
                 <div className="rounded-lg shadow-lg">
-            <CartSummary subtotal={subtotal} tax={tax} total={total} />
+            <CartSummary subtotal={cart.subtotal} tax={cart.tax} total={cart.total} />
             </div>
             </div>
             </div>
