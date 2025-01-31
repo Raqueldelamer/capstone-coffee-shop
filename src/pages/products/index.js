@@ -13,16 +13,16 @@ const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 export default function ProductsPage() {
     const router = useRouter();
-    const { category } = router.query;
-    console.log(category);
-    const { id } = router.query;
+    const { category, id } = router.query;
+    const [url, setUrl] = useState(`${BACKEND_URL}/products?limit=25`);
+    const { token } = useAuth();
+    console.log(token);
+    console.log(id);
+    // const { id } = router.query;
 
     const [cartContents, setCartContents] = useState([]);
 
-    const { token } = useAuth();
-    console.log(token);
 
-    const [url, setUrl] = useState(`${BACKEND_URL}/products?limit=25`);
     // fetch products using hook
     const { data: products = [], loading, error } = useAuthFetch(url, [], token);
     //const [productFetchError, productsLoading, products] = useFetch (url, []);
@@ -33,9 +33,12 @@ export default function ProductsPage() {
     }, []);
         
     function addProductToCart(product) {
-        const newCartContents = [...cartContents, product];
-        setCartContents(newCartContents);
-        saveCartToLocalStorage(newCartContents);
+         // Using functional state update to avoid relying on stale state
+        setCartContents((prevContents) => {
+            const newCartContents = [...prevContents, product];
+            saveCartToLocalStorage(newCartContents);
+            return newCartContents;
+        });
     }
 
     // handling add to cart
@@ -45,7 +48,7 @@ export default function ProductsPage() {
     }
 
         if(loading) {
-            return <div className='text-xl ml-30 mb-10 mt-10 font-mono font-bold 
+            return  <div className='text-xl ml-30 mb-10 mt-10 font-mono font-bold 
             text-stroke-thick justify-center'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
                     width={32} 
@@ -78,10 +81,7 @@ export default function ProductsPage() {
                         ..No products available. Sign Up & Login to obtain access.
             </div>
 
-        //function handleAddToCart() {
-          //  alert(product.name + " added to cart!");
-            //addProductToCart(product);
-        //}
+
     return (
         <>
         <Navbar menuItems={["HOME", "LOGIN", "PRODUCTS", "CART"]} />

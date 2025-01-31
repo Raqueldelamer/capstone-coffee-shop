@@ -17,12 +17,13 @@ Live link that displays steps initialized and completed:
 The Coffee Shop Backend and Frontend is a project to build a Next.js-based frontend and backend application that will include a variety of components and features to create a user-friendly experience for customers that serves as an e-commerce coffee shop. This project integrates Storybook for component development, and building stubs for your components. Follow an incremental approach to ensure all components work as expected before moving forward. The fullstack app provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
 
 ### **Key Tools & Technologies**
-- **Frontend:** Next.js, DaisyUI, Storybook, Iconify, React Hooks (useState, useQuery)
+- **Frontend:** Next.js, React, DaisyUI, Storybook, Iconify, Vercel, Hooks (useState, useQuery)
 - **Backend:** Node.js, API v1 (non-auth) and API v2 (auth)
 - **Database:** (Database type to be decided: e.g., MongoDB, PostgreSQL)
 - **Version Control:** Git/GitHub
 
 ## Components
+- [x] About
 - [x] Button
 - [x] Cart Icon
 - [x] Cart Summary
