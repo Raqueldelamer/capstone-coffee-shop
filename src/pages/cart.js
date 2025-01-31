@@ -32,7 +32,11 @@ export default function Cart() {
             
         const newTotal = (parseFloat(newSubtotal) + parseFloat(newTax)).toFixed(2);
             setTotal(newTotal);
-    }, [cartContents]);
+        
+        const cartData = loadCartFromLocalStorage();
+            setCartContents(cartData);
+
+    }, [], [cartContents]);
 
     function removeFromCart(productId) {
         // Remove the product from the cart array

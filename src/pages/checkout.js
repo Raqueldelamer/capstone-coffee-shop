@@ -4,11 +4,11 @@ import CartSummary from "@/components/CartSummary";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { clearCartFromLocalStorage } from "@/utils";
 
 
 export default function CheckoutPage () {
     const router = useRouter();
-
     // get subtotal, tax & total from url query parameters
     const { subtotal, tax, total } = router.query;
     const [cart, setCart] = useState({
@@ -27,6 +27,9 @@ export default function CheckoutPage () {
     function handleCheckout(name, address, city, state, zipcode) {
         alert('Submit Clicked!');
         console.log('Checkout Info:', { name, address, city, state, zipcode });
+
+        // clear cart form local storage after checkout
+        clearCartFromLocalStorage();
 
          // Clear the cart summary after checkout
         setCart({

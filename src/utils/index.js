@@ -1,4 +1,8 @@
 // src/util/index.js
+export const clearCartFromLocalStorage = () => {
+    localStorage.removeItem("cart");
+};
+
 export const loadProductsFromLocalStorage = () => {
     const products = localStorage.getItem("products");
     return products ? JSON.parse(products) : [];
