@@ -11,11 +11,12 @@ export default function Navbar({ title, menuItems }) {
       <Icon />
       <p className="text-xl mx-2">+</p>
       <Book />
-      <div className="navbar flex text-center font-sans text-xl space-x-5 px-3 justify-start">
+      <div className="navbar flex text-center font-sans text-xl space-x-5 px-3 justify-start w-full">
         <div><Link href="/" className="hover:text-yellow-200">{menuItems[0]}</Link></div>
         <div><Link href="/login" className="hover:text-yellow-200">{menuItems[1]}</Link></div>
         
         {/* Hover dropdown for the Products link */}
+        <div className="flex-grow"></div>
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className=" text-xl">
             <Link href="/products" className="hover:text-yellow-200">{menuItems[2]}</Link>
