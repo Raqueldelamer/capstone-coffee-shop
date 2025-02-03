@@ -118,7 +118,7 @@ Storybook may will already be running after the installation. If not, you can st
 
    - DELETE Product by ID
 
-   ![Alt text](public/imgs/delete-id.png) <br /><br />
+   ![Alt text](public/imgs/delete-by-id.png) <br /><br />
 
 
 ---
