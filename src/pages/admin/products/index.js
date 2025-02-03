@@ -34,7 +34,7 @@ export default function ProductsPage() {
     async function deleteProduct(product) {
         console.log("delete", product);
         const productId = product._id;
-        const url = `https://coffee-shop-backend-5fmn.onrender.com/api/v2/products/${productId}`;
+        const url = `https://coffee-shop-backend-3ovb.onrender.com/api/v1/products/${productId}`;
         console.log(url);
         try {
             const response = await fetch(url, {

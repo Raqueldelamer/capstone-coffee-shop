@@ -59,7 +59,7 @@ export default function CreateProducts() {
 
         // goal: Fetch POST
         try {
-            const response = await fetch("https://coffee-shop-backend-5fmn.onrender.com/api/v1/products/", {
+            const response = await fetch("https://coffee-shop-backend-3ovb.onrender.com/api/v1/products", {
                 method: "POST",
                 body: JSON.stringify(product),
                 headers: { "Content-Type": "application/json; charset=UTF-8", },

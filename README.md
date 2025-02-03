@@ -18,7 +18,7 @@ The Coffee Shop Backend and Frontend is a project to build a Next.js-based front
 
 ### **Key Tools & Technologies**
 - **Frontend:** Next.js, React, DaisyUI, Storybook, Iconify, Vercel, Hooks (useState, useQuery)
-- **Backend:** Node.js, API v1 (non-auth) and API v2 (auth)
+- **Backend:** Node.js, API v1 (non-auth), and API v2 (auth)
 - **Database:** (Database type to be decided: e.g., MongoDB, PostgreSQL)
 - **Version Control:** Git/GitHub
 
