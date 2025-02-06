@@ -105,7 +105,7 @@ useEffect(() => {
 
         {loading ? (
         <div className="flex justify-center items-center h-96">
-            <p classname="font-mono text-2xl text-yellow-400">Loading Products...</p>
+            <p className="font-mono text-2xl text-yellow-400">Loading Products...</p>
         </div>
         
         ) : error ? (
