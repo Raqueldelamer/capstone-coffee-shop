@@ -2,35 +2,40 @@ import LoginForm from "@/components/LoginForm";
 import NavBar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
+import { useState } from 'react';
+import { useFetch } from "@/hooks/api";
+
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const loginURL = `${BACKEND_URL}/users/login`;
 
 export default function Login() {
     const router = useRouter();
-
+    const [error, setError] = useState('');
+    
     // Handle login
     async function handleLogin(email, password) {
         const payload = {
             email,
             password,
         };
-                            // https://coffee-shop-backend-3ovb.onrender.com/api/v1/products
+                                //https://coffee-shop-backend-5fmn.onrender.com/api/v2/users/login
+                            
         try {
-            const response = await fetch("https://coffee-shop-backend-5fmn.onrender.com/api/v2/users/login", 
-                {   method: "POST",
+            const response = await fetch(loginURL, {
+                    method: "POST",
                     body: JSON.stringify(payload),
                     headers: { "Content-Type": "application/json; charset=UTF-8", },
                 }
             );
-
+                
             const data = await response.json();
+            console.log(data);
 
-            // store it in localStorage if returned a token
-            if (data.token) {
-                localStorage.setItem("token", data.token);
-                localStorage.setItem("user", JSON.stringify(data.user)); 
+            if (response.ok) {
                 alert('You are logged in: ' + email); 
                 router.push('/products'); 
             } else {
-                alert('Login failed!');
+                alert('Login failed: ' + data.message);
             }
         } catch (error) {
             console.error("Login error:", error);

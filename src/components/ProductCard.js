@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 export default function ProductCard({ product, addToCart, buttonLabel }) {
+    console.log("Product inside ProductCard:", product);
     return (
         <div className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 flex justify-items-center">
         <div className="card bg-base-300 px-2 pt-3 text-center font-mono mt-2 mb-8 justify-items-center w-48 max-h-72">

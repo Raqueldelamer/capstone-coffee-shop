@@ -12,9 +12,13 @@ Live link that displays steps initialized and completed:
 
 ![Alt text](public/imgs/splash.jpg) <br /><br />
 
+## WIREFRAME
+
+![Alt text](public/imgs/wireframe.png) <br /><br />
+
 ## Objective:  
 
-The Coffee Shop Backend and Frontend is a project to build a Next.js-based frontend and backend application that will include a variety of components and features to create a user-friendly experience for customers that serves as an e-commerce coffee shop. This project integrates Storybook for component development, and building stubs for your components. Follow an incremental approach to ensure all components work as expected before moving forward. The fullstack app provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
+The Coffee Shop Backend and Frontend is a fullstack project that is built with a Next.js-based frontend and backend applications that includes a variety of components and features to create a user-friendly experience for customers that serves as an e-commerce coffee shop that is fun and easy to navigate. This project integrates Storybook for component development, and building stubs for your components. Follow an incremental approach to ensure all components work as expected before moving forward. The fullstack app provides APIs for managing products with full CRUD (Create, Read, Update, Delete) functionality. The backend uses MongoDB with Mongoose for database operations, allowing efficient storage and retrieval of product data.
 
 ### **Key Tools & Technologies**
 - **Frontend:** Next.js, React, DaisyUI, Storybook, Iconify, Vercel, Hooks (useState, useQuery)
@@ -48,6 +52,7 @@ The Coffee Shop Backend and Frontend is a project to build a Next.js-based front
 - [x] **Implement Shopping Cart Page Functionality**
 - [x] **Implement Login and Register Pages**
 - [x] **CRUD Operations: Implemented APIs for managing products, including creating, reading,** 
+- [x] **Database that stores user data (MongoDB)**
 - [x] **Updating, and deleting.JWT User Authentication & Protected Routes**
 
 ## Attribution
@@ -57,6 +62,8 @@ Give credit to any resources or inspiration you used in this project.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 - [Storybook](https://storybook.js.org/)
+- [MongoDB](https://www.mongodb.com)
+- [Cloudinary](https://cloudinary.com)
 - [Iconify](https://icon-sets.iconify.design)
 
 
@@ -75,6 +82,12 @@ In `index.jsx`, build a splash page that includes the following:
 - [x] - It's best to deploy your app to Vercel right away to ensure it works as expected in a production environment.
 
 ![Alt text](public/imgs/vercel.jpg) <br /><br />
+
+## Stretch Goals
+- [x] - **Users with Roles to access protected routes**
+- [x] - **Custom middleware**
+- [x] - **Images stored in Cloudinary**
+- [x] - **Custom Hooks to clean up the code in your components**
 
 ## Step 0: **Setup Storybook**
 
@@ -108,13 +121,17 @@ Storybook may will already be running after the installation. If not, you can st
    ```
 
 2. **Connect to POSTMAN Backend**:
-   - POST Products on Postman Backend URL 
+   - CRUD (Create, Read, Update, Delete) functionality 
 
    ![Alt text](public/imgs/postman.jpg) <br /><br />
 
    - GET All Products
 
    ![Alt text](public/imgs/get.png) <br /><br />
+
+   - PUT Update Products
+
+   ![Alt text](public/imgs/put-update-products.png)<br /><br />
 
    - DELETE Product by ID
 

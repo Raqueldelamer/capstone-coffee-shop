@@ -5,7 +5,7 @@ import Icon from './Icon';
 import Book from './Book';
 import CartIcon from './CartIcon';
 
-export default function Navbar({ title, menuItems }) {
+export default function Navbar({ menuItems }) {
   return (
     <div className="flex items-center text-wrap ml-4 mt-1">
       <Icon />

@@ -21,16 +21,16 @@ export default function Home() {
     height: '100vh',
     color: 'black',
 };
-  return (
-  <>  
-  <NavBar menuItems={["HOME", "LOGIN"]} />
-  <div style={divStyle}>
-  <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
-  <center><TestButton label="SIGN UP HERE" handleClick={handleCtaClick} className="mb-40"/></center>
-  <br />
-  <About title= {"ABOUT"} className="mt-20" />
-  </div>
-  <Footer />
+    return (
+    <>  
+    <NavBar menuItems={["HOME", "LOGIN"]} />
+      <div style={divStyle}>
+        <Header headerText={"COFFEE, TEA, SNACK & READ!"} />
+        <center><TestButton label="SIGN UP HERE" handleClick={handleCtaClick} className="mb-40"/></center>
+      <br />
+      <About title= {"ABOUT"} className="mt-20" />
+    </div>
+      <Footer />
   </>
   );
 }

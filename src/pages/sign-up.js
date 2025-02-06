@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useState } from 'react';
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
-const registerURL = `${BACKEND_URL}/users/register`;
+//const registerURL = `${BACKEND_URL}/users/register`;
 
 export default function Signup() {
     const router = useRouter();
@@ -16,24 +16,22 @@ export default function Signup() {
     alert('Thank you for Signing Up ' + user.email);
 
     // Add the user role 
-    user.role = 'admin';
+    //user.role = 'admin';
 
     // Make the POST request to register the user
-    const response = await fetch(registerURL, {
+    const response = await fetch("https://coffee-shop-backend-3ovb.onrender.com/api/v2/users/register", {
         method: 'POST',
         body: JSON.stringify(user),
-        headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-        },
+        headers: {'Content-type': 'application/json; charset=UTF-8', },
     });
 
     const data = await response.json();
-    if (data.error) {
-        // Handle any errors during signup
-        setError(data.error);
+    if (data.message) {
+        // Handle errors during signup
+        setError(data.message);
         } else {
         // Redirect to the login page if signup is successful
-        router.push('/login');
+        //router.push('/login');
         }
     }
 

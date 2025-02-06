@@ -3,11 +3,12 @@ import { useRouter } from "next/router";
 import Navbar from '@/components/Navbar';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-// import data from '@/mocks/products.json';
+
 import ProductCard from '@/components/ProductCard';
 import { loadCartFromLocalStorage, saveCartToLocalStorage } from '@/utils';
-import { useAuthFetch } from '@/hooks/api';
 import useAuth from '@/hooks/auth';
+import { useAuthFetch } from '@/hooks/api';
+
 // import Button from '@/components/Button';
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
@@ -16,43 +17,56 @@ export default function ProductsPage() {
     const { category } = router.query;
     console.log(category);
 
+    const [url, setUrl] = useState(`${BACKEND_URL}/products?limit=25`);
     const [cartContents, setCartContents] = useState([]);
+    const [products, setProducts] = useState([]);
 
     const { token } = useAuth();
     console.log(token);
 
-    const [url, setUrl] = useState(`${BACKEND_URL}/products?limit=25`);
-    // fetch products using hook
-    const { data: products = [], loading, error } = useAuthFetch(url, [], token);
+    // fetch products using useAuthFetch hook
+    const { data: productsFromApi = [], loading, error } = useAuthFetch(url, [], token);
     //const [productFetchError, productsLoading, products] = useFetch (url, []);
 
     useEffect(() => {
         const cartData = loadCartFromLocalStorage();
         setCartContents(cartData);
-    }, []);
+        setProducts(productsFromApi);
+    }, [productsFromApi]);
         
     async function deleteProduct(product) {
         console.log("delete", product);
         const productId = product._id;
-        const url = `https://coffee-shop-backend-3ovb.onrender.com/api/v1/products/${productId}`;
+        const url = `https://coffee-shop-backend-3ovb.onrender.com/api/v2/products/${productId}`;
         console.log(url);
+        
         try {
             const response = await fetch(url, {
                 method: "DELETE",
                 headers: {
-                    "Authorization": `Bearer ${token}`
-                }
-        })
-        const data = await response.json();
-        console.log(data);
+                    "Authorization": `Bearer ${token}`,
+                },
+        });
 
-        } catch (error) {
-            console.log(error);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
 
+            setProducts((prevProducts) => 
+            prevProducts.filter((prod) => prod._id !== productId));
+
+        } else {
+            const errorData = await response.json();
+            console.log('Error deleting products:', errorData);
+        }
+        } catch (error){
+            console.log('Error while deleting product:', error);
         }
     }
+    
 
-    // handling add to cart
+
+    // handle add to cart
     function handleDeleteProduct(product) {
         alert(`${product.name} deleted from cart!`);
         deleteProduct(product);

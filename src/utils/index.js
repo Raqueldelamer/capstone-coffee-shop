@@ -1,4 +1,4 @@
-// src/util/index.js
+// src/utils/index.js
 export const clearCartFromLocalStorage = () => {
     localStorage.removeItem("cart");
 };
