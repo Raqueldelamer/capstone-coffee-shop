@@ -1,9 +1,5 @@
 
-export default function CreateProducts() {
-    return (
-        <h1>H</h1>
-    )
-}
+
 
 // import { useState, useEffect } from 'react';
 // import { useRouter } from "next/router";
