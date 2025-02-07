@@ -1,6 +1,5 @@
 
 export default function CreateProducts() {
-    alert("Help :)")
     return (
         <h1>H</h1>
     )
