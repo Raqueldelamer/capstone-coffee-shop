@@ -1,3 +1,11 @@
+
+export default function CreateProducts() {
+    alert("Help :)")
+    return (
+        <h1>H</h1>
+    )
+}
+
 // import { useState, useEffect } from 'react';
 // import { useRouter } from "next/router";
 // //import { loadCartFromLocalStorage, saveCartToLocalStorage } from '@/utils';
