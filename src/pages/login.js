@@ -6,7 +6,8 @@ import { useState } from 'react';
 import { useFetch } from "@/hooks/api";
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
-const loginURL = `${BACKEND_URL}/users/login`;
+//const loginURL = `${BACKEND_URL}/users/login`;
+const loginURL = "https://coffee-shop-backend-3ovb.onrender.com/api/v2/users/login"
 
 export default function Login() {
     const router = useRouter();
@@ -18,7 +19,6 @@ export default function Login() {
             email,
             password,
         };
-                                //https://coffee-shop-backend-5fmn.onrender.com/api/v2/users/login
                             
         try {
             const response = await fetch(loginURL, {

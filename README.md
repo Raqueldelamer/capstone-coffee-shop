@@ -88,6 +88,7 @@ In `index.jsx`, build a splash page that includes the following:
 - [x] - **Custom middleware**
 - [x] - **Images stored in Cloudinary**
 - [x] - **Custom Hooks to clean up the code in your components**
+- [x] - **Stretch Goal: Empty Cart Animated Icon that redirects to Products.js Page if cart is empty**
 
 ## Step 0: **Setup Storybook**
 
