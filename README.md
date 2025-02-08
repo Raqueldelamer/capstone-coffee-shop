@@ -86,9 +86,16 @@ In `index.jsx`, build a splash page that includes the following:
 ## Stretch Goals
 - [x] - **Users with Roles to access protected routes**
 - [x] - **Custom middleware**
-- [x] - **Images stored in Cloudinary**
 - [x] - **Custom Hooks to clean up the code in your components**
+- [x] - **Presigned uploads with Cloudinary to avoid file uploads to the server**
 - [x] - **Stretch Goal: Empty Cart Animated Icon that redirects to Products.js Page if cart is empty**
+
+## Deploy Backend on Render 
+
+- [x] - backend successfully deployed on Render.com 
+
+![Alt text](public/imgs/render-backend.png) <br /><br />
+
 
 ## Step 0: **Setup Storybook**
 
@@ -224,13 +231,16 @@ export default function CartPage() {
 
 ## **Step 4: Implement Product Display Page Functionality Instructions**:
 
-1. Use `fetchProduct` to load product data via .env.local to BACKEND https://coffee-shop-backend-5fmn.onrender.com/api/v1/products/ .
+1. Use `fetchProduct` to load product data via .env.local to BACKEND https://coffee-shop-backend-3ovb.onrender.com/api/v2/products .
 
 2. Pass `addToCart` into the button in the `ProductCard` component using **prop drilling**.
 
 ---
+## **Step 5: Implement Product Display Page by Category ("category":) Functionality**:
 
-## **Step 5: Implement Shopping Cart Page Functionality**:
+![Alt text](public/imgs/category-shop.png) <br /><br />
+
+## **Step 6: Implement Shopping Cart Page Functionality**:
 
 1. Replace the stub functions for `loadCart`, `addToCart`, `removeFromCart`, and `saveCartToLocalStorage` with real functionality.
 
@@ -253,7 +263,7 @@ export default function CartPage() {
 ![Alt text](public/imgs/product-removed.png) <br /><br />
 ---
 
-## **Step 6: Implement Checkout Page Functionality**
+## **Step 7: Implement Checkout Page Functionality**
 
 - [x] - Checkout Cart Summary and Checkout Form
 - [x] - Implement a controlled form for checkout details
@@ -278,7 +288,7 @@ export default function CartPage() {
 
 ---
 
-## **Step 7: Implement Login and Register Pages**
+## **Step 8: Implement Login and Register Pages**
 
 ### **Instructions**:
 - [x] - Replace the stub functions in `registerUser` and `signInUser` with functionality to save user data to localStorage.
@@ -289,7 +299,7 @@ export default function CartPage() {
 
 
 ---
-## **Step 8: Implement a Create Product page for Authenticated Logged In Admin User in `/admin/products/create.js`**
+## **Step 9: Implement a Create Product page for Authenticated Logged In Admin User in `/admin/products/create.js`**
 
 - [x] - Successfully create product by Authenticated Admin User
 
@@ -303,128 +313,16 @@ export default function CartPage() {
 
 
 
-# Day 3 **5. Product Page => https://coffee-shop-frontend-azure.vercel.app/products**
 
 
 
 
-### **Step 4**: Update Product Page to include an event handler
-
-**Your challenge** is to create a function in `src/pages/products/[id].jsx` that will fire when the button is clicked. You can use `console.log` or `alert` to verify that the function is working.
-
-Look at the previous examples for how to pass a function to a component.
-
----
-
-## **6. Products Page**
-
-The products page will display a list of products. You will use the `ProductCard` component to display each product. You will get the data from the mock products file and pass the data to the `ProductCard` components.
-
-- in `src/pages/products/index.jsx`, create a layout for the products page.
-- Use the `ProductCard` component to display a list of products.
-- Create mock data for products and iterate over them using `.map()`.
-- See [Rendering Lists](https://react.dev/learn/describing-the-ui#rendering-lists) in the React documentation for more information.
 
 
 
-# Day 2 Guide: Coffee Shop Frontend => https://coffee-shop-frontend-azure.vercel.app
-
-## Objective:  
-
-Continue building the project you started in Day 1. Today, you will create pages for the Coffee Shop frontend, then break them into reusable components while the layout and structure are fresh in your mind. Utilize Storybook to verify components, and enhance the design for consistency across the application.
-
----
 
 
-## **1. Create Basic Pages**
-Set up the following blank pages in the `pages` directory. These pages will serve as the foundation of your application:
 
-### **Required Pages**:
-- `index.jsx`
-- `products/index.jsx`
-- `products/[id].jsx`
-- `cart.jsx`
-- `checkout.jsx`
-- `signup.jsx`
-- `signin.jsx`
-
-
----
-
-
-### **Step 3**: Example: Update the Button to handle click events
-
-- in `src/components/Button.jsx`:
-  ```jsx
-  export default function Button({ label, handleClick }) {
-    return (
-      <button onClick={handleClick} className="btn btn-primary">
-        {label}
-      </button>
-    );
-  }
-  ```
-- in `index.jsx`:
-  ```jsx
-  import Button from '../components/Button';
-  import { useRouter } from 'next/router';
-  ...
-  export default function Home() {
-    const router = useRouter();
-    function handleCtaClick() {
-      console.log('CTA button clicked!');
-      router.push('/signup');
-    }
-    return (
-      <div>
-      ...
-        <Button label="Sign Up Now" handleClick={handleCtaClick} />
-      ...
-      </div>
-    );
-  }
-  ```
-  This will allow the button to navigate to the signup page when clicked, but also keep the Button component flexible for other uses.
-
----
-
-## **3. Signup Page**
-
-Follow a similar process to the Splash page for the signup page and the rest of the pages. The goal is to build out your design, then break it into components. This will help you keep things organized. Focus on visual design and components. You will add functionality, like button clicks, later.
-
-### **Step 1**: Layout
-- Include the header and footer components from the splash page.
-- Add a form with the following fields:
-  - Name
-  - Email
-  - Password
-  - Submit Button
-
-### **Step 2**: Break the Form Into a Component
-- Create a `SignupForm` component and use the following prop:
-  - **`buttonLabel`**: A string that determines the button's text.
-- Use **PropTypes** to validate `buttonLabel` as a string.
-
-Example (Note 1: insert your own JSX and design choices into this component.) (Note 2: Don't forget to include PropTypes so you can validate the prop types in storybook.):
-```jsx
-import PropTypes from 'prop-types';
-import Button from '@/components/Button';
-
-export default function SignupForm({ buttonLabel }) {
-  return (
-    <form className="form">
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <Button label="Sign Up" handleClick={()=>{console.log("clicked sign up")}}/>
-    </form>
-  );
-}
-
-SignupForm.propTypes = {
-  buttonLabel: PropTypes.string.isRequired,
-};
-```
 
 
 
