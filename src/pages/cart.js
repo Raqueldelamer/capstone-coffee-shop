@@ -64,7 +64,7 @@ export default function Cart() {
     const handleProceed = () =>
     {
         if (cartContents.length === 0) {
-            router.push("/products");
+            router.push("/products/mock");
         } else {
             handleCheckout();
         }

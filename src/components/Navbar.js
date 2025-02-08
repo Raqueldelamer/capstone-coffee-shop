@@ -23,7 +23,7 @@ export default function Navbar({ menuItems }) {
           </div>
           <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
             <li><a href="/admin/products/create">Create Product</a></li>
-            <li><a href="/admin/products">Delete Product</a></li>
+            {/* <li><a href="/admin/products">Delete Product</a></li> */}
           </ul>
         </div>
 

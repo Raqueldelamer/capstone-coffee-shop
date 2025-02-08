@@ -37,7 +37,7 @@ The Coffee Shop Backend and Frontend is a fullstack project that is built with a
 - [x] Login Form
 - [x] Navbar
 - [x] Product Card
-- [x] Signup Form
+- [x] SignUp Form
 - [x] Test Button
 
 

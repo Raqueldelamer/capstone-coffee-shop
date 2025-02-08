@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
 import Navbar from '@/components/Navbar';
 import Header from "@/components/Header";
+import TestButton from "@/components/TestButton";
 import Footer from "@/components/Footer";
-
 import ProductCard from '@/components/ProductCard';
 import { loadCartFromLocalStorage, saveCartToLocalStorage } from '@/utils';
 import useAuth from '@/hooks/auth';
@@ -24,6 +24,11 @@ export default function ProductsPage() {
     const { token } = useAuth();
     console.log(token);
 
+    function handleCtaClick() {
+        console.log('CTA button clicked!');
+        router.push('/products/mock');
+    }
+
     // fetch products using useAuthFetch hook
     const { data: productsFromApi = [], loading, error } = useAuthFetch(url, [], token);
     //const [productFetchError, productsLoading, products] = useFetch (url, []);
@@ -43,8 +48,8 @@ export default function ProductsPage() {
         try {
             const response = await fetch(url, {
                 method: "DELETE",
-                headers: {
-                    "Authorization": `Bearer ${token}`,
+                headers: { "Content-Type": "application/json; charset=UTF-8", 
+                            "Authorization": `Bearer ${token}` // token
                 },
         });
 
@@ -113,6 +118,9 @@ export default function ProductsPage() {
         <Header classname="flex justify-items-end items-center w-full" headerText={"COFFEE, TEA, & READ!"}/>
         <center><h1 className="text-5xl mb-10 mt-10 font-mono font-bold 
             text-stroke-thick justify-center">Products In Stock</h1></center>
+        <center>
+        <TestButton label="PRODUCTS BY CATEGORY" handleClick={handleCtaClick} className="mb-30" />
+        </center>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
             {productsJSX}
         </div>

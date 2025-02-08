@@ -1,14 +1,15 @@
 import { useState } from 'react';
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 // import { useAuthFetch } from '@/hooks/api';
 import useAuth from '@/hooks/auth';
 import Navbar from '@/components/Navbar';
 import Header from "@/components/Header";
+import TestButton from "@/components/TestButton";
 import Footer from "@/components/Footer";
 import Button from "@/components/Button";
 
 export default function CreateProducts() {
-    //const router = useRouter();
+    const router = useRouter();
     const{token} = useAuth();
     console.log(token);
 
@@ -19,6 +20,11 @@ export default function CreateProducts() {
         category: '',
         stock: '',
     });
+
+    function handleCtaClick() {
+        console.log('CTA button clicked!');
+        router.push('/products/mock');
+    }
 
     // goal; say "form submitted" on submit
     function handleSubmit(event) {
@@ -63,10 +69,12 @@ export default function CreateProducts() {
                 method: "POST",
                 body: JSON.stringify(product),
                 headers: { "Content-Type": "application/json; charset=UTF-8", },
+                            "Authorization": `Bearer ${token}` // token
                 
         });
             const data = await response.json();
             console.log(data);
+            console.log("User Token:", token);
 
         }   catch(error) {
             console.log(error);
@@ -126,8 +134,11 @@ export default function CreateProducts() {
                     value={formData.stock}
                     onChange={(e) => setFormData({ ...formData, stock: e.target.value })} />
                 </label>
-            <Button label="Submit to Create New Product" />
+            <Button label="SUBMIT TO CREATE NEW PRODUCT" className="mb-2" />
             </form>
+            <center>
+                <TestButton label="CLICK TO SEE NEW PRODUCT " handleClick={handleCtaClick} className="mt-3" />
+            </center>
             </div>
             </div>
             
