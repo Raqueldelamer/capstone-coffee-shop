@@ -93,6 +93,7 @@ In `index.jsx`, build a splash page that includes the following:
 ## Deploy Backend on Render 
 
 - [x] - backend successfully deployed on Render.com 
+- [x] - Backend Link => https://github.com/Raqueldelamer/coffee-shop
 
 ![Alt text](public/imgs/render-backend.png) <br /><br />
 
