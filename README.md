@@ -98,7 +98,7 @@ In `index.jsx`, build a splash page that includes the following:
 ![Alt text](public/imgs/render-backend.png) <br /><br />
 
 
-## Step 0: **Setup Storybook**
+## **Setup Storybook**
 
 
 - [x] - Verify Storybook runs at [http://localhost:6006](http://localhost:6006).
@@ -107,7 +107,7 @@ In `index.jsx`, build a splash page that includes the following:
 
 ![Alt text](public/imgs/storybook.png) <br /><br />
 
-## Step 1: **Setup .env File and Connect to Backend**
+## **Setup .env File and Connect to Backend**
 
 1. - [x] **Created `.env.local` File** 
 
