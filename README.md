@@ -131,33 +131,27 @@ In `index.jsx`, build a splash page that includes the following:
 
 ---
 
-## - [x] **Step 2: Create Stub Functions**
-
-
-## **Step 3: Implemented Product List Page Functionality**
+## **Created Stub Functions & Implemented Product List Page Functionality**
 - [x] - Products fetched via Backend URL, implementing Product Card Component w product data and Add to Cart Button which redirects to the cart.js
 
 ![Alt text](public/imgs/products-page.jpg) <br /><br />
 
-### **Instructions**:
 - [x] - Replace stub functions with real functionality to:
    - Load and filter products.
    - Pass `viewProduct` to the button in `ProductCard` using **prop drilling**.
 
-
-
-## **Step 4: Implemented Product Display Page Functionality Instructions**:
+## **Implemented Product Display Page Functionality Instructions**:
 
 1. Use `fetchProduct` to load product data via .env.local to BACKEND https://coffee-shop-backend-3ovb.onrender.com/api/v2/products .
 
 2. Pass `addToCart` into the button in the `ProductCard` component using **prop drilling**.
 
 ---
-## **Step 5: Implemented Product Display Page by Category ("category":) Functionality**:
+## **Implemented Product Display Page by Category ("category":) Functionality**:
 
 ![Alt text](public/imgs/category-shop.png) <br /><br />
 
-## **Step 6: Implement Shopping Cart Page Functionality**:
+## **Implemented Shopping Cart Page Functionality**:
 
 1. Replace the stub functions for `loadCart`, `addToCart`, `removeFromCart`, and `saveCartToLocalStorage` with real functionality.
 
@@ -180,7 +174,7 @@ In `index.jsx`, build a splash page that includes the following:
 ![Alt text](public/imgs/product-removed.png) <br /><br />
 ---
 
-## **Step 7: Implement Checkout Page Functionality**
+## **Implemented Checkout Page Functionality**
 
 - [x] - Checkout Cart Summary and Checkout Form
 - [x] - Implement a controlled form for checkout details
@@ -191,7 +185,7 @@ In `index.jsx`, build a splash page that includes the following:
 
 ![Alt text](public/imgs/local-storage.png) <br /><br />
 
-## Implement a function to save the cart order details to localStorage.
+## **Implemented a function to save the cart order details to localStorage.**
 
 - [x] - After the form is submitted you can save the order details to localStorage. You can use the `saveCartToLocalStorage` function as a reference.
 
@@ -205,7 +199,7 @@ In `index.jsx`, build a splash page that includes the following:
 
 ---
 
-## **Step 8: Implement Login and Register Pages**
+## **Implemented Login and Register Pages**
 
 ### **Instructions**:
 - [x] - Replace the stub functions in `registerUser` and `signInUser` with functionality to save user data to localStorage.
@@ -216,7 +210,7 @@ In `index.jsx`, build a splash page that includes the following:
 
 
 ---
-## **Step 9: Implement a Create Product page for Authenticated Logged In Admin User in `/admin/products/create.js`**
+## **Implemented a Create Product page for Authenticated Logged In Admin User in `/admin/products/create.js`**
 
 - [x] - Successfully create product by Authenticated Admin User
 
