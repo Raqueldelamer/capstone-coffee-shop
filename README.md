@@ -100,19 +100,6 @@ In `index.jsx`, build a splash page that includes the following:
 
 ## Step 0: **Setup Storybook**
 
-a. **Install Storybook**:
-
-   ```bash
-   npx storybook@latest init
-   ```
-
-b. **Run Storybook**:
-
-Storybook may will already be running after the installation. If not, you can start it with:
-
-   ```bash
-   npm run storybook
-   ```
 
 - [x] - Verify Storybook runs at [http://localhost:6006](http://localhost:6006).
 - [x] - Verify all components render correctly in Storybook.
@@ -122,14 +109,9 @@ Storybook may will already be running after the installation. If not, you can st
 
 ## Step 1: **Setup .env File and Connect to Backend**
 
-1. **Create `.env.local` File**:
+1. - [x] **Created `.env.local` File** 
 
-   ```plaintext
-   NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
-   NEXT_PUBLIC_API_BASE_URL_PROD=https://api.onrender.com
-   ```
-
-2. **Connect to POSTMAN Backend**:
+2. - [x] **Connect to POSTMAN Backend**:
    - CRUD (Create, Read, Update, Delete) functionality 
 
    ![Alt text](public/imgs/postman.jpg) <br /><br />
@@ -149,76 +131,10 @@ Storybook may will already be running after the installation. If not, you can st
 
 ---
 
-## **Step 2: Create Stub Functions**
-
-### **Instructions**:
-1. **Stub Functions**: Create empty functions in the respective Page components. For now, these will log messages to the console or display alerts.
-2. **Placement**:
-   - Add the functions inside the **Page function** of each page.
-   - Some will be triggered on page load using `useEffect`.
-   - Others will be triggered by button clicks.
-3. **Prop Drilling**: Pass functions as props to child components where needed.
-
-### **List of Stub Functions and Locations**:
-| **Page/Component**             | **Functions to Add**                          |
-|---------------------------------|-----------------------------------------------|
-| **Header Component**            | `goToLogin`, `goToSignup`                     |
-| **Register Page** (`signup.jsx`) | `registerUser(user)`                          |
-| **Login Page** (`login.jsx`)    | `signInUser(username, password)`              |
-| **Product List Page**           | `loadProducts()`, `filterProducts(category, start, limit)`, `viewProduct(product)` |
-| **Product Display Page**        | `fetchProduct(id)`, `addToCart(product)`      |
-| **Cart Page**                   | `loadCart()`, `addToCart(product)`, `removeFromCart(product)`, `saveCartToLocalStorage(cart)` |
-| **Utility Functions** (`util/index.js`) | `loadProductsFromLocalStorage`, `loadCartFromLocalStorage`, `saveCartToLocalStorage`, `saveProductsToLocalStorage`, `saveUserToLocalStorage`, `loginUserToLocalStorage` |
-
-### **Example**:
-```javascript
-// src/pages/cart.jsx
-import { useEffect, useState } from 'react';
-
-import ProductCard from '@/components/ProductCard';
-
-// Stub data for Cart Page
-import data from '@/mocks/cart.json';
-
-export default function CartPage() {
-  const [cart, setCart] = useState([]);
-
-// Stub functions for Cart Page
-  const loadCart = () => console.log("Cart loaded");
-  const addToCart = (product) => console.log(`Added ${product.name} to cart`);
-  const removeFromCart = (product) => console.log(`Removed ${product.name} from cart`);
-  const saveCartToLocalStorage = (cart) => console.log("Cart saved to localStorage");
-
-  // use useEffect to put initialization code.
-  useEffect(() => {
-    loadCart();
-    setCart([...data]);
-  }, []);
-
-  const handleClick = (product) => {
-    addToCart(product);
-  };
-
-  // Note how we pass the handleClick function to the ProductCard component.
-  // This will passed again to the button in the ProductCard component.
-  // Passing a prop multiple times is called prop drilling.
-  return (<div>
-  <h1>Shopping Cart: {cart.length} items in cart</h1>
-  {cart.map((product) => (
-    <ProductCard 
-      key={product.id}
-      product={product}
-      handleClick={() => handleClick(product)} 
-    />
-  ))}
-
-  </div>);
-}
-```
+## - [x] **Step 2: Create Stub Functions**
 
 
-  
-## **Step 3: Implement Product List Page Functionality**
+## **Step 3: Implemented Product List Page Functionality**
 - [x] - Products fetched via Backend URL, implementing Product Card Component w product data and Add to Cart Button which redirects to the cart.js
 
 ![Alt text](public/imgs/products-page.jpg) <br /><br />
@@ -230,14 +146,14 @@ export default function CartPage() {
 
 
 
-## **Step 4: Implement Product Display Page Functionality Instructions**:
+## **Step 4: Implemented Product Display Page Functionality Instructions**:
 
 1. Use `fetchProduct` to load product data via .env.local to BACKEND https://coffee-shop-backend-3ovb.onrender.com/api/v2/products .
 
 2. Pass `addToCart` into the button in the `ProductCard` component using **prop drilling**.
 
 ---
-## **Step 5: Implement Product Display Page by Category ("category":) Functionality**:
+## **Step 5: Implemented Product Display Page by Category ("category":) Functionality**:
 
 ![Alt text](public/imgs/category-shop.png) <br /><br />
 
