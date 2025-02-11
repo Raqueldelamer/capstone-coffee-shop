@@ -8,6 +8,10 @@ export default function useAuth() {
 
     useEffect(() => {
         try {
+            const token = data.token;
+
+            localStorage.setItem("token") 
+
             const storedToken = localStorage.getItem("token");
             const storedUser = localStorage.getItem("user");
 
